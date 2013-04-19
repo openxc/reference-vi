@@ -10,11 +10,11 @@ Details
 
 ![Interface Block Diagram](./InterfaceBlockDiagram.svg "Interface Block Diagram")
 
-The Vehicle Interface is built around an LPC1769 ARM Cortex M3 MCU by NXP,
-running at 100MHz.  The interface reads vehicle data via two CAN busses.  By
+The Vehicle Interface (VI) is built around an LPC1769 ARM Cortex M3 MCU by NXP,
+running at 100MHz.  The interface reads vehicle data via two CAN buses.  By
 default the device reads from the Diagnostic High speed and Diagnostic Medium
-speed busses (Channel B can also read from the Multimedia CAN bus).  The CAN
-busses are converted into serial data by a [TJA1048
+speed buses (Channel B can also read from the Multimedia CAN bus).  The CAN
+buses are converted into serial data by a [TJA1048
 IC](http://www.nxp.com/documents/data_sheet/TJA1048.pdf).  The translated data
 is sent to a tablet or PC via USB and Bluetooth.  USB is achieved by the device
 controller built into the LPC1769.  Bluetooth is achieved via a [Roving Networks
@@ -75,7 +75,7 @@ LPC1769 to enter a USB bootloader if available.  See
   interfaces A and B respectively. If being used in a vehicle, these jumpers
   should be shorted.
 * SJ3, SJ4 - These switch the CAN B channel between the Diagnostic Medium Speed
-  and Multimedia CAN Busses exposed by the OBD-II connector on Ford vehicles.
+  and Multimedia CAN buses exposed by the OBD-II connector on Ford vehicles.
   They are each shorted towards the PCB edge, enabling the Diagnostic interface
   by default.
 * SJ5  - This connects the DTR line of the ISP header (J3) to the LPC1769 RESET
@@ -137,7 +137,7 @@ Usage:
 
 ### How to program
 
-The most reliable way to program the vehicle interface is via the JTAG
+The most reliable way to program the VI is via the JTAG
 interface, however other options are available:
 
 #### JTAG
@@ -178,7 +178,7 @@ is not built into the MCU.  In order to program over USB, a USB bootloader must
 already have been programmed onto the LPC1769.  The USB Bootloader should watch
 pin P2.12 (the same pin as the LPC1768 BlueBoard) on startup.  If installed
 correctly, the bootloader can be actived by holding down S2 while resetting the
-vehicle interface.
+VI.
 
 #### RN-41 Configuration
 
@@ -188,12 +188,12 @@ default RN-41 baud rate is 115200 baud, which is not high enough to saturate the
 bluetooth link.  The quickest way to preform this first initial configuration is
 to use a PC or tablet with a bluetooth interface:
 
-1. Apply power to the vehicle interface.
-1. Discover Bluetooth devices on the PC, find the vehicle interface, and pair
+1. Apply power to the VI.
+1. Discover Bluetooth devices on the PC, find the VI, and pair
       with it.
-1. Remove power from the vehicle interface.
-1. After a few moments, reapply power to the vehicle interface
-1. Very quickly (within 60 seconds) connect to the vehicle interface and open a
+1. Remove power from the VI.
+1. After a few moments, reapply power to the VI
+1. Very quickly (within 60 seconds) connect to the VI and open a
     terminal
 1. type "$$$" and press enter.  If done quickly, the bluetooth LED should
       start flashing rapidly and "CMD" should be printed to the screen.
@@ -202,7 +202,7 @@ to use a PC or tablet with a bluetooth interface:
 1. type "SU,43" to set the baud rate to 460800.  This value is used by the test
     firmware.
 1. type "---" to exit configuration mode
-1. Remove power from the vehicle interface.  When power is reapplied, the
+1. Remove power from the VI.  When power is reapplied, the
    settings will be changed.
 
 The commands can also be sent via UART0 on the LPC1769 to avoid the
@@ -214,7 +214,7 @@ quick reference)
 
 ### Known issues:
 
-For greater detail, see [the CAN Translator Changelog](./CAN Translator Changelog + Testing.xls)
+For greater detail, see CHANGELOG.xls
 
 #### R0.3:
 
@@ -228,13 +228,13 @@ For greater detail, see [the CAN Translator Changelog](./CAN Translator Changelo
   configured such that Pin 1 (the keyed pin) is Ground, and Pin 2 is +12V. This
   is flipped on the R0.2 PCB. A custom cable was created to patch this issue,
   and is labeled `R0.2 Only`. Only use this cable with R0.2 prototypes,
-  otherwise the KBoard TVS Diode D2 and/or the CAN Translator power switch IC7
+  otherwise the KBoard TVS Diode D2 and/or the VI power switch IC7
   may be damaged or destroyed.
 * JTAG CLK line - the JTAG signal RTCK was disconnected on R0.2 boards. It has
   manually been replaced with a wire. Occasionally the additional capacitance of
   this wire can cause JTAG errors - try reducing the JTAG clock rate.
 * JTAG Ground noise - Occasionally JTAG errors can be caused by a ground loop
-  between a USB JTAG adapter and the MicroUSB port on the CAN Translator. Try
+  between a USB JTAG adapter and the MicroUSB port on the VI. Try
   removing one or more connections to ground: IE, try powering the prototype
   from ONLY +5V USB verses the +12V OBD-II supply.
 * Bluetooth connection dropout - Under some circumstances, the RN-41 bluetooth
@@ -246,7 +246,7 @@ For greater detail, see [the CAN Translator Changelog](./CAN Translator Changelo
       fill. From the LPC1769, enter configuration mode by transmitting
       ```$$$```, disable the configuration timer with ```ST,0\r\n``` and then
       exit configuration mode by entering ```---\r\n```. Finally, power cycle
-      the CAN Translator. The test firmware `rn42-passthrough` enables serial
+      the VI. The test firmware `rn42-passthrough` enables serial
       data to be relayed between UART0 (the 6-pin ISP header) and UART1 (the
       bluetooth interface).
 
@@ -255,7 +255,7 @@ Design details:
 
 ### MCU Selection
 
-The Vehicle Interface was originally built around a ChipKit MAX32 development
+The VI was originally built around a ChipKit MAX32 development
 board, which used a PIC32MX795F512 processor.  We chose to move away from this
 architecture due to frustrations around the open-source support and tools of the
 PIC32 line.  We had trouble developing for this platform in Linux, and had to
@@ -290,7 +290,7 @@ connector.  This results in a 12MHz external crystal oscillator stepped up to a
 
 ### Power Section
 
-The Vehicle interface uses two heavy-duty low dropout linear regulators to
+The VI uses two heavy-duty low dropout linear regulators to
 convert the unpredictable +12V automotive power source to the +5V and +3.3V
 rails needed by the MCU and related ICs.  Incoming power is protected from
 overvoltage by D3, a [SMBJ16CA](http://www.fairchildsemi.com/ds/SM/SMBJ16CA.pdf)
@@ -323,7 +323,7 @@ charging at 1A.
 
 ### Power Input/Output
 
-The Vehicle Interface has the following power connections:
+The VI has the following power connections:
 
 * OBD-II Automotive Power: Input @ 12V
 * Dock Power Connector: Output @ 5V up to 6A
@@ -341,7 +341,7 @@ The lack of a diode means that the connected USB device can either consume or
 supply current.  If a PC is connected to the USB Micro connector, it will power
 the 3.3V regulator and the +5V regulator will be bypassed.  If an android tablet
 is connected that supports USB OTG Charging, it will be allowed to consume +5V
-power.  A resettable fuse (F1) has been added to protect the vehicle interface
+power.  A resettable fuse (F1) has been added to protect the VI
 from a bad USB cable or USB Host.  The fuse is a [Bourns
 MF-MSMF110/16-2](http://www.bourns.com/pdfs/mfmsmf.pdf).  The fuse will
 automatically reset when power is removed and the fuse is allowed to cool off.
@@ -366,7 +366,7 @@ required.  D4 and D5 provide additional ESD protection against voltage spikes on
 the CAN line - each
 [PESD1CAN](http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf) can provide up
 to 200W of peak dissipation and ESD protection up to 23kV.  R1 and R2 provide
-termination resistance for the CAN Bus.  If the CAN Translator is acting as a
+termination resistance for the CAN Bus.  If the VI is acting as a
 CAN Slave, and is reading CAN signals from a vehicle, these resistors need to be
 connected across the HI and LO wires of each CAN bus.  SJ1 and SJ2 are closed by
 default, enabling this termination.  If this termination is not needed, the
@@ -388,7 +388,7 @@ reflections and other transmission line phenomenon.
 ### Bluetooth Interface
 
 The [Roving Networks RN-41](http://www.rovingnetworks.com/products/RN41) was
-chosen to implement the Bluetooth interface for the vehicle interface:
+chosen to implement the Bluetooth interface for the VI:
 
 * a low-cost and easy-to-use option
 * easily prototyped
@@ -453,7 +453,7 @@ specification.  It's totally up to the implementation of the portable tablet or
 smartphone whether or not they support charging while using the USB port as a
 USB Host.
 
-If a Male-Male USB Micro cable is used with the vehicle interface, this
+If a Male-Male USB Micro cable is used with the VI, this
 identification resistor will be readable by a connected USB OTG device.  If the
 device is USB ACA compliant, it will successfully charge.  If a Male-Male cable
 is unavailable, or if the device doesn't honor the USB ACA specification, a

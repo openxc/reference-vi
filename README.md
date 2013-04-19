@@ -5,14 +5,14 @@ OpenXC Vehicle Interface
 
 ### Description
 
-The Vehicle Interface is an open source microcontroller board that reads data
+The Vehicle Interface (VI) is an open source microcontroller board that reads data
 from an automotive OBD-II diagnostic port. Vehicle data is decoded by the
 translator into a more human and machine readable format, JSON. The decoded data
 can be read from either of the USB or Bluetooth interfaces.
 
 ### Features
 
-* Reads from 2 different CAN busses (Diagnostic Fast and Diagnostic Med) at up
+* Reads from 2 different CAN buses (Diagnostic Fast and Diagnostic Med) at up
   to 1Mbps per bus.
 * Decodes CAN data into a human and machine-readable format (currently JSON)
 * Can relay vehicle data at up to 250kbps over a Bluetooth connection
@@ -29,7 +29,8 @@ Documents
 * [Board Layout (eagle)](./CANtranslator.brd)
 * [Board Layout (png image)](./CANtranslator.brd.png)
 * [Bill of Materials](./CANtranslator.bom.xls)
-* [Testing Results + Changelog](./CAN Translator Changelog + Testing.xls)
+* schematics/DESIGN_CRITERIA.xls
+* CHANGELOG.xls
 
 ### Assembly Files
 

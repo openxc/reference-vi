@@ -66,7 +66,7 @@ Assembly file output instructions
 	"CANtranslator.parts.txt".  Click OK.
 *	Manually compare "CANtranslator.parts.txt" to "CANtranslator.bom.xls".  Make
 	sure the two lists are consistent.
-*	Open "CAN Translator Changelog + Testing.xls".  Update the file to reflect
+*	Open "CHANGELOG.xls".  Update the file to reflect
 	the new revision.
 *	Create a zip archive with the following files (at least):
 	*	CANtranslator.pdf
@@ -90,7 +90,7 @@ Assembly file output instructions
 	*	CANtranslator.bom.xls
 	*	CANtranslator.sch
 	*	CANtranslator.brd
-	*	CAN Translator Changelog + Testing.xls
+	*	CHANGELOG.xls
 
 Gerber file descriptions:
 -------------------------
