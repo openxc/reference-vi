@@ -1,0 +1,132 @@
+Partlist
+
+Exported from CANtranslator.sch at 3/11/13 7:49 PM
+
+EAGLE Version 6.1.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part     Value                     Device                        Package               Library                    Sheet
+
+C1       0.1u                      CAP0805                       0805                  BUG                        1
+C2       150u                      CAP_POL5MMX2D                 CPOL-5MMX2D           BUG                        1
+C3       270u                      CAP_POL10MMX5D                CPOL-10MMX5D          BUG                        1
+C4       22n                       CAP0402-CAP                   0402-CAP              BUG                        1
+C5       0.1u                      CAP0805                       0805                  BUG                        1
+C6       0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C7       0.47u                     CAP0805                       0805                  BUG                        1
+C8       0.1u                      CAP0805                       0805                  BUG                        1
+C9       47u                       CAP1210                       1210                  BUG                        1
+C10      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C11      22n                       CAP0402-CAP                   0402-CAP              BUG                        1
+C12      0.47u                     CAP0805                       0805                  BUG                        1
+C13      0.1u                      CAP0805                       0805                  BUG                        1
+C14      10u                       CAP0805                       0805                  BUG                        1
+C15      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C16      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C17      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C18      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C19      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C20      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C21      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C22      1u                        CAP0402-CAP                   0402-CAP              BUG                        1
+C23      0.1u                      CAP0402-CAP                   0402-CAP              BUG                        1
+C24      18p                       CAP0402-CAP                   0402-CAP              BUG                        1
+C25      18p                       CAP0402-CAP                   0402-CAP              BUG                        1
+C26      18p                       CAP0402-CAP                   0402-CAP              BUG                        1
+C27      1u                        CAP0402-CAP                   0402-CAP              BUG                        1
+C28      18p                       CAP0402-CAP                   0402-CAP              BUG                        1
+C29      100p                      CAP0402-CAP                   0402-CAP              BUG                        1
+C30      100p                      CAP0402-CAP                   0402-CAP              BUG                        1
+C31      100p                      CAP0402-CAP                   0402-CAP              BUG                        1
+C32      100p                      CAP0402-CAP                   0402-CAP              BUG                        1
+C33      100p                      CAP0402-CAP                   0402-CAP              BUG                        1
+C34      100p                      CAP0402-CAP                   0402-CAP              BUG                        1
+D1       RS1J                      DIODESMA                      SMA-DIODE             BUG                        1
+D2       PESD12VS1ULD              DIODE-TVS-SOD882D             SOD-882D              BUG                        1
+D3       1SMB16CAT3G               DIODE-TVS-SMB                 SMB-DIODE             BUG                        1
+D4       PESD1CAN                  DIODE_ESD_DUAL-SOT-23         SOT23                 BUG                        1
+D5       PESD1CAN                  DIODE_ESD_DUAL-SOT-23         SOT23                 BUG                        1
+D6       PESD5V0X1BL               DIODE_ESD_BI-SOD882           SOD-882               BUG                        1
+D7       PESD5V0X1BL               DIODE_ESD_BI-SOD882           SOD-882               BUG                        1
+D8                                 DIODE_ESD_DUAL-SOT-1123       SOT-1123              BUG                        1
+D9                                 DIODE_ESD_DUAL-SOT-1123       SOT-1123              BUG                        1
+D10                                DIODE_ESD_DUAL-SOT-1123       SOT-1123              BUG                        1
+F1       MF-MSMF110/16-2           PTCFUSE-1206                  R1206                 adafruit                   1
+FB1      742843122                 INDUCTOR0402                  C0402                 BUG                        1
+IC1      LM340S-50                 V_REG_317DPACK                V-REG_DPACK           SparkFun-PowerIC           1
+IC2      TLE4284DV33               V_REG_317DPACK                V-REG_DPACK           SparkFun-PowerIC           1
+IC3      TJA1048T                  TJA1048-SO14                  SO14                  BUG                        1
+IC5      LPC1769FBD100             LPC1768_SPLIT-TQFP            TQFP100               BUG                        1
+IC6      RN41-I/RM                 BLUETOOTH-RN41"               RN41                  SparkFun-RF                1
+IC7      TPS2421-2                 TPS2421SO8                    POWER_SO8             BUG                        1
+J1       USB_MINIB_SHIELD-10118193 USB_MINIB_SHIELD-10118193     10118193              BUG                        1
+J2       OBDII                     M08X2-OBDII-COMTECH           OBDII-COMTECH         BUG                        1
+J3       ISP                       ARDUINO_SERIAL_PROGRAMPTH     1X06                  SparkFun-Connectors        1
+J4       PWR OUT                   M022-1445055-2                2-1445055-2           BUG                        1
+J5       ARM mini-JTAG             M05X2-SHF-105-01-X-D-SM       SHF-105-01-X-D-SM     BUG                        1
+JP2      ISP_EN                    M02PTH                        1X02                  SparkFun-Connectors        1
+LED1     RGB                       LED_3X_COMMON_CATHODE         LED5MM-RGB            BUG                        1
+LED2     SML-LX0603SRW             LED0603                       LED-0603              BUG                        1
+LED3     SML-LX0603SRW             LED0603                       LED-0603              BUG                        1
+LED4     RGB                       LED_3X_COMMON_CATHODE         LED5MM-RGB            BUG                        1
+Q1       BC856                     TRANSISTOR_PNPSMD             SOT23-3               SparkFun-DiscreteSemi      1
+Q2       32k                       CRYSTAL-ST2012SB              ST2012SB              BUG                        1
+Q3       12M                       CRYSTAL-CX3225SB              CX3225SB              BUG                        1
+R1       120                       RESISTOR0402-RES              0402-RES              BUG                        1
+R2       120                       RESISTOR0402-RES              0402-RES              BUG                        1
+R3       10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R4       17.4                      RESISTOR0402-RES              0402-RES              BUG                        1
+R5       143                       RESISTOR0402-RES              0402-RES              BUG                        1
+R6       30                        RESISTOR0402-RES              0402-RES              BUG                        1
+R7       33E                       RESISTOR0402-RES              0402-RES              BUG                        1
+R8       1.5k                      RESISTOR0402-RES              0402-RES              BUG                        1
+R9       2k                        RESISTOR0402-RES              0402-RES              BUG                        1
+R10      33E                       RESISTOR0402-RES              0402-RES              BUG                        1
+R11      560                       RESISTOR0402-RES              0402-RES              BUG                        1
+R12      10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R13      10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R14      10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R15      4.7k                      RESISTOR0402-RES              0402-RES              BUG                        1
+R16      10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R17      10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R18      49.9k                     RESISTOR0402-RES              0402-RES              BUG                        1
+R19      560                       RESISTOR0402-RES              0402-RES              BUG                        1
+R20      143                       RESISTOR0402-RES              0402-RES              BUG                        1
+R21      30                        RESISTOR0402-RES              0402-RES              BUG                        1
+R22      17.4                      RESISTOR0402-RES              0402-RES              BUG                        1
+R23      10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R24      10k                       RESISTOR0402-RES              0402-RES              BUG                        1
+R25      120                       RESISTOR0402-RES              0402-RES              BUG                        1
+R25B     DNP                       RESISTORPTH-1/4W              AXIAL-0.4             BUG                        1
+S1       RESET                     SWITCH-MOMENTARY-2-SMD-1101NE TACTILE-SWITCH-1101NE SparkFun-Electromechanical 1
+S2       PROG                      SWITCH-MOMENTARY-2-SMD-1101NE TACTILE-SWITCH-1101NE SparkFun-Electromechanical 1
+SJ1      CLOSED                    SOLDERJUMPERTRACE             SJ_2S-TRACE           SparkFun-Passives          1
+SJ2      CLOSED                    SOLDERJUMPERTRACE             SJ_2S-TRACE           SparkFun-Passives          1
+SJ3                                SOLDERJUMPER_2WAYPASTE1&2     SJ_3_PASTE1&2         SparkFun-Passives          1
+SJ4                                SOLDERJUMPER_2WAYPASTE1&2     SJ_3_PASTE1&2         SparkFun-Passives          1
+SJ5      OPEN                      SOLDERJUMPERNO                SJ_2S-NO              SparkFun-Passives          1
+SJ6      CLOSED                    SOLDERJUMPERTRACE             SJ_2S-TRACE           SparkFun-Passives          1
+TP1                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP2                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP3                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP4                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP5                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP6                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP7                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP8                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP9                                TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP10                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP11                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP12                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP13                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP14                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP15                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP16                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP17                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP18                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP19                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP20                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP21                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP22                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
+TP23                               TEST-POINT3X5                 PAD.03X.05            SparkFun-Passives          1
