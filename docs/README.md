@@ -72,8 +72,9 @@ LPC1769 to enter a USB bootloader if available.  See
 #### Solder Jumpers
 
 * SJ1, SJ2 - These are used to engage the 120 ohm termination resistor for CAN
-  interfaces A and B respectively. If being used in a vehicle, these jumpers
-  should be shorted.
+  interfaces A and B respectively. If being used in a test bench without a full
+  CAN network, you probably want these enabled. It may be simpler and more
+  reversible to add the resistors to the OBD-II cable, instead.
 * SJ3, SJ4 - These switch the CAN B channel between the Diagnostic Medium Speed
   and Multimedia CAN Busses exposed by the OBD-II connector on Ford vehicles.
   They are each shorted towards the PCB edge, enabling the Diagnostic interface
