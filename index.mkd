@@ -1,0 +1,36 @@
+---
+layout: default
+title: OpenXC Open Source Vehicle Interface
+---
+
+<div class="page-header">
+    <h1><a href="http://openxcplatform.com">OpenXC</a> {{page.title}}</h1>
+</div>
+
+![Vehicle Interface](/images/CANTranslator_scaled.JPG "The Vehicle Interface")
+
+<h2>What is OpenXC?</h2>
+
+<a href="http://openxcplatform.com">OpenXC</a> is an API to your car - by
+installing a small hardware module to read and translate metrics from a
+car's internal network, the data becomes accessible from most Android
+applications using the OpenXC library. You can start making vehicle-aware
+applications that have better interfaces based on context, can minimize
+distraction while driving, are integrated with other connected services, and
+can offer you more insight into your car's operation.
+
+<h2>What is this vehicle interface?</h2>
+
+This vehicle interface (VI or "CAN translator") is based on a microcontroller with two
+external connections - one to the CAN bus via the OBD-II port, and one to a
+[host device][] via USB or Bluetooth. It passively listens for a subset of CAN
+messages, performs required unit conversion or factoring and outputs a [generic
+version][output-format] to the USB interface.
+
+The particular design is an open source microcontroller board that reads data
+from an automotive OBD-II diagnostic port. Vehicle data is decoded by the
+translator into a more human and machine readable format, JSON. The decoded data
+can be read from either of the USB or Bluetooth interfaces.
+
+[output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
+[host device]: http://openxcplatform.com/android/index.html
