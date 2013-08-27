@@ -42,11 +42,11 @@ LPC1769 to enter a USB bootloader if available.  See
 
 ### Parts Layout
 
-![Interface Connections](./CANTranslator_connectors.JPG "Interface board - Connections")
+![Interface Connections](./connectors.JPG "Interface board - Connections")
 
-![Interface Headers Bottom](./CANTranslator_headers_bottom.JPG "Interface board - headers on bottom side")
+![Interface Headers Bottom](./headers_bottom.JPG "Interface board - headers on bottom side")
 
-![Interface Headers Top](./CANTranslator_headers_top.JPG "Interface board - headers on top side")
+![Interface Headers Top](./headers_top.JPG "Interface board - headers on top side")
 
 ### Inputs/Outputs
 

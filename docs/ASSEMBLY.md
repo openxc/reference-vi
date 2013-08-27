@@ -46,50 +46,50 @@ Assembly file output instructions
 	(17)Pads, (18)Vias, (20)Dimension, (21)tPlace, (23)tOrigins, (48)Document,
 	(49)Reference, (51)tDocu, (125)tAssy, (144)DrillLegend
 *	Hit print (Ctrl+P), select "Print to File (PDF)" as the printer, select
-	CANtranslator_ASSY_TOP.pdf, paper size A4, scale factor 1.  Click OK.
+	vehicle-interface_ASSY_TOP.pdf, paper size A4, scale factor 1.  Click OK.
 *	Deselect all layers, select only the following layers:
 	(17)Pads, (18)Vias, (20)Dimension, (22)bPlace, (24)bOrigins, (48)Document,
 	(49)Reference, (52)bDocu, (126)bAssy, (144)DrillLegend
 *	Hit print (Ctrl+P), select "Print to File (PDF)" as the printer, select
-	CANtranslator_ASSY_BOT.pdf, paper size A4, scale factor 1.  Click OK.
+	vehicle-interface_ASSY_BOT.pdf, paper size A4, scale factor 1.  Click OK.
 *	Deselect all layers, select only the following layers:
 	(1)Top, (16)Bottom, (17)Pads, (18)Vias, (20)Dimension, (21)tPlace,
 	(22)bPlace, (25)tNames, (51)tDocu, (52)bDocu
 *	Zoom in so that PCB is centered in the screen and fills the window as much
 	as possible.
-*	Select File->Export->Image.  Select CANtranslator.brd.png.  Set "Resolution"
+*	Select File->Export->Image.  Select vehicle-interface.brd.png.  Set "Resolution"
 	to 600.  Set "Area" to "Window".
 *	In the schematic window, hit print (Ctrl+P), select "Print to File (PDF)" as
-	the printer, select CANtranslator.sch.pdf, paper size A4, scale factor 1,
+	the printer, select vehicle-interface.sch.pdf, paper size A4, scale factor 1,
 	page limit 1  Click OK.
 *	In the schematic window, select File->Export->Partlist.  Select
-	"CANtranslator.parts.txt".  Click OK.
-*	Manually compare "CANtranslator.parts.txt" to "CANtranslator.bom.xls".  Make
+	"vehicle-interface.parts.txt".  Click OK.
+*	Manually compare "vehicle-interface.parts.txt" to "vehicle-interface.bom.xls".  Make
 	sure the two lists are consistent.
 *	Open "CAN Translator Changelog + Testing.xls".  Update the file to reflect
 	the new revision.
 *	Create a zip archive with the following files (at least):
-	*	CANtranslator.pdf
-	*	CANtranslator.brd.png
-	*	CANtranslator_ASSY_TOP.pdf
-	*	CANtranslator_ASSY_BOT.pdf
-	*	CANtranslator.tsp
-	*	CANtranslator.top
-	*	CANtranslator.smt
-	*	CANtranslator.smb
-	*	CANtranslator.slk
-	*	CANtranslator.oln
-	*	CANtranslator.gpi
-	*	CANtranslator.dxf
-	*	CANtranslator.drl
-	*	CANtranslator.dri
-	*	CANtranslator.drd
-	*	CANtranslator.bsp
-	*	CANtranslator.bsk
-	*	CANtranslator.bot
-	*	CANtranslator.bom.xls
-	*	CANtranslator.sch
-	*	CANtranslator.brd
+	*	vehicle-interface.pdf
+	*	vehicle-interface.brd.png
+	*	vehicle-interface_ASSY_TOP.pdf
+	*	vehicle-interface_ASSY_BOT.pdf
+	*	vehicle-interface.tsp
+	*	vehicle-interface.top
+	*	vehicle-interface.smt
+	*	vehicle-interface.smb
+	*	vehicle-interface.slk
+	*	vehicle-interface.oln
+	*	vehicle-interface.gpi
+	*	vehicle-interface.dxf
+	*	vehicle-interface.drl
+	*	vehicle-interface.dri
+	*	vehicle-interface.drd
+	*	vehicle-interface.bsp
+	*	vehicle-interface.bsk
+	*	vehicle-interface.bot
+	*	vehicle-interface.bom.xls
+	*	vehicle-interface.sch
+	*	vehicle-interface.brd
 	*	CAN Translator Changelog + Testing.xls
 
 Gerber file descriptions:
@@ -114,7 +114,7 @@ Factory Testing Plan
 A test jig can be created using [Spring Pogo
 Pins](https://www.adafruit.com/products/394).  At a minimum, the test jig should
 contain pogo pins and mounting holes at the PCB locations outlined by [this
-spreadsheet](./CANtranslator_pogo_locations.xls).  A rooted linux host is
+spreadsheet](./pogo_locations.xls).  A rooted linux host is
 necessary for this test - perhaps an embedded android device like a raspberyPi,
 Beagleboard or pcDuino.
 
