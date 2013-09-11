@@ -216,13 +216,13 @@ quick reference)
 
 For greater detail, see CHANGELOG.xls
 
-#### R0.3:
+#### v0.3:
 
 * The very first run of prototypes are lacking epoxy on the USB Micro connector
   and the connector may break under stress.  This will be fixed in subsequent
   manufacturing runs.
 
-#### R0.2:
+#### v0.2:
 
 * Output Power Jack Polarity is incorrect - The output power jack should be
   configured such that Pin 1 (the keyed pin) is Ground, and Pin 2 is +12V. This
@@ -250,8 +250,8 @@ For greater detail, see CHANGELOG.xls
       data to be relayed between UART0 (the 6-pin ISP header) and UART1 (the
       bluetooth interface).
 
-Design details:
----------------
+Design Details and Consideration
+--------------------------------
 
 ### MCU Selection
 
