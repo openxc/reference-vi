@@ -41,5 +41,43 @@ can be read from either of the USB or Bluetooth interfaces.
 * Can relay vehicle data at up to 11Mbps over a USB connection
 * Passes up to 6A of power from the vehicle to the Dock and Accessories
 
+### Known issues:
+
+For greater detail, see CHANGELOG.xls
+
+#### v0.3:
+
+* The very first run of prototypes are lacking epoxy on the USB Micro connector
+  and the connector may break under stress.  This will be fixed in subsequent
+  manufacturing runs.
+
+#### v0.2:
+
+* Output Power Jack Polarity is incorrect - The output power jack should be
+  configured such that Pin 1 (the keyed pin) is Ground, and Pin 2 is +12V. This
+  is flipped on the R0.2 PCB. A custom cable was created to patch this issue,
+  and is labeled `R0.2 Only`. Only use this cable with R0.2 prototypes,
+  otherwise the KBoard TVS Diode D2 and/or the VI power switch IC7
+  may be damaged or destroyed.
+* JTAG CLK line - the JTAG signal RTCK was disconnected on R0.2 boards. It has
+  manually been replaced with a wire. Occasionally the additional capacitance of
+  this wire can cause JTAG errors - try reducing the JTAG clock rate.
+* JTAG Ground noise - Occasionally JTAG errors can be caused by a ground loop
+  between a USB JTAG adapter and the MicroUSB port on the VI. Try
+  removing one or more connections to ground: IE, try powering the prototype
+  from ONLY +5V USB verses the +12V OBD-II supply.
+* Bluetooth connection dropout - Under some circumstances, the RN-41 bluetooth
+  chipset will lock up and drop an active bluetooth connetion when under heavy
+  load:
+    * The most common cause of this problem is software flow control: make sure
+      to use the RTS and CTS pins for UART1.
+    * The RN-41 configuration timer can also cause the RN-41 input buffer to
+      fill. From the LPC1769, enter configuration mode by transmitting
+      ```$$$```, disable the configuration timer with ```ST,0\r\n``` and then
+      exit configuration mode by entering ```---\r\n```. Finally, power cycle
+      the VI. The test firmware `rn42-passthrough` enables serial
+      data to be relayed between UART0 (the 6-pin ISP header) and UART1 (the
+      bluetooth interface).
+
 [output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
 [host device]: http://openxcplatform.com/android/index.html
