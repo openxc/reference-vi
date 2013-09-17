@@ -8,10 +8,23 @@ OpenXC vehicle interface reference design, originally created by Ford.
 
 ## Documentation
 
-The documentaiton is in the form of simple website, written in Markdown with the
+The documentation is in the form of simple website, written in Markdown with the
 HTML generated with [Jekyll][jekyll].
 
 [jekyll]: http://jekyllrb.com/
+
+### Organization
+
+* the `*.mkd` files are the source for the documentation website - they're very
+  readable as plain text files, too, if you're just digging through the
+  repository.
+* `static/` contains the static JavaScript, CSS and images for the site.
+* `_layouts/default.html` contains the main layout for the site. There's only 1
+  layout for now, although there could others in the future.
+* `electrical/` contains the electrical design files and documentation.
+* `mechanical/` contains the mechanical housing design files and documentation.
+* `assembly/` contains documentation to support final assembly at a fabrication
+  house.
 
 ### Local development
 
@@ -74,14 +87,6 @@ The documentation site is hosted on GitHub pages, so deploying is as simple as
 commiting your changes to the `gh-pages` branch and pushing to GitHub. It gets
 regenerated within a minute or two, and then it's live. This of course means
 don't push anything in the `gh-pages` branch that isn't 100% done!
-
-## Organization
-
-`_layouts/default.html` contains the main layout for the site. There's only 1
-layout for now, although there could others in the future.
-
-There's lots you can do with the templates (they're using the Liquid template
-engine) - see the [Jekyll docs](https://github.com/mojombo/jekyll/wiki).
 
 ## License
 
