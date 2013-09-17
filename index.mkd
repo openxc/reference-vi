@@ -32,5 +32,14 @@ from an automotive OBD-II diagnostic port. Vehicle data is decoded by the
 translator into a more human and machine readable format, JSON. The decoded data
 can be read from either of the USB or Bluetooth interfaces.
 
+### Features
+
+* Reads from 2 different CAN buses (Diagnostic Fast and Diagnostic Med) at up
+  to 1Mbps per bus.
+* Decodes CAN data into a human and machine-readable format (currently JSON)
+* Can relay vehicle data at up to 250kbps over a Bluetooth connection
+* Can relay vehicle data at up to 11Mbps over a USB connection
+* Passes up to 6A of power from the vehicle to the Dock and Accessories
+
 [output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
 [host device]: http://openxcplatform.com/android/index.html

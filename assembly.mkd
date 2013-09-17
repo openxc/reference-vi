@@ -1,0 +1,21 @@
+---
+layout: default
+title: Assembly
+---
+
+### Assembly Files
+
+* [Board Layout DXF](./Fabrication/vehicle-interface.dxf)
+* [Fabrication files](./schematics/fabrication)
+    * .top  - Top Copper Layer
+    * .bot  - Bottom Copper Layer
+    * .smt - Top Soldermask
+    * .slk - Top Silkscreen
+    * .tsp - Top Solderpaste
+    * .smb - Bottom Soldermask
+    * .bsk - Bottom Silkscreen
+    * .bsp - Bottom Solderpaste
+    * .oln - PCB Outline
+    * .drd - Excellon Drill Data
+    * .drl - Basic Drill tool information
+    * .dri - Extended Drill tool information
