@@ -1,0 +1,14 @@
+---
+layout: default
+section: overview
+---
+
+<ul class="nav nav-pills">
+  <li {% if page.url == '/index.html' %}class="active"{% endif %}><a href="/index.html">Overview</a></li>
+  <li><a href="/issues.html">Known Issues</a></li>
+  <li><a href="/future-work.html">Future Work</a></li>
+</ul>
+
+<hr/>
+
+{{ content }}

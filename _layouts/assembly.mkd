@@ -1,0 +1,14 @@
+---
+layout: default
+section: assembly
+---
+
+<ul class="nav nav-pills">
+  <li><a href="/assembly/index.html">Assembly</a></li>
+  <li><a href="/assembly/electrical/index.html">Electrical Fabrication Sources</a></li>
+  <li><a href="/assembly/testing.html">Factory Testing</a></li>
+</ul>
+
+<hr/>
+
+{{ content }}

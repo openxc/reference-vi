@@ -1,10 +1,7 @@
 ---
-layout: default
-title: Testing
+layout: assembly
+title: Testing Plan
 ---
-
-Factory Testing Plan
---------------------
 
 A test jig can be created using [Spring Pogo
 Pins](https://www.adafruit.com/products/394).  At a minimum, the test jig should
@@ -41,7 +38,6 @@ Beagleboard or pcDuino.
  below.
 1. Deploy production firmware to board
 1. Connecto to USB, verify production firmware is successfully running
-
 
 **Bluetooth**
 

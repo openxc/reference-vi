@@ -1,0 +1,13 @@
+---
+layout: electrical
+---
+
+<ul class="nav nav-pills">
+  <li class=""><a href="/electrical/design/power.html">Power</a></li>
+  <li class=""><a href="/electrical/design/microcontroller.html">Microcontroller</a></li>
+  <li class=""><a href="/electrical/design/can.html">CAN</a></li>
+  <li class=""><a href="/electrical/design/bluetooth.html">Bluetooth</a></li>
+  <li class=""><a href="/electrical/design/usb.html">USB</a></li>
+</ul>
+
+{{ content }}

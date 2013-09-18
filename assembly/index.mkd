@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: assembly
 title: Assembly Instructions
 ---
 
 TODO explain how we order PCBS, send to a fab house, etc - what exactly needs to
 happen to get this made?
-
-[Electrical Fabrication Source](/assembly/electrical/index.html)
-[Factory Testing](/assembly/testing.html)

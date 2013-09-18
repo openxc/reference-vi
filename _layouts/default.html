@@ -24,22 +24,15 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
             <a class="brand" href="/"><img src="/static/images/openxc-logo.png"
                 alt="OpenXC"/> VI Reference Design</a>
-            <div class="nav-collapse">
-                <ul class="nav">
-                    <li class="{% if page.url contains 'overview' %}active{% endif %}"><a href="/index.html">Overview</a></li>
-                    <li class="{% if page.url contains 'electrical' %}active{% endif %}"><a href="/electrical/index.html">Electrical</a></li>
+              <ul class="nav">
+                    <li class="{% if page.section == 'overview' %}active{% endif %}"><a href="/index.html">Overview</a></li>
+                    <li class="{% if page.url contains 'electrical/' %}active{% endif %}"><a href="/electrical/index.html">Electrical</a></li>
                     <li class="{% if page.url contains 'mechanical' %}active{% endif %}"><a href="/mechanical/index.html">Mechanical</a></li>
-                    <li class="{% if page.url contains 'assembly' %}active{% endif %}"><a href="/assembly/index.html">Assembly</a></li>
+                    <li class="{% if page.url contains 'assembly/' %}active{% endif %}"><a href="/assembly/index.html">Assembly</a></li>
                     <li class="{% if page.url contains 'firmware' %}active{% endif %}"><a href="/firmware/index.html">Firmware</a></li>
-                </ul>
-            </div>
+              </ul>
             <a class="brand reverse-brand" href="http://openxcplatform.com">...back to OpenXC</a>
         </div>
     </div>
@@ -48,7 +41,7 @@
 <div class="container">
   <div class="span12">
     <div class="page-header">
-        <h1>{{page.title}}</h1>
+        <h2>{{page.title}}</h2>
     </div>
 
     {{ content }}

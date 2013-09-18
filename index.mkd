@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: overview
 title: OpenXC Vehicle Interface Reference Design
 ---
-
-* [Known Issues](/issues.html)
-* [Future Work and Cost Optimizations](/future-work.html)
 
 ![Vehicle Interface](/static//images/scaled.jpg "The Vehicle Interface")
 

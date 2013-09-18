@@ -1,0 +1,13 @@
+---
+layout: default
+section: firmware
+---
+
+<ul class="nav nav-pills">
+  <li><a href="/firmware/index.html">Firmware</a></li>
+  <li><a href="/firmware/vi-firmware.html">OpenXC VI Firmware</a></li>
+</ul>
+
+<hr/>
+
+{{ content }}

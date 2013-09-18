@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: firmware
 title: OpenXC Vehicle Interface Firmware
 ---
 

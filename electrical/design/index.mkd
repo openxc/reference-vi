@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: electrical-design
 title: Electrical Design Considerations
 ---
 
@@ -26,9 +26,3 @@ The production board must have:
 * Self-test function to validate boards that are mass produced
 * 6-pin ISP header
 * Powered by the vehicle via the OBD-II port
-
-* [Power](/electrical/power.html)
-* [Microcontroller](/electrical/microcontroller.html)
-* [CAN](/electrical/can.html)
-* [Bluetooth](/electrical/bluetooth.html)
-* [USB](/electrical/usb.html)

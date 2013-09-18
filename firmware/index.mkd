@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: firmware
 title: Firmware
 ---
-
-[OpenXC VI Firmware](/firmware/vi-firmware.html)
 
 ### How to program
 

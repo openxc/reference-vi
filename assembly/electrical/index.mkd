@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: assembly
 title: PCB Assembly Sources
 ---
 
-## Special Assembly Instructions
+### Special Assembly Instructions
 
 * See NOTES: on ASSY drawings for general notes
 * Ensure no excess solder is wicked into J0 (USB Micro Connector).  Verify a USB
@@ -20,7 +20,7 @@ title: PCB Assembly Sources
 * Ensure part Q2 (12MHz crystal) is oriented such that the long dimension
   follows the centerline on the silkscreen layer.
 
-## Assembly Files
+### Assembly Files
 
 * [Board Layout DXF](./Fabrication/vehicle-interface.dxf)
 * [Gerber files](./schematics/fabrication)
@@ -37,7 +37,7 @@ title: PCB Assembly Sources
     * .drl  Basic Drill tool information
     * .dri  Extended Drill tool information
 
-## Assembly file output instructions
+### Assembly file output instructions
 
 * Verify silkscreen and PCB Frame artwork reflects accurate revision
 * Update layers 125 and 126 - text on top of each component should identify the

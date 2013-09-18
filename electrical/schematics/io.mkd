@@ -1,3 +1,8 @@
+---
+layout: electrical
+title: Pins, Ports, Inputs and Outputs
+---
+
 ### Inputs/Outputs
 
 #### Buttons
