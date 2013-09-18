@@ -1,0 +1,80 @@
+---
+layout: default
+title: Power Supply
+---
+
+### Power Section
+
+The VI uses two heavy-duty low dropout linear regulators to
+convert the unpredictable +12V automotive power source to the +5V and +3.3V
+rails needed by the MCU and related ICs.  Incoming power is protected from
+overvoltage by D3, a [SMBJ16CA](http://www.fairchildsemi.com/ds/SM/SMBJ16CA.pdf)
+Transient Voltage Suppressor (TVS) diode.  D3 will protect the interface from
+any voltage over 19.7V (Vbr).  The power regulators can handle up to 40V, but
+the Dock power switch (IC7) can only tolerate up to 20V.  Reverse voltage is
+protected by D1.  Both regulators do not require any additional current or
+temperature protection - they can safely drive into a short circuit at
+temperatures up to 150 degrees C, and will limit current if they become too hot.
+Plenty of bulk and bypass capacitance has been provided to absorb automotive
+power transients.
+
+The regulators are cascaded such that the +5V rail supplies the +3.3V rail.  The
+TLE4284DV33 has a maximum voltage drop of 1.4V, so it can be safely powered by
+any source above 4.7V.  While this puts additional load on the +5V rail, it also
+allows the interface to be powered either by the OBD-II connector or the
+MicroUSB port.  Both regulators can deliver current up to 1.6A.  Current budget:
+
+* 5V regulator capacity: 1600mA
+* USB Charging Limit (fuse): 1000mA
+* RN-41 average TX rate: 60mA
+* LPC1769 Base consumption @ 100MHz: 50mA
+* LPC1769 peripherals (2xCAN+2xUART): 3mA
+* Both RGB LEDs on at full: 60mA
+* TJA1048T both channels dominant: 140mA
+* Total: 1313mA
+
+This yields a headroom of ~300mA when all peripherals are active and a Tablet is
+charging at 1A.
+
+### Power Input/Output
+
+The VI has the following power connections:
+
+* OBD-II Automotive Power: Input @ 12V
+* Dock Power Connector: Output @ 5V up to 6A
+* USB Micro Connector: Input OR Output @5V up to 1A
+
+The Dock power connector is controlled by a [TPS2421-2 power switch with
+internal MOSFET](http://www.ti.com/lit/ds/symlink/tps2421-2.pdf).  This allows
+the Dock power to be disabled when the vehicle is turned off, as well as
+providing current protection.  The power switch has an active 6A limit, and will
+actively attempt to re-engage power when the limit is tripped ("retry on
+fault").
+
+The USB Micro Connector is directly connected to the +5V bus through a Fuse.
+The lack of a diode means that the connected USB device can either consume or
+supply current.  If a PC is connected to the USB Micro connector, it will power
+the 3.3V regulator and the +5V regulator will be bypassed.  If an android tablet
+is connected that supports USB OTG Charging, it will be allowed to consume +5V
+power.  A resettable fuse (F1) has been added to protect the VI
+from a bad USB cable or USB Host.  The fuse is a [Bourns
+MF-MSMF110/16-2](http://www.bourns.com/pdfs/mfmsmf.pdf).  The fuse will
+automatically reset when power is removed and the fuse is allowed to cool off.
+This has an added downside of temperature dependence - the fuse can only pass
+the full 1A of current up to 40 degrees C.  Above that temperature the limit
+slowly decreases - see the datasheet for a thermal derating chart.
+
+
+Some notes on the power supply, designed by Kevin Hille and Karl Wojcik.
+
+* One of the 330 caps at the top, going into the 5v regulator, is missing the
+  polarity sign - the top line should have the +.
+* C5 protects from low voltage dropout
+* Diodes make sure reversing 12v and ground doesn't blow anything up
+* c3/c4 are high frequency filters to protect from a voltage dropout
+* 47uF - keeps 3v3 regulator stable and protects from dropouts
+* Could take the 3.3v regulator off of the 5v to minimize the heat that has to
+  be dissapated - going from 5 -> 3.3 instead of 12 -> 3.3v.
+  * Fill in the copper around the regulator as a heatsink
+
+![Power Supply Schematic](/electrical/img/powersupply_v1.0.jpg)
