@@ -3,8 +3,6 @@ layout: default
 title: Power Supply
 ---
 
-### Power Section
-
 The VI uses two heavy-duty low dropout linear regulators to
 convert the unpredictable +12V automotive power source to the +5V and +3.3V
 rails needed by the MCU and related ICs.  Incoming power is protected from

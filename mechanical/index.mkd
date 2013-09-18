@@ -3,6 +3,39 @@ layout: default
 title: Mechanical Design
 ---
 
+TODO add picture
+
+We've manufacturing this design succesfully with a MakerBot Replicator 2,
+SLA, and most recently, injection molded by ProtoMold. At ProtoMold, the
+materials used were:
+
+* VI Top and Bottom: Bayblend T85 XF-901510
+* VI Difffuser: Lexan 3412R-131 (Natural 20% Glass Fiber PC)
+
+## Sources
+
+The master source files for the 3D design were created in CATIA, which
+unfortunately is neither open source nor affordable. We've output the design for
+the top of the enclosure, the bottom and the diffuser as STL (triangle) and
+STP (solid) files.
+
+The files are all [stored in a Git repository at
+GitHub](https://github.com/openxc/reference-vi/tree/jekyll/mechanical/sources) -
+pull requests are welcome!
+
+* VI Enclosure Bottom
+  * [CATIA](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-bottom.CATPart)
+  * [STL](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-bottom.stl)
+  * [STP](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-bottom.stp)
+* VI Enclosure Top
+  * [CATIA](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-top.CATPart)
+  * [STL](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-top.stl)
+  * [STP](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-top.stp)
+* Diffuser
+  * [CATIA](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-diffuser.CATPart)
+  * [STL](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-diffuser.stl)
+  * [STP](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-diffuser.stp)
+
 ## Improving Design for Manufacturing
 
 * Decrease mold costs by designing mirror image parts - i.e. the top and bottom

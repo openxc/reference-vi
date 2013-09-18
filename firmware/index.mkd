@@ -3,6 +3,8 @@ layout: default
 title: Firmware
 ---
 
+[OpenXC VI Firmware](/firmware/vi-firmware.html)
+
 ### How to program
 
 The most reliable way to program the VI is via the JTAG

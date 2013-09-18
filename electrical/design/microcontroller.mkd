@@ -1,0 +1,38 @@
+---
+layout: default
+title: Microcontroller
+---
+
+The VI was originally built around a ChipKit MAX32 development
+board, which used a PIC32MX795F512 processor.  We chose to move away from this
+architecture due to frustrations around the open-source support and tools of the
+PIC32 line.  We had trouble developing for this platform in Linux, and had to
+resort to closed-source windows tools in order to use the device effectively.
+Most other MCUs in the same performance category as the PIC32 device lie in the
+[ARM-Cortex-M family](http://en.wikipedia.org/wiki/ARM_Cortex-M), particularly
+the ARM Cortex-M3 core.  Several major MCU manufacturers make Cortex-M3 devices
+(Atmel, NXP, STMicro, TI),  The NXP LPC17XX line was selected due to it's
+excellent open-source compiler support, library support, and ease of
+programming.  Many off-the-shelf open-source hardware designs exist for the
+LPC1768, and this encourages a large amount of community support and a wider
+variety of user-contributed libraries.
+
+The MCU system design was based around the [Blueboard
+LPC1768-H](http://shop.ngxtechnologies.com/product_info.php?products_id=65).
+This was done to allow firmware to be prototyped on an off-the-shelf open-source
+hardware.  The hardware configuration is also compatible with the [MBED rapid
+prototyping board/environment](http://mbed.org/).  The Clock, Power and USB
+subsystems are all equivalent.  The JTAG interface was converted to the 10-pin
+ARM JTAG Mini format to reduce the PCB footprint of the normal large 20-pin JTAG
+connector.  This results in a 12MHz external crystal oscillator stepped up to a
+100MHz system clock.
+
+### LPC1769 Data
+
+* [LPC1769FB100 Product Page](http://www.nxp.com/products/microcontrollers/cortex_m3/LPC1769FBD100.html)
+* [LPC176X Datasheet](http://www.nxp.com/documents/data_sheet/LPC1769_68_67_66_65_64_63.pdf)
+* [LPC17XX User Manual](http://www.nxp.com/documents/user_manual/UM10360.pdf)
+* [Blueboard LPC1768-H Product Page](http://shop.ngxtechnologies.com/product_info.php?products_id=65)
+* [Blueboard LPC1768-H Schematics V2](http://shop.ngxtechnologies.com/download/Schematics/BlueBoard/BB_LPC1768_H/Blueboard_lpc1768_H_V2.pdf)
+* [mbed LPC1768 schematics](http://mbed.org/media/uploads/chris/mbed-005.1.pdf)
+

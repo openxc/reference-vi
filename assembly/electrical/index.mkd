@@ -1,0 +1,109 @@
+---
+layout: default
+title: PCB Assembly Sources
+---
+
+## Special Assembly Instructions
+
+* See NOTES: on ASSY drawings for general notes
+* Ensure no excess solder is wicked into J0 (USB Micro Connector).  Verify a USB
+  Micro cable can successfully connect
+* Ensure J0 (USB Micro Connector) is completely flush to the PCB before/after
+  reflow.  Ensure pins at rear of connector are not lifted off pads.
+* Apply epoxy to J0 for additional structural rigidity
+* Ensure J2 (OBD-II connector) pins are flush with PCB before soldering
+* Ensure J2 (OBD-II connector) is horizontal to PCB before soldering
+* LED1 and LED4 (through hole RGB LEDs) must be bent 90 degrees towards front
+  edge of PCB
+* Ensure both through hole electrolytic capacitors (C2 and C3) are flush against
+  PCB before soldering.
+* Ensure part Q2 (12MHz crystal) is oriented such that the long dimension
+  follows the centerline on the silkscreen layer.
+
+## Assembly Files
+
+* [Board Layout DXF](./Fabrication/vehicle-interface.dxf)
+* [Gerber files](./schematics/fabrication)
+    * .top  Top Copper Layer
+    * .smt  Top Soldermask
+    * .slk  Top Silkscreen
+    * .tsp  Top Solderpaste
+    * .bot  Bottom Copper Layer
+    * .smb  Bottom Soldermask
+    * .bsk  Bottom Silkscreen
+    * .bsp  Bottom Solderpaste
+    * .oln PCB Outline
+    * .drd  Excellon Drill Data
+    * .drl  Basic Drill tool information
+    * .dri  Extended Drill tool information
+
+## Assembly file output instructions
+
+* Verify silkscreen and PCB Frame artwork reflects accurate revision
+* Update layers 125 and 126 - text on top of each component should identify the
+  part designator
+* Delete all content on layer (144) DrillLegend
+* run "drillegend.ulp": Use all default values, click OK.
+* Reselect layer (144) and move the newly created drill legend back onto the
+  frame
+* Verify SSC-EAGLE-2Lyr_v1.0.0.3.dru is loaded as current design rules file
+* Turn on all copper and stopmask layers, turn off silkscreen layers (skip
+  silkscreen error checking, silkscreen will be clipped by assembly house)
+* Preform DRC/ERC check
+* run "drillcfg.ulp": select "Inch" as output format.  Click OK.  Save.
+* run "excellon.cam" in the CAM processor, click "Process Job"
+* run "2LPlus-Sunstone.cam" in the CAM processor, click "Process Job"
+* Double check all gerber files using a gerber file viewer (like gerbv).
+* Deselect all layers, select only the following layers: (17)Pads, (18)Vias,
+  (20)Dimension, (21)tPlace, (22)bPlace, (23)tOrigins, (24)bOrigins,
+  (49)Reference, (51)tDocu, (52)bDocu, (125)tAssy, (126)bAssy
+* run "dxf.ulp": deselect "Fill Areas", make sure "mm" is selected under the
+  "units" header.  Save the DXF file.
+* Deselect all layers, select only the following layers: (17)Pads, (18)Vias,
+  (20)Dimension, (21)tPlace, (23)tOrigins, (48)Document, (49)Reference,
+  (51)tDocu, (125)tAssy, (144)DrillLegend
+* Hit print (Ctrl+P), select "Print to File (PDF)" as the printer, select
+  vehicle-interface_ASSY_TOP.pdf, paper size A4, scale factor 1.  Click OK.
+* Deselect all layers, select only the following layers: (17)Pads, (18)Vias,
+  (20)Dimension, (22)bPlace, (24)bOrigins, (48)Document, (49)Reference,
+  (52)bDocu, (126)bAssy, (144)DrillLegend
+* Hit print (Ctrl+P), select "Print to File (PDF)" as the printer, select
+  vehicle-interface_ASSY_BOT.pdf, paper size A4, scale factor 1.  Click OK.
+* Deselect all layers, select only the following layers: (1)Top, (16)Bottom,
+  (17)Pads, (18)Vias, (20)Dimension, (21)tPlace, (22)bPlace, (25)tNames,
+  (51)tDocu, (52)bDocu
+* Zoom in so that PCB is centered in the screen and fills the window as much as
+  possible.
+* Select File->Export->Image.  Select vehicle-interface.brd.png.  Set
+  "Resolution" to 600.  Set "Area" to "Window".
+* In the schematic window, hit print (Ctrl+P), select "Print to File (PDF)" as
+  the printer, select vehicle-interface.sch.pdf, paper size A4, scale factor 1,
+  page limit 1  Click OK.
+* In the schematic window, select File->Export->Partlist.  Select
+  "vehicle-interface.parts.txt".  Click OK.
+* Manually compare "vehicle-interface.parts.txt" to "vehicle-interface.bom.xls".
+  Make sure the two lists are consistent.
+* Open "CHANGELOG.xls".  Update the file to reflect the new revision.
+* Create a zip archive with the following files (at least):
+    * vehicle-interface.pdf
+    * vehicle-interface.brd.png
+    * vehicle-interface_ASSY_TOP.pdf
+    * vehicle-interface_ASSY_BOT.pdf
+    * vehicle-interface.tsp
+    * vehicle-interface.top
+    * vehicle-interface.smt
+    * vehicle-interface.smb
+    * vehicle-interface.slk
+    * vehicle-interface.oln
+    * vehicle-interface.gpi
+    * vehicle-interface.dxf
+    * vehicle-interface.drl
+    * vehicle-interface.dri
+    * vehicle-interface.drd
+    * vehicle-interface.bsp
+    * vehicle-interface.bsk
+    * vehicle-interface.bot
+    * vehicle-interface.bom.xls
+    * vehicle-interface.sch
+    * vehicle-interface.brd
+    * CHANGELOG.xls

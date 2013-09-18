@@ -1,0 +1,13 @@
+---
+layout: default
+title: Electrical Source Files
+---
+
+* [Schematics (eagle)](./vehicle-interface.sch)
+* [Schematics (pdf)](./vehicle-interface.sch.pdf)
+* [Board Layout (eagle)](./vehicle-interface.brd)
+* [Board Layout (png image)](./vehicle-interface.brd.png)
+* [Bill of Materials](./vehicle-interface.bom.xls)
+* [Testing Results + Changelog](./CAN Translator Changelog + Testing.xls)
+* schematics/DESIGN_CRITERIA.xls
+* CHANGELOG.xls
