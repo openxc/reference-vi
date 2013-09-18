@@ -6,6 +6,30 @@ title: Electrical Design Motivations
 Design Details and Consideration
 --------------------------------
 
+Both the production board and development board must have:
+
+* Microcontroller with enough horsepower to process and send all CAN messages
+  and 2 CAN controllers
+* USB 2.0 port (controller included in microcontroller)
+* 2x CAN transceivers
+* 2x 12-pin headers for CAN
+* UART with optional Bluetooth module
+
+The development board must:
+
+* Be programmable over USB with no extra hardware (we don't care so much if the
+  production board is easily programmable by end users, since they will be so
+  cheap as to just warrant replacement when a new version rolls around)
+* Have a JTAG header for debugging
+* Include extra GPIO for other testing
+* Power via USB
+
+The production board must have:
+
+* Self-test function to validate boards that are mass produced
+* 6-pin ISP header
+* Powered by the vehicle via the OBD-II port
+
 [Power](/electrical/power.html)
 
 ### MCU Selection
@@ -78,6 +102,14 @@ and very crowded, this wasn't implemented perfectly, but seems to be within 85%
 coverage.  The combination of these considerations means that the CAN interface
 should be highly resilient to noise and should limit signal distortion due to
 reflections and other transmission line phenomenon.
+
+CAN transceivers:
+
+* NXP TJA1040 (or other NXP model, but this is supposedly best for being able to
+  suspend) (Ford approved)
+* MCP2551 - Single CAN transceiver (not Ford approved, need 2)
+* NXP TJA1048T - Dual-CAN transceiver (Ford approved)
+  * about 10 cents more expensive than 2 single CAN transceivers
 
 ### Bluetooth Interface
 
