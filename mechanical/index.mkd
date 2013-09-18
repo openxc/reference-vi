@@ -3,4 +3,13 @@ layout: default
 title: Mechanical Design
 ---
 
-TODO
+## Improving Design for Manufacturing
+
+* Decrease mold costs by designing mirror image parts - i.e. the top and bottom
+  of the VI shold be identical. As of right now, this is not possible with the
+  side ports for USB and 12V power.
+* Make the part, and therefore the mold, more modular by creating an
+  interchangeable plate on the side of the VI. This plate could
+  be changed and swapped for different input/output configurations. For
+  example: If down the line we decide to remove the 12V connection to reduce
+  costs, we could just create a new plate instead of an entire new VI mold.
