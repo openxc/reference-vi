@@ -21,16 +21,36 @@ can offer you more insight into your car's operation.
 
 <h2>What is this vehicle interface?</h2>
 
-This vehicle interface (VI or "CAN translator") is based on a microcontroller with two
-external connections - one to the CAN bus via the OBD-II port, and one to a
-[host device][] via USB or Bluetooth. It passively listens for a subset of CAN
-messages, performs required unit conversion or factoring and outputs a [generic
-version][output-format] to the USB interface.
+The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
+(VI or CAN translator) is piece of hardware that connects to the car's CAN bus,
+translates proprietary CAN messages to the standard [OpenXC message
+format][output-format] and sends the output over USB, Bluetooth or Ethernet/WiFi
+to a [host device][].
 
-The particular design is an open source microcontroller board that reads data
-from an automotive OBD-II diagnostic port. Vehicle data is decoded by the
-translator into a more human and machine readable format, JSON. The decoded data
-can be read from either of the USB or Bluetooth interfaces.
+The particular unit is a reference design for a "dongle" style vehicle interface
+that connects directly to the diagnostic port with no cable. Ford created this
+design as an iteration from the original, [chipKIT-based vehicle
+interface](http://chipkit-vi.openxcplatform.com) with the goal to:
+
+* Require no OBD-II cable to connect to the vehicle
+* Be compact enough to sit directly on the OBD-II port and not hit the driver's
+  knees.
+* Include Bluetooth by default
+* Be powered from the vehicle and not drain the battery when left attached
+* Provide 12v power from the vehicle to an external USB hub for other OpenXC
+  hardware modules
+
+This streamlined vehicle interface uses the ARM Cortex-M3 processor (the NXP
+LPC1769), CAN transceivers from NXP, a micro-USB port and the RN-41 Bluetooth
+module from Roving Networks. The design includes a 12v port (with a Molex
+connector) to power an external device from the car, and this port can be shut
+off with the car to avoid battery drain.
+
+We also designed and prototyped a plastic housing for the board that allows it
+to be easily gripped and attached/detached from the OBD-II port underneath the
+steering wheel.
+
+The current BOM total cost in 1,000 unit quantities is around $45.
 
 ### Features
 
