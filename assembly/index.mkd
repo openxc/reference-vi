@@ -3,6 +3,8 @@ layout: default
 title: Assembly Instructions
 ---
 
+[Validation Testing](/assembly/testing.html)
+
 Special Assembly Instructions
 -----------------------------
 

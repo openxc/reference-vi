@@ -1,0 +1,64 @@
+---
+layout: default
+title: Validation Testing
+---
+
+**Bluetooth**
+
+1. Maintain a baud rate of at least 115200 for a sustained 5MB transfer over
+   Bluetooth with no transmission errors
+1. Push varying amounts of data for 12 hours and record all disconnections and
+   transmissions errors
+1. Run through 100 connect/disconnect cycles, looking for failures to connect,
+   or any instance in which the Bluetooth stack on the CAN Translator becomes
+   out of sync.
+
+**USB**
+
+1. Maintain a transfer rate of at least 100KB/s for a sustained 5MB transfer
+   over USB with no transmission errors
+1. Push varying amounts of data for 12 hours and record all disconnections and
+   transmissions errors
+1. Verify the CAN translator can be powered via USB when not connected to an
+   OBD-II port
+1. Verify that the CAN translator can be powered by the vehicle through the
+   OBD-II port and also be plugged into an Android device via USB while not
+   having conflicting current.
+
+**CAN**
+
+1. Verify that CAN messages can be received from a vehicle or test harness,
+   and that the stream can be maintained for 1 hour without interruption.
+1. Verify that a stream of CAN messages can be written out to the CAN bus for
+   1 hour
+
+**Power**
+
+1. Test that MCU can be put to sleep and power draw goes very low
+1. Test that MCU can wakeup on a CAN interrupt and get back to full power,
+   record time to wakeup (time to wakeup is on the order of microseconds)
+1. External power socket should provide steady 12v
+1. External power socket should not provide any power when the MCU goes into
+   sleep mode
+
+**Lighting**
+
+1. RGB LEDs must be controllable from software
+
+**Pysical**
+
+1. OBD-II connector can be attached to a vehicle with a reasonable amount of
+   force
+1. OBD-II connector is robustly connected to the port
+1. OBD-II connector takes a reasonable amount of effort to detach from the
+   vehicle, but the process does not overly strain the housing or PCB
+1. The 12v power cable can be attached and detached with a reasonable amount
+   of force, and resists being knocked out of the socket by accident
+
+**Mechanical Design**
+
+1. Designed for injection molding --> Constant wall thickness, appropriate
+  minimum thickness material (0.050" for ABS), draft angles, slide
+  consideration
+1. Robust attachment and mating features between housing pieces
+1. Appropriate fit in specified vehicles (Focus, Flex, F-150, Explorer)

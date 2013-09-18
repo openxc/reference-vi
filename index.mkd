@@ -41,6 +41,10 @@ can be read from either of the USB or Bluetooth interfaces.
 * Can relay vehicle data at up to 11Mbps over a USB connection
 * Passes up to 6A of power from the vehicle to the Dock and Accessories
 
+### Design Criteria
+
+
+
 ### Known issues:
 
 For greater detail, see CHANGELOG.xls
