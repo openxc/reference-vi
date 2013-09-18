@@ -41,9 +41,40 @@ can be read from either of the USB or Bluetooth interfaces.
 * Can relay vehicle data at up to 11Mbps over a USB connection
 * Passes up to 6A of power from the vehicle to the Dock and Accessories
 
-### Design Criteria
+### Cost Optimization Options
 
+These are some thoughts on how to minimize the cost of the VI.
 
+**Remove Bluetooth**
+
+Cost Savings: ~$25 (1000 unit quantity) by removing the module, associated
+components on board and the slight size decrease that would be possible.
+
+Negatives: No wireless support, USB only.
+
+**Use a different MCU in the same family**
+
+Cost Savings: ~$2 (1000 unit quantity) by going with the LPC1754 (half the price
+of the LPC1769)
+
+Negatives: Only 1 CAN controller
+
+**Use a different MCU from another family**
+
+Cost Savings: ?
+
+NXP's Cortex-0 family doesn't have CAN controllers. The PIC32 family is
+generally more expensive than the LPC1769. Any other options?
+
+**Remove 12v power port**
+
+**Remove 1 RGB LED**
+
+Cost savings: $1
+
+**Remove 1 button**
+
+Cost savings: ~$0.35
 
 ### Known issues:
 
