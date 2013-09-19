@@ -3,7 +3,12 @@ layout: default
 title: Mechanical Design
 ---
 
-TODO add picture
+![Assembly opened](/static/images/vi-open-top.jpg)
+
+The VI housing design consists of an opaque top and bottom, with a translucent
+diffuser piece at the end opposite the OBD-II connector, between two halves of
+the housing. The diffuser does a decent job of spreading the light from the 2
+RGB LEDs, although a light pipe may provide more consistent saturation.
 
 We've manufacturing this design succesfully with a MakerBot Replicator 2,
 SLA, and most recently, injection molded by ProtoMold. At ProtoMold, the
@@ -11,6 +16,9 @@ materials used were:
 
 * VI Top and Bottom: Bayblend T85 XF-901510
 * VI Difffuser: Lexan 3412R-131 (Natural 20% Glass Fiber PC)
+
+![Housing Top](/static/images/vi-housing-top.jpg)
+![Housing Bottom with Diffuser](/static/images/vi-housing-bottom.jpg)
 
 ## Sources
 

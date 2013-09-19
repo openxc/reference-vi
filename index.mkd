@@ -3,7 +3,8 @@ layout: default
 title: OpenXC Vehicle Interface Reference Design
 ---
 
-![Vehicle Interface](/static//images/scaled.jpg "The Vehicle Interface")
+![Vehicle Interface](/static/images/vi-assembled.jpg)
+![Vehicle Interface Opened Up](/static/images/vi-open-top-right.jpg)
 
 <h2>What is OpenXC?</h2>
 
