@@ -3,5 +3,18 @@ layout: assembly
 title: Assembly Instructions
 ---
 
-TODO explain how we order PCBS, send to a fab house, etc - what exactly needs to
-happen to get this made?
+If you want to take this design into the physical world, they major components
+you need to build are:
+
+* Manufacture the PCB, e.g. with a company like [OSH Park](http://oshpark.com/)
+* Manufacture the enclosure, e.g. with your own [3D
+  printer](http://store.makerbot.com/replicator2.html) (you may find one at your
+  local [TechShop][]), a rapid prototyping shop like
+  [Fathom](http://studiofathom.com/) or an injection molding service like
+  [Protomold](http://www.protomold.com/).
+* Assemble the components onto the PCB - there are surface mount components that
+  will reuquire a reflow oven, so you can't hand solder this. Again, check out
+  your local [TechShop][] or a prototyping firm like [SF
+  Circuits](http://www.sfcircuits.com/).
+
+[TechShop]: http://techshop.ws
