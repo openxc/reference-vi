@@ -34,8 +34,7 @@ sustained average speed was 202kbps.  Future designs may consider using a more
 complicated bluetooth chipset with an HCI interface implemented on the MCU for
 greater throughput.  An example of a test run:
 
-<img src="./Testing%20Results/BT_Endurance_Histogram_012613.svg" alt="RN-41 Test Throughput" width="1024">
-<!--![RN-41 Test Throughput](./Testing%20Results/BT_Endurance_Histogram_012613.svg "RN-41 Test Throughput")-->
+![Bluetooth Testing Results](/electrical/img/BT_Endurance_Histogram_012613.svg)
 
 * Average rate: 25.282 KB/s
 * Maximum speed: 30.185 KB/s
