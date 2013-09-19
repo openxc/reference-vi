@@ -3,11 +3,20 @@ layout: electrical
 title: Electrical Source Files
 ---
 
-* [Schematics (eagle)](./vehicle-interface.sch)
-* [Schematics (pdf)](./vehicle-interface.sch.pdf)
-* [Board Layout (eagle)](./vehicle-interface.brd)
-* [Board Layout (png image)](./vehicle-interface.brd.png)
-* [Bill of Materials](./vehicle-interface.bom.xls)
-* [Testing Results + Changelog](./CAN Translator Changelog + Testing.xls)
-* schematics/DESIGN_CRITERIA.xls
-* CHANGELOG.xls
+The board was designed with Cadsoft EAGLE, and the source files should be
+compatible with the free Light Edition.
+
+The files are all [stored in a Git repository at
+GitHub](https://github.com/openxc/reference-vi/tree/gh-pages/electrical/sources) -
+pull requests are welcome!
+
+TODO add small screenshot of schematic and layout
+
+* Electrical Schematic
+  * [EAGLE source](/electrical/sources/vehicle-interface.sch)
+  * [PDF](/electrical/sources/vehicle-interface.pdf)
+* Board Layout
+  * [EAGLE source](/electrical/sources/vehicle-interface.brd)
+  * [PNG image](/electrical/sources/vehicle-interface.brd.png)
+* [Bill of Materials (BOM)](/electrical/sources/vehicle-interface.bom.xls)
+* [Changelog](/electrical/CHANGELOG.xls)

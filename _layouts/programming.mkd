@@ -1,0 +1,11 @@
+---
+layout: firmware
+---
+
+<ul class="nav nav-tabs">
+  <li><a href="/firmware/programming/usb.html">USB</a></li>
+  <li><a href="/firmware/programming/jtag.html">JTAG</a></li>
+  <li><a href="/firmware/programming/isp.html">ISP</a></li>
+</ul>
+
+{{ content }}

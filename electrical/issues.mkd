@@ -3,7 +3,8 @@ layout: electrical
 title: Known Issues
 ---
 
-For greater detail, see CHANGELOG.xls
+For greater detail, see the [changelog in the source
+files](/electrical/sources/index.html).
 
 #### v0.3:
 

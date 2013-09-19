@@ -4,8 +4,7 @@ section: electrical
 ---
 
 <ul class="nav nav-tabs">
-  <li><a href="/electrical/index.html">Electrical Design</a></li>
-  <li {% if page.url contains 'electrical/design/' %}class="active"{% endif %}><a href="/electrical/design/index.html">Design Considerations</a></li>
+  <li {% if page.url contains 'electrical/design/' %}class="active"{% endif %}><a href="/electrical/index.html">Electrical Design Considerations</a></li>
   <li><a href="/electrical/schematics/index.html">Schematics and Layout</a></li>
   <li><a href="/electrical/sources/index.html">Source Files</a></li>
   <li><a href="/electrical/issues.html">Known Issues</a></li>

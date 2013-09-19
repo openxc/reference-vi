@@ -32,10 +32,14 @@ to a [host device][].
   <div class="tab-content">
     <div class="active tab-pane" id="app-devs">
 
-      <p>The VI needs to be programmed with firmware before you can get data from a
-      car. You can use the <a href="">emulator firmware</a> to test the data
-      connection to a <a href="">host device</a> (a computer, smartphone or
-      tablet). To get data from a real car, grab one of the <a href="">other
+      <p>The VI needs to be programmed with firmware before you can get data
+      from a car. You can use the <a
+      href="http://openxcplatform.com.s3.amazonaws.com/openxc-canemulator-firmware.zip">emulator
+      firmware (zip file)</a> to test the data connection to a <a
+      href="http://openxcplatform.com/host-devices/index.html">host device</a>
+      (a computer, smartphone or tablet). To get data from a real car, grab one
+      of the <a
+      href="http://openxcplatform.com/vehicle-interface/firmware.html">other
       available firmwares</a>.</p>
 
       <p>Once you have a firmware file (it should be a version for the "FORDBOARD"
@@ -46,11 +50,13 @@ to a [host device][].
 
     <div class="tab-pane" id="firmware-devs">
 
-      <p>Besides using <a href="">binary firmware for app developers</a>, you
-      can build your own code to run on the VI. You can use the <a
-      href="">official OpenXC VI firmware</a> (the source for most binary
-      firmware, e.g. those from Ford) or start from scratch with a <a
-      href="">blank project</a>.</p>
+      <p>Besides using <a
+      href="http://openxcplatform.com/vehicle-interface/firmware.html">binary
+      firmware for app developers</a>, you can build your own code to run on the
+      VI. You can use the <a
+      href="http://vi-firmware.openxcplatform.com">official OpenXC VI
+      firmware</a> (the source for most binary firmware, e.g. those from Ford)
+      or start from scratch with a <a href="">blank project (TODO)</a>.</p>
 
       <p>If you're programming your custom firmware with the <a
       href="/firmware/usb.html">USB bootloader</a>, the memory layout must be

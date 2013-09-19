@@ -1,32 +1,28 @@
 ---
-layout: electrical
-title: Electrical Design
+layout: electrical-design
+title: Electrical Design Considerations
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae eleifend
-mi. Aliquam rhoncus, nisi tincidunt interdum tincidunt, lorem tortor tempor
-nunc, at ornare risus magna a felis. Praesent nec lacus turpis. Fusce porta in
-leo nec congue. Phasellus consequat est sed tortor semper faucibus sit amet non
-purus. Morbi scelerisque risus et lorem eleifend posuere. Donec a vestibulum
-justo. Nunc vitae tortor at diam hendrerit ullamcorper sed sed nisi. Cras id est
-ut neque volutpat sollicitudin mollis non massa. Sed enim nibh, sodales nec orci
-at, condimentum vulputate velit. Class aptent taciti sociosqu ad litora torquent
-per conubia nostra, per inceptos himenaeos. Sed in suscipit nulla, quis
-consequat risus. Pellentesque congue ullamcorper adipiscing.
+Both the production board and development board must have:
 
-Sed venenatis nec eros in blandit. Nunc id turpis id arcu iaculis aliquam vel
-nec nisi. Duis molestie rutrum eleifend. Cras auctor, metus at faucibus dapibus,
-ipsum dolor aliquet elit, non malesuada tellus dui nec tortor. Sed sed fermentum
-magna. Sed eleifend, purus eget pellentesque fringilla, orci leo consectetur
-nisl, eget ornare turpis nulla sit amet purus. Nullam elementum eros ac nisl
-aliquet fermentum.
+* Microcontroller with enough horsepower to process and send all CAN messages
+  and 2 CAN controllers
+* USB 2.0 port (controller included in microcontroller)
+* 2x CAN transceivers
+* 2x 12-pin headers for CAN
+* UART with optional Bluetooth module
 
-Proin tristique tempus erat. Integer pretium erat leo, egestas accumsan quam
-tincidunt quis. Vivamus feugiat accumsan interdum. Suspendisse et sapien id arcu
-venenatis convallis sit amet nec mauris. Nullam convallis elit et eleifend
-luctus. Proin in placerat augue. Pellentesque in risus purus. Donec sapien
-velit, adipiscing sit amet facilisis in, blandit ac urna. Nullam lobortis ante
-vitae lacus lobortis, at elementum dui vestibulum. Maecenas lacinia in mi eu
-fermentum. Quisque neque ipsum, ultrices a dignissim eget, pharetra eu nisi.
+The development board must:
 
+* Be programmable over USB with no extra hardware (we don't care so much if the
+  production board is easily programmable by end users, since they will be so
+  cheap as to just warrant replacement when a new version rolls around)
+* Have a JTAG header for debugging
+* Include extra GPIO for other testing
+* Power via USB
 
+The production board must have:
+
+* Self-test function to validate boards that are mass produced
+* 6-pin ISP header
+* Powered by the vehicle via the OBD-II port

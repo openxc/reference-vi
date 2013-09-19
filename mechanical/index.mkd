@@ -16,25 +16,25 @@ materials used were:
 
 The master source files for the 3D design were created in CATIA, which
 unfortunately is neither open source nor affordable. We've output the design for
-the top of the enclosure, the bottom and the diffuser as STL (triangle) and
-STP (solid) files.
+the top of the enclosure, the bottom and the diffuser as STL (triangle) and STP
+(solid) files.
 
 The files are all [stored in a Git repository at
-GitHub](https://github.com/openxc/reference-vi/tree/jekyll/mechanical/sources) -
+GitHub](https://github.com/openxc/reference-vi/tree/gh-pages/mechanical) -
 pull requests are welcome!
 
 * VI Enclosure Bottom
-  * [CATIA](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-bottom.CATPart)
-  * [STL](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-bottom.stl)
-  * [STP](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-bottom.stp)
+  * [CATIA](/mechanical/vi-bottom.CATPart)
+  * [STL](/mechanical/vi-bottom.stl)
+  * [STP](/mechanical/vi-bottom.stp)
 * VI Enclosure Top
-  * [CATIA](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-top.CATPart)
-  * [STL](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-top.stl)
-  * [STP](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-top.stp)
+  * [CATIA](/mechanical/vi-top.CATPart)
+  * [STL](/mechanical/vi-top.stl)
+  * [STP](/mechanical/vi-top.stp)
 * Diffuser
-  * [CATIA](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-diffuser.CATPart)
-  * [STL](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-diffuser.stl)
-  * [STP](https://github.com/openxc/reference-vi/raw/master/mechanical/vi-diffuser.stp)
+  * [CATIA](/mechanical/vi-diffuser.CATPart)
+  * [STL](/mechanical/vi-diffuser.stl)
+  * [STP](/mechanical/vi-diffuser.stp)
 
 ## Improving Design for Manufacturing
 

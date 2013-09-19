@@ -1,15 +1,21 @@
 ---
 layout: firmware
-title: Programming Firmware
+title: Firmware Options
 ---
 
-### How to program
+<p>Besides using <a
+href="http://openxcplatform.com/vehicle-interface/firmware.html">binary
+firmware for app developers</a>, you can build your own code to run on the
+VI. You can use the <a
+href="http://vi-firmware.openxcplatform.com">official OpenXC VI
+firmware</a> (the source for most binary firmware, e.g. those from Ford)
+or start from scratch with a <a href="">blank project (TODO)</a>.</p>
 
-The most reliable way to program the VI is via the JTAG interface, however other
-options are available:
+<p>If you're programming your custom firmware with the <a
+href="/firmware/usb.html">USB bootloader</a>, the memory layout must be
+adjusted; both the official VI firmware and the blank project use a USB
+bootloader compatible layout by default.</p>
 
-<ul class="nav nav-tabs">
-  <li class="active"><a href="/firmware/usb.html" data-toggle="tab">USB</a></li>
-  <li><a href="/firmware/jtag.html" data-toggle="tab">JTAG</a></li>
-  <li><a href="/firmware/isp.html" data-toggle="tab">ISP</a></li>
-</ul>
+<p>Alternatively, you can use one of a few lower level programming options
+(some even allow in-circuit debugging). More details are available in the
+<a href="/firmware/index.html">firmware page</a>.

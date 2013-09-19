@@ -3,6 +3,29 @@ layout: assembly
 title: PCB Assembly Sources
 ---
 
+### Assembly Files
+
+The assembly files are generated from the [schematics and board layout source
+files](/electrical/sources/index.html) which were created in CADsoft EAGLE.
+
+The files are all [stored in a Git repository at
+GitHub](https://github.com/openxc/reference-vi/tree/gh-pages/assembly/electrical).
+
+* [Board Layout DXF](/assembly/electrical/vehicle-interface.dxf)
+* [Gerber files](https://github.com/openxc/reference-vi/raw/gh-pages/assembly/electrical)
+    * .top  Top Copper Layer
+    * .smt  Top Soldermask
+    * .slk  Top Silkscreen
+    * .tsp  Top Solderpaste
+    * .bot  Bottom Copper Layer
+    * .smb  Bottom Soldermask
+    * .bsk  Bottom Silkscreen
+    * .bsp  Bottom Solderpaste
+    * .oln PCB Outline
+    * .drd  Excellon Drill Data
+    * .drl  Basic Drill tool information
+    * .dri  Extended Drill tool information
+
 ### Special Assembly Instructions
 
 * See NOTES: on ASSY drawings for general notes
@@ -20,24 +43,10 @@ title: PCB Assembly Sources
 * Ensure part Q2 (12MHz crystal) is oriented such that the long dimension
   follows the centerline on the silkscreen layer.
 
-### Assembly Files
-
-* [Board Layout DXF](./Fabrication/vehicle-interface.dxf)
-* [Gerber files](./schematics/fabrication)
-    * .top  Top Copper Layer
-    * .smt  Top Soldermask
-    * .slk  Top Silkscreen
-    * .tsp  Top Solderpaste
-    * .bot  Bottom Copper Layer
-    * .smb  Bottom Soldermask
-    * .bsk  Bottom Silkscreen
-    * .bsp  Bottom Solderpaste
-    * .oln PCB Outline
-    * .drd  Excellon Drill Data
-    * .drl  Basic Drill tool information
-    * .dri  Extended Drill tool information
-
 ### Assembly file output instructions
+
+If you modify the schematics and need to regenerate the assembly files, follow
+these instructions.
 
 * Verify silkscreen and PCB Frame artwork reflects accurate revision
 * Update layers 125 and 126 - text on top of each component should identify the

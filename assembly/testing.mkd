@@ -6,7 +6,7 @@ title: Testing Plan
 A test jig can be created using [Spring Pogo
 Pins](https://www.adafruit.com/products/394).  At a minimum, the test jig should
 contain pogo pins and mounting holes at the PCB locations outlined by [this
-spreadsheet](./pogo_locations.xls).  A rooted linux host is
+spreadsheet](/assembly/pogo_location.xls).  A rooted linux host is
 necessary for this test - perhaps an embedded android device like a raspberyPi,
 Beagleboard or pcDuino.
 

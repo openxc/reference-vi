@@ -3,11 +3,12 @@ layout: electrical
 ---
 
 <ul class="nav nav-tabs">
-  <li class=""><a href="/electrical/design/power.html">Power</a></li>
-  <li class=""><a href="/electrical/design/microcontroller.html">Microcontroller</a></li>
-  <li class=""><a href="/electrical/design/can.html">CAN</a></li>
-  <li class=""><a href="/electrical/design/bluetooth.html">Bluetooth</a></li>
-  <li class=""><a href="/electrical/design/usb.html">USB</a></li>
+  <li><a href="/electrical/index.html">Overview</a></li>
+  <li><a href="/electrical/design/power.html">Power</a></li>
+  <li><a href="/electrical/design/microcontroller.html">Microcontroller</a></li>
+  <li><a href="/electrical/design/can.html">CAN</a></li>
+  <li><a href="/electrical/design/bluetooth.html">Bluetooth</a></li>
+  <li><a href="/electrical/design/usb.html">USB</a></li>
 </ul>
 
 {{ content }}

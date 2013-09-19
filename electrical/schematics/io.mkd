@@ -1,5 +1,5 @@
 ---
-layout: electrical
+layout: electrical-schematic
 title: Pins, Ports, Inputs and Outputs
 ---
 

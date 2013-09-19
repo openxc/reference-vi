@@ -1,9 +1,9 @@
 ---
-layout: electrical
+layout: electrical-schematic
 title: Schematics
 ---
 
-![Interface Block Diagram](./InterfaceBlockDiagram.svg "Interface Block Diagram")
+![Interface Block Diagram](/electrical/img/InterfaceBlockDiagram.svg "Interface Block Diagram")
 
 The Vehicle Interface (VI) is built around an LPC1769 ARM Cortex M3 MCU by NXP,
 running at 100MHz.  The interface reads vehicle data via two CAN buses.  By
@@ -33,13 +33,13 @@ serial debug as well as ISP programming.  The standard JTAG interface has also
 been exposed through a 10-pin ARM JTAG Mini connector.  Two buttons have also
 been added to the board - one resets the LPC1769, and the other allows the
 LPC1769 to enter a USB bootloader if available.  See
-[Inputs/Outputs](#inputsoutputs) for more information.
+[Inputs/Outputs](/electrical/schematics/io.html) for more information.
 
 ### Parts Layout
 
-![Interface Connections](./connectors.JPG "Interface board - Connections")
+![Interface Connections](/electrical/img/connectors.jpg "Interface board - Connections")
 
-![Interface Headers Bottom](./headers_bottom.JPG "Interface board - headers on bottom side")
+![Interface Headers Bottom](/electrical/img/headers_bottom.jpg "Interface board - headers on bottom side")
 
-![Interface Headers Top](./headers_top.JPG "Interface board - headers on top side")
+![Interface Headers Top](/electrical/img/headers_top.jpg "Interface board - headers on top side")
 
