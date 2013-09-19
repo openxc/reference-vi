@@ -14,6 +14,8 @@ plug the ARM-JTAG-MINI connector into J5 on the bottom side of the vehicle
 interface PCB.  Make sure that the ribbon cable exits the connector in the
 direction of the arrow on the PCB.
 
+![JTAG Header](/firmware/img/jtag-header.jpg)
+
 With the JTAG adapter connected, and power applied to the board, the LPC1769
 should respond to commands from [OpenOCD](http://openocd.sourceforge.net/).  If
 deploying code from an OpenXC repository, the board can be programmed by simply
