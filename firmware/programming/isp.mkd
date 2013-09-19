@@ -12,3 +12,4 @@ for programming under an application like [Flash
 Magic](http://www.flashmagictool.com/).  Page 616 of the LPC17XX user manual
 outlines how to use ISP mode.
 
+![ISP Header](/firmware/img/isp-header.jpg)
