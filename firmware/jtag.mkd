@@ -1,0 +1,23 @@
+---
+layout: firmware
+title: JTAG Programming
+---
+
+To program using JTAG, any ARM Cortex M3 compatible JTAG adapter can be used.
+The interface has been tested using an
+[ARM-USB-TINY-H](https://www.olimex.com/Products/ARM/JTAG/ARM-USB-TINY-H/) and
+an [ARM-USB-OCD-H](https://www.olimex.com/Products/ARM/JTAG/ARM-USB-OCD-H/) by
+Olimex.  The interface board does not have a full-size 20-pin JTAG connector -
+[an adapter will be required with most JTAG
+programmers](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/).  Simply
+plug the ARM-JTAG-MINI connector into J5 on the bottom side of the vehicle
+interface PCB.  Make sure that the ribbon cable exits the connector in the
+direction of the arrow on the PCB.
+
+With the JTAG adapter connected, and power applied to the board, the LPC1769
+should respond to commands from [OpenOCD](http://openocd.sourceforge.net/).  If
+deploying code from an OpenXC repository, the board can be programmed by simply
+executing "make flash" from the root of the source tree.  See other LPC17XX JTAG
+tutorials for more information, the process is nearly identical across all
+LPC17XX devices.
+

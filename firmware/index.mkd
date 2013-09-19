@@ -1,82 +1,15 @@
 ---
 layout: firmware
-title: Firmware
+title: Programming Firmware
 ---
 
 ### How to program
 
-The most reliable way to program the VI is via the JTAG
-interface, however other options are available:
+The most reliable way to program the VI is via the JTAG interface, however other
+options are available:
 
-#### JTAG
-
-To program using JTAG, any ARM Cortex M3 compatible JTAG adapter can be used.
-The interface has been tested using an
-[ARM-USB-TINY-H](https://www.olimex.com/Products/ARM/JTAG/ARM-USB-TINY-H/) and
-an [ARM-USB-OCD-H](https://www.olimex.com/Products/ARM/JTAG/ARM-USB-OCD-H/) by
-Olimex.  The interface board does not have a full-size 20-pin JTAG connector -
-[an adapter will be required with most JTAG
-programmers](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/).  Simply
-plug the ARM-JTAG-MINI connector into J5 on the bottom side of the vehicle
-interface PCB.  Make sure that the ribbon cable exits the connector in the
-direction of the arrow on the PCB.
-
-With the JTAG adapter connected, and power applied to the board, the LPC1769
-should respond to commands from [OpenOCD](http://openocd.sourceforge.net/).  If
-deploying code from an OpenXC repository, the board can be programmed by simply
-executing "make flash" from the root of the source tree.  See other LPC17XX JTAG
-tutorials for more information, the process is nearly identical across all
-LPC17XX devices.
-
-#### ISP
-
-If a [3.3V USB-Serial converter is
-available](https://www.sparkfun.com/products/9873), the device can be programmed
-using the ISP header, J3.  To use ISP simply short JP2 and reset the LPC1769.
-If the ISP_EN pin is grounded when the LPC1769 boots, it will enter the built-in
-ISP bootloader instead of running the OpenXC firmware.  UART0 will then be used
-for programming under an application like [Flash
-Magic](http://www.flashmagictool.com/).  Page 616 of the LPC17XX user manual
-outlines how to use ISP mode.
-
-#### USB Bootloader
-
-The LPC1769 has the capability to load code from the USB interface, however this
-is not built into the MCU.  In order to program over USB, a USB bootloader must
-already have been programmed onto the LPC1769.  The USB Bootloader should watch
-pin P2.12 (the same pin as the LPC1768 BlueBoard) on startup.  If installed
-correctly, the bootloader can be actived by holding down S2 while resetting the
-VI.
-
-#### RN-41 Configuration
-
-After being manufactured, the only additional configuration step (outside of
-deploying firmware) is to change a few default values on the RN-41 device.  The
-default RN-41 baud rate is 115200 baud, which is not high enough to saturate the
-bluetooth link.  The quickest way to preform this first initial configuration is
-to use a PC or tablet with a bluetooth interface:
-
-1. Apply power to the VI.
-1. Discover Bluetooth devices on the PC, find the VI, and pair
-      with it.
-1. Remove power from the VI.
-1. After a few moments, reapply power to the VI
-1. Very quickly (within 60 seconds) connect to the VI and open a
-    terminal
-1. type "$$$" and press enter.  If done quickly, the bluetooth LED should
-      start flashing rapidly and "CMD" should be printed to the screen.
-1. type "ST,10" to reduce the configuration timer to 10 seconds.  It can also
-      be disabled by executing "ST,0".
-1. type "SU,43" to set the baud rate to 460800.  This value is used by the test
-    firmware.
-1. type "---" to exit configuration mode
-1. Remove power from the VI.  When power is reapplied, the
-   settings will be changed.
-
-The commands can also be sent via UART0 on the LPC1769 to avoid the
-configuration timer.  See [the RN-41 advanced user
-manual](http://www.rovingnetworks.com/resources/download/47/Advanced_User_Manual)
-for additional documentation on parameters that can be changed (Page 30 for a
-quick reference)
-
-
+<ul class="nav nav-tabs">
+  <li class="active"><a href="/firmware/usb.html" data-toggle="tab">USB</a></li>
+  <li><a href="/firmware/jtag.html" data-toggle="tab">JTAG</a></li>
+  <li><a href="/firmware/isp.html" data-toggle="tab">ISP</a></li>
+</ul>

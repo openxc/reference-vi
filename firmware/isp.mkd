@@ -1,0 +1,14 @@
+---
+layout: firmware
+title: ISP Programming
+---
+
+If a [3.3V USB-Serial converter is
+available](https://www.sparkfun.com/products/9873), the device can be programmed
+using the ISP header, J3.  To use ISP simply short JP2 and reset the LPC1769.
+If the ISP_EN pin is grounded when the LPC1769 boots, it will enter the built-in
+ISP bootloader instead of running the OpenXC firmware.  UART0 will then be used
+for programming under an application like [Flash
+Magic](http://www.flashmagictool.com/).  Page 616 of the LPC17XX user manual
+outlines how to use ISP mode.
+

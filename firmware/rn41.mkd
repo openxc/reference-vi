@@ -1,0 +1,35 @@
+---
+layout: firmware
+title: RN-41 Configuration
+---
+
+TODO this isn't necessary with the VI firmware
+
+After being manufactured, the only additional configuration step (outside of
+deploying firmware) is to change a few default values on the RN-41 device.  The
+default RN-41 baud rate is 115200 baud, which is not high enough to saturate the
+bluetooth link.  The quickest way to preform this first initial configuration is
+to use a PC or tablet with a bluetooth interface:
+
+1. Apply power to the VI.
+1. Discover Bluetooth devices on the PC, find the VI, and pair
+      with it.
+1. Remove power from the VI.
+1. After a few moments, reapply power to the VI
+1. Very quickly (within 60 seconds) connect to the VI and open a
+    terminal
+1. type "$$$" and press enter.  If done quickly, the bluetooth LED should
+      start flashing rapidly and "CMD" should be printed to the screen.
+1. type "ST,10" to reduce the configuration timer to 10 seconds.  It can also
+      be disabled by executing "ST,0".
+1. type "SU,43" to set the baud rate to 460800.  This value is used by the test
+    firmware.
+1. type "---" to exit configuration mode
+1. Remove power from the VI.  When power is reapplied, the
+   settings will be changed.
+
+The commands can also be sent via UART0 on the LPC1769 to avoid the
+configuration timer.  See [the RN-41 advanced user
+manual](http://www.rovingnetworks.com/resources/download/47/Advanced_User_Manual)
+for additional documentation on parameters that can be changed (Page 30 for a
+quick reference)

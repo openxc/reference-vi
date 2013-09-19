@@ -1,5 +1,5 @@
 ---
-layout: overview
+layout: default
 title: OpenXC Vehicle Interface Reference Design
 ---
 
@@ -15,13 +15,69 @@ applications that have better interfaces based on context, can minimize
 distraction while driving, are integrated with other connected services, and
 can offer you more insight into your car's operation.
 
-<h2>What is this vehicle interface?</h2>
-
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
 (VI or CAN translator) is piece of hardware that connects to the car's CAN bus,
 translates proprietary CAN messages to the standard [OpenXC message
 format][output-format] and sends the output over USB, Bluetooth or Ethernet/WiFi
 to a [host device][].
+
+<h2>Quick Start</h2>
+
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#app-devs" data-toggle="tab">For App Developers</a></li>
+    <li><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
+    <li><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="active tab-pane" id="app-devs">
+
+      <p>The VI needs to be programmed with firmware before you can get data from a
+      car. You can use the <a href="">emulator firmware</a> to test the data
+      connection to a <a href="">host device</a> (a computer, smartphone or
+      tablet). To get data from a real car, grab one of the <a href="">other
+      available firmwares</a>.</p>
+
+      <p>Once you have a firmware file (it should be a version for the "FORDBOARD"
+      and have the ".bin" extension) programming the VI is simple - follow the
+      <a href="/firmware/usb.html">USB programming instructions</a>.</p>
+
+    </div>
+
+    <div class="tab-pane" id="firmware-devs">
+
+      <p>Besides using <a href="">binary firmware for app developers</a>, you
+      can build your own code to run on the VI. You can use the <a
+      href="">official OpenXC VI firmware</a> (the source for most binary
+      firmware, e.g. those from Ford) or start from scratch with a <a
+      href="">blank project</a>.</p>
+
+      <p>If you're programming your custom firmware with the <a
+      href="/firmware/usb.html">USB bootloader</a>, the memory layout must be
+      adjusted; both the official VI firmware and the blank project use a USB
+      bootloader compatible layout by default.</p>
+
+      <p>Alternatively, you can use one of a few lower level programming options
+      (some even allow in-circuit debugging). More details are available in the
+      <a href="/firmware/index.html">firmware page</a>.
+
+    </div>
+
+    <div class="tab-pane" id="hardware-devs">
+
+      <p>This site contains complete documentation of the hardware,
+      design motivations, fabrication and testing plans. Every component is
+      released as open source hardware and the source files are available in the
+      <a href="https://github.com/openxc/reference-vi">openxc/reference-vi</a>
+      GitHub repository (along with the contents of this website).
+
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<h2>What is this vehicle interface?</h2>
 
 The particular unit is a reference design for a "dongle" style vehicle interface
 that connects directly to the diagnostic port with no cable. Ford created this
@@ -63,6 +119,14 @@ This reference design was created by Bug Labs, contracted by Ford and in
 collaboration with Ford Research & Advanced Development engineers in both Palo
 Alto, CA and Dearborn, MI. For a full list of the contributors to this project,
 see the `AUTHORS` file in the repository.
+
+## License
+
+Copyright (c) 2013 Ford Motor Company
+
+This vehicle interface is open source hardware. The electrical and mechanical
+designs in this repository are available under the [Creative Commons Atribution
+3.0 Unported](http://creativecommons.org/licenses/by/3.0/deed.en_US) license.
 
 [output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
 [host device]: http://openxcplatform.com/android/index.html
