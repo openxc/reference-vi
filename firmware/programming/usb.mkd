@@ -10,20 +10,37 @@ pin P2.12 (the same pin as the LPC1768 BlueBoard) on startup.  If installed
 correctly, the bootloader can be actived by holding down S2 while resetting the
 VI.
 
-TODO add image
+![Programming Button](/firmware/img/vi-programming-button.jpg)
 
-1. Use a paper clip or pencil to hold down the programming button on the VI.
-1. While holding down the programming button, connect a micro-USB cable to the
+* Use a paper clip or pencil to hold down the programming button on the VI.
+* While holding down the programming button, connect a micro-USB cable to the
    VI and to the computer you will use to do the programming - an LED on the VI
-   will flash green, and then you can let go of the button. TODO add image of
-   USB cable attaching
-1. On Windows, OS X and Linux, the VI will appear as a typical USB drive named
-   `LPC1759` - open it.
-1. The drive will have a `firmware.bin` file - delete it.
-1. Drag and drop the new firmware `.bin` file onto the drive.
-1. Eject or unmount the drive.
-1. When the drive is safe to remove, unplug the USB cable.
-1. The next time you power up the VI (without pressing the programming button)
-   it will be running the new firmware.
+   will flash green, and then you can let go of the button.
 
-TODO point to testing guide, installing Windows drivers
+![Enabling Bootloader](/firmware/img/programming-entering-bootloader.jpg)
+
+On Windows, OS X and Linux, the VI will appear as a typical USB drive named
+`LPC1759` - open it.
+
+![USB drive](/firmware/img/usb-drive-appears.png)
+
+The drive will have a `firmware.bin` file - delete it.
+
+![Existing firmware](/firmware/img/usb-existing-firmware.png)
+
+Drag and drop the new firmware `.bin` file onto the drive.
+
+![New firmware](/firmware/img/usb-new-firmware.png)
+
+Eject or unmount the drive. When the drive is safe to remove, unplug the USB
+cable.
+
+![Safe to remove](/firmware/img/usb-eject.png)
+
+The next time you power up the VI (without pressing the programming button) it
+will be running the new firmware.
+
+To verify the VI was flashed correctly, we recommend this [testing
+procedure](http://openxcplatform.com/vehicle-interface/testing.html) - be aware
+that in order to use the VI in Windows, you need to install a driver (what else
+is new?).
