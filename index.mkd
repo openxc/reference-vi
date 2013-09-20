@@ -62,7 +62,8 @@ this particular implementation has USB and Bluetooth.
       VI. You can use the <a
       href="http://vi-firmware.openxcplatform.com">official OpenXC VI
       firmware</a> (the source for most binary firmware, e.g. those from Ford)
-      or start from scratch with a <a href="">blank project (TODO)</a>.</p>
+      or start from scratch with a <a
+      href="https://github.com/openxc/lpc17xx-starter">blank project</a>.</p>
 
       <p>If you're programming your custom firmware with the <a
       href="/firmware/programming/usb.html">USB bootloader</a>, the memory layout must be

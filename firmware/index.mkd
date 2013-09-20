@@ -3,19 +3,18 @@ layout: firmware
 title: Firmware Options
 ---
 
-<p>Besides using <a
-href="http://openxcplatform.com/vehicle-interface/firmware.html">binary
-firmware for app developers</a>, you can build your own code to run on the
-VI. You can use the <a
-href="http://vi-firmware.openxcplatform.com">official OpenXC VI
-firmware</a> (the source for most binary firmware, e.g. those from Ford)
-or start from scratch with a <a href="">blank project (TODO)</a>.</p>
+Besides using [binary firmware for app
+developers](http://openxcplatform.com/vehicle-interface/firmware.html) you can
+build your own code to run on the VI. You can use the
+[official OpenXC VI firmware](http://vi-firmware.openxcplatform.com)
+(the source for most binary firmware, e.g. those from Ford) or start from
+scratch with a [blank project](https://github.com/openxc/lpc17xx-starter).
 
-<p>If you're programming your custom firmware with the <a
-href="/firmware/usb.html">USB bootloader</a>, the memory layout must be
-adjusted; both the official VI firmware and the blank project use a USB
-bootloader compatible layout by default.</p>
+If you're programming your custom firmware with the [USB
+bootloader](/firmware/usb.html), the memory layout must be adjusted; both the
+official VI firmware and the blank project use a USB bootloader compatible
+layout by default.
 
-<p>Alternatively, you can use one of a few lower level programming options
+Alternatively, you can use one of a few lower level programming options
 (some even allow in-circuit debugging). More details are available in the
-<a href="/firmware/index.html">firmware page</a>.
+[firmware page](/firmware/index.html).
