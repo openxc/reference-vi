@@ -5,22 +5,25 @@ title: OpenXC Vehicle Interface Reference Design
 
 <h2>What is OpenXC?</h2>
 
-<a href="http://openxcplatform.com">OpenXC</a> is an API to your car - by
-installing a small hardware module to read and translate metrics from a
-car's internal network, the data becomes accessible from most Android
-applications using the OpenXC library. You can start making vehicle-aware
-applications that have better interfaces based on context, can minimize
-distraction while driving, are integrated with other connected services, and
-can offer you more insight into your car's operation.
+[OpenXC][openxc] is an API to your car - by installing a small hardware module
+to read and translate metrics from a car's internal network, the data becomes
+accessible from most Android applications using the OpenXC library. You can
+start making vehicle-aware applications that have better interfaces based on
+context, can minimize distraction while driving, are integrated with other
+connected services, and can offer you more insight into your car's operation.
+This website is the documentation for a reference design of an OpenXC-compatible
+[Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)  -
+for more information on the platform in general, visit
+[openxcplatform.com][openxc].
 
 ![Vehicle Interface](/static/images/vi-assembled.jpg)
 ![Vehicle Interface Opened Up](/static/images/vi-open-top-right.jpg)
 
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
-(VI or CAN translator) is piece of hardware that connects to the car's CAN bus,
-translates proprietary CAN messages to the standard [OpenXC message
-format][output-format] and sends the output over USB, Bluetooth or Ethernet/WiFi
-to a [host device][].
+(VI) is piece of hardware that connects to the car's CAN bus, translates
+proprietary CAN messages to the standard [OpenXC message format][output-format]
+and sends the output over a common interface like USB to a [host device][] -
+this particular implementation has USB and Bluetooth.
 
 <h2>Quick Start</h2>
 
@@ -99,11 +102,11 @@ interface](http://chipkit-vi.openxcplatform.com) with the goal to:
 * Provide 12v power from the vehicle to an external USB hub for other OpenXC
   hardware modules
 
-This streamlined vehicle interface uses the ARM Cortex-M3 processor (the NXP
-LPC1769), CAN transceivers from NXP, a micro-USB port and the RN-41 Bluetooth
-module from Roving Networks. The design includes a 12v port (with a Molex
-connector) to power an external device from the car, and this port can be shut
-off with the car to avoid battery drain.
+This streamlined vehicle interface uses a ARM Cortex-M3 microcontroller (NXP's
+LPC1769), a CAN transceiver from NXP, the RN-41 Bluetooth module from Roving
+Networks and includes a micro-USB port. The design also includes a 12v port
+(with a Molex connector) to power an external device from the car, and this port
+can be shut off with the car to avoid battery drain.
 
 We also designed and prototyped a plastic housing for the board that allows it
 to be easily gripped and attached/detached from the OBD-II port underneath the
@@ -113,9 +116,10 @@ The current BOM total cost in 1,000 unit quantities is around $45.
 
 ### Features
 
-* Reads from 2 different CAN buses (Diagnostic Fast and Diagnostic Med) at up
-  to 1Mbps per bus.
-* Decodes CAN data into a human and machine-readable format (currently JSON)
+* Reads from 2 different CAN buses simultaneously at up to 1Mbps per bus - by
+  default CAN1 and CAN2-1 (according to the [OpenXC naming
+  scheme](http://openxcplatform.com/vehicle-interface/index.html)), with CAN2-2
+  available behind a solder jumper
 * Can relay vehicle data at up to 250kbps over a Bluetooth connection
 * Can relay vehicle data at up to 11Mbps over a USB connection
 * Passes up to 6A of power from the vehicle to the Dock and Accessories
@@ -125,10 +129,10 @@ The current BOM total cost in 1,000 unit quantities is around $45.
 ## Contributors
 
 This reference design was created by Bug Labs, contracted by Ford and in
-collaboration with Ford Research & Advanced Development engineers in both Palo
-Alto, CA and Dearborn, MI. For a full list of the contributors to this project,
-see the [AUTHORS](https://github.com/openxc/reference-vi/blob/gh-pages/AUTHORS)
-file.
+collaboration with Ford Research & Advanced Development engineers in both [Palo
+Alto, CA](http://fordsvl.com) and Dearborn, MI. For a full list of the
+contributors to this project, see the
+[AUTHORS](https://github.com/openxc/reference-vi/blob/gh-pages/AUTHORS) file.
 
 ## License
 
@@ -140,3 +144,4 @@ designs in this repository are available under the [Creative Commons Atribution
 
 [output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
 [host device]: http://openxcplatform.com/android/index.html
+[openxc]: http://openxcplatform.com

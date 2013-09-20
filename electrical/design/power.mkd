@@ -39,8 +39,8 @@ charging at 1A.
 The VI has the following power connections:
 
 * OBD-II Automotive Power: Input @ 12V
-* Dock Power Connector: Output @ 5V up to 6A
-* USB Micro Connector: Input OR Output @5V up to 1A
+* Dock Power Connector: Output @ 12V up to 6A
+* USB Micro Connector: Input OR Output @ 5V up to 1A
 
 The Dock power connector is controlled by a [TPS2421-2 power switch with
 internal MOSFET](http://www.ti.com/lit/ds/symlink/tps2421-2.pdf).  This allows
@@ -62,8 +62,11 @@ This has an added downside of temperature dependence - the fuse can only pass
 the full 1A of current up to 40 degrees C.  Above that temperature the limit
 slowly decreases - see the datasheet for a thermal derating chart.
 
+## Original Schematic
 
-Some notes on the power supply, designed by Kevin Hille and Karl Wojcik.
+This power supply is based on a design by Kevin Hille and Karl Wojcik at Ford.
+The following are the original schematic (which also includes the CAN and CPU
+supervisor sections) and some notes.
 
 * One of the 330 caps at the top, going into the 5v regulator, is missing the
   polarity sign - the top line should have the +.

@@ -1,7 +1,18 @@
 ---
-layout: electrical-schematic
+layout: electrical
 title: Pins, Ports, Inputs and Outputs
 ---
+
+Several headers and jumpers have been exposed for development purposes.  A
+header has been provided to access UART0 on the LPC1769 - this can be used for
+serial debug as well as ISP programming.  The standard JTAG interface has also
+been exposed through a 10-pin ARM JTAG Mini connector.  Two buttons have also
+been added to the board - one resets the LPC1769, and the other allows the
+LPC1769 to enter a USB bootloader if available.
+
+### Parts Layout
+
+![VI Ports](/static/images/vi-ports.jpg)
 
 ### Inputs/Outputs
 
@@ -11,6 +22,8 @@ title: Pins, Ports, Inputs and Outputs
   the RN-41 chipset)
 * S2 (PROG) - This button engages a USB Bootloader. Hold down S2 while pressing
   S1 to enter the bootloader.
+
+![Interface Headers Top](/electrical/img/headers_top.png "Interface board - headers on top side")
 
 #### Headers and jumpers
 
@@ -23,6 +36,8 @@ title: Pins, Ports, Inputs and Outputs
   programming (see JP2).
 * J5 (JTAG) - This is a 50 mil pitch 10-pin ARM Mini JTAG interface. An adapter
   can be used to connect the standard 100 mil 20-pin JTAG connector.
+
+![Interface Headers Bottom](/electrical/img/headers_bottom.png "Interface board - headers on bottom side")
 
 #### Solder Jumpers
 

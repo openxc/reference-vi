@@ -3,12 +3,10 @@ layout: programming
 title: USB Programming
 ---
 
-The LPC1769 has the capability to load code from the USB interface, however this
-is not built into the MCU.  In order to program over USB, a USB bootloader must
-already have been programmed onto the LPC1769.  The USB Bootloader should watch
-pin P2.12 (the same pin as the LPC1768 BlueBoard) on startup.  If installed
-correctly, the bootloader can be actived by holding down S2 while resetting the
-VI.
+In order to program over USB, a USB bootloader must already have been programmed
+onto the vehicle interface - the OpenXC fork of the [OpenLPC USB
+Bootloader](https://github.com/openxc/openlpc-USB_Bootloader) is compatible and
+shipped on all of the prototype VI units by default.
 
 ![Programming Button](/firmware/img/vi-programming-button.jpg)
 
