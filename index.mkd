@@ -3,9 +3,6 @@ layout: default
 title: OpenXC Vehicle Interface Reference Design
 ---
 
-![Vehicle Interface](/static/images/vi-assembled.jpg)
-![Vehicle Interface Opened Up](/static/images/vi-open-top-right.jpg)
-
 <h2>What is OpenXC?</h2>
 
 <a href="http://openxcplatform.com">OpenXC</a> is an API to your car - by
@@ -15,6 +12,9 @@ applications using the OpenXC library. You can start making vehicle-aware
 applications that have better interfaces based on context, can minimize
 distraction while driving, are integrated with other connected services, and
 can offer you more insight into your car's operation.
+
+![Vehicle Interface](/static/images/vi-assembled.jpg)
+![Vehicle Interface Opened Up](/static/images/vi-open-top-right.jpg)
 
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
 (VI or CAN translator) is piece of hardware that connects to the car's CAN bus,
