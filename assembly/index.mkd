@@ -3,7 +3,7 @@ layout: assembly
 title: Assembly Instructions
 ---
 
-If you want to take this design into the physical world, they major components
+If you want to take this design into the physical world, the major components
 you need to build are:
 
 * Manufacture the PCB, e.g. with a company like [OSH Park](http://oshpark.com/)

@@ -4,35 +4,37 @@ title: Bluetooth Interface
 ---
 
 The [Roving Networks RN-41](http://www.rovingnetworks.com/products/RN41) was
-chosen to implement the Bluetooth interface for the VI:
+chosen to implement the Bluetooth interface for the VI because:
 
-* a low-cost and easy-to-use option
-* easily prototyped
-* automatically implents the Serial Port Profile (SPP) configuration
-* no need to implement a Host/Controller Interface (HCI), keeps MCU code simple
+* it supports the Serial Port Profile (SPP) configuration
+* it doesn't require implementing a Host/Controller Interface (HCI), keeping the
+  MCU code simple
+  - the stack is on the RN-41
 
 The only major design impact of the RN-41 is that it requires a large "keepout"
-area near the antenna of the module.  In this area, there should be a minimal
-amount of traces or copper blocking the radio signal.  The [RN-41
+area near the antenna of the module. In this area, there should be a minimal
+amount of traces or copper blocking the radio signal. The [RN-41
 Datasheet](http://www.rovingnetworks.com/resources/download/18/RN_41)
-illustrates the suggested keepout zone on page 9.  Otherwise, the RN-41 is
+illustrates the suggested keepout zone on page 9. Otherwise, the RN-41 is
 controlled with a serial UART bus with similar bitrates to the CAN data (230kbps
-- 1Mbps).  In our testing we discovered that hardware flow control is necessary
-to fully saturate the bluetooth link.  The firmware on the RN-41 does not
-respond well to buffer overruns - if data is written to the RN-41 faster than it
-can be sent over the bluetooth link, the module will eventually overflow and
-reset without warning.  Adding the RTS and CTS lines to UART1 on the LPC1769
-fixed this problem - the RN-41 will inform the MCU host when it's buffer is
-full.
+- 1Mbps).
+
+In our testing we discovered that hardware flow control is necessary to fully
+saturate the bluetooth link. The firmware on the RN-41 [does not respond
+well](http://christopherpeplin.com/2013/07/26/uart-hardware-flow-control/) to
+buffer overruns - if data is written to the RN-41 faster than it can be sent
+over the bluetooth link, the module will eventually overflow and reset without
+warning. Adding the RTS and CTS lines to UART1 on the LPC1769 fixed this problem
+- the RN-41 will inform the MCU host when it's buffer is full.
 
 The tradeoff of a simplified Bluetooth module is that the implementation details
-of the SPP profile limit the throughput of the bluetooth link.  While the
+of the SPP profile limit the throughput of the bluetooth link. While the
 underlying Enhanced Data Rate (EDR) bluetooth link can technically operate at
 3Mbps, the asynchronous nature of SPP limits the RN-41 to 240kbps in slave mode.
-In our testing, the RN-41 only hit this speed for brief peak bursts.  The
-sustained average speed was 202kbps.  Future designs may consider using a more
-complicated bluetooth chipset with an HCI interface implemented on the MCU for
-greater throughput.  An example of a test run:
+In our testing, the RN-41 only hit this speed for brief peak bursts. The
+sustained average speed was 202kbps. Future designs may consider using a more
+complicated Bluetooth chipset with an HCI interface implemented on the MCU for
+greater throughput. An example of a test run:
 
 ![Bluetooth Testing Results](/electrical/img/BT_Endurance_Histogram_012613.svg)
 

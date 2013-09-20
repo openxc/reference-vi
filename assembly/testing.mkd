@@ -37,7 +37,9 @@ Beagleboard or pcDuino.
 1. De-assert Dock power output, re-measure, verify connector output is 1V or
  below.
 1. Deploy production firmware to board
-1. Connecto to USB, verify production firmware is successfully running
+1. Connect to USB, verify production firmware is successfully running
+
+## Validation Criteria
 
 **Bluetooth**
 

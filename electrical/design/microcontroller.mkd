@@ -4,27 +4,29 @@ title: Microcontroller
 ---
 
 The VI was originally built around a ChipKit MAX32 development
-board, which used a PIC32MX795F512 processor.  We chose to move away from this
-architecture due to frustrations around the open-source support and tools of the
-PIC32 line.  We had trouble developing for this platform in Linux, and had to
-resort to closed-source windows tools in order to use the device effectively.
+board, which used a PIC32MX795F512 processor. We chose to move away from this
+architecture due to the closed source nature of Microchip's C32 compiler for the
+PIC32. It was pleasant enough using the compiler packaged with the chipKIT IDE
+(MPIDE) but the licensing situation was unclear, particularly with the Microchip
+Peripheral libraries (MAL).
+
 Most other MCUs in the same performance category as the PIC32 device lie in the
 [ARM-Cortex-M family](http://en.wikipedia.org/wiki/ARM_Cortex-M), particularly
-the ARM Cortex-M3 core.  Several major MCU manufacturers make Cortex-M3 devices
-(Atmel, NXP, STMicro, TI),  The NXP LPC17XX line was selected due to it's
+the ARM Cortex-M3 core. Several major MCU manufacturers make Cortex-M3 devices
+(Atmel, NXP, STMicro, TI). The NXP LPC17XX line was selected due to it's
 excellent open-source compiler support, library support, and ease of
-programming.  Many off-the-shelf open-source hardware designs exist for the
+programming. Many off-the-shelf open-source hardware designs exist for the
 LPC1768, and this encourages a large amount of community support and a wider
 variety of user-contributed libraries.
 
 The MCU system design was based around the [Blueboard
 LPC1768-H](http://shop.ngxtechnologies.com/product_info.php?products_id=65).
 This was done to allow firmware to be prototyped on an off-the-shelf open-source
-hardware.  The hardware configuration is also compatible with the [MBED rapid
-prototyping board/environment](http://mbed.org/).  The Clock, Power and USB
-subsystems are all equivalent.  The JTAG interface was converted to the 10-pin
+hardware. The hardware configuration is also compatible with the [MBED rapid
+prototyping board/environment](http://mbed.org/). The Clock, Power and USB
+subsystems are all equivalent. The JTAG interface was converted to the 10-pin
 ARM JTAG Mini format to reduce the PCB footprint of the normal large 20-pin JTAG
-connector.  This results in a 12MHz external crystal oscillator stepped up to a
+connector. This results in a 12MHz external crystal oscillator stepped up to a
 100MHz system clock.
 
 ### LPC1769 Data

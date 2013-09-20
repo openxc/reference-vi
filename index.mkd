@@ -46,9 +46,10 @@ this particular implementation has USB and Bluetooth.
       href="http://openxcplatform.com/vehicle-interface/firmware.html">other
       available firmwares</a>.</p>
 
-      <p>Once you have a firmware file (it should be a version for the "FORDBOARD"
-      and have the ".bin" extension) programming the VI is simple - follow the
-      <a href="/firmware/usb.html">USB programming instructions</a>.</p>
+      <p>Once you've downloaded a firmware file (it should be a version for the
+      "FORDBOARD" and have the ".bin" extension) programming the VI is simple -
+      follow the <a href="/firmware/programming/usb.html">USB programming
+      instructions</a>.</p>
 
     </div>
 
@@ -63,7 +64,7 @@ this particular implementation has USB and Bluetooth.
       or start from scratch with a <a href="">blank project (TODO)</a>.</p>
 
       <p>If you're programming your custom firmware with the <a
-      href="/firmware/usb.html">USB bootloader</a>, the memory layout must be
+      href="/firmware/programming/usb.html">USB bootloader</a>, the memory layout must be
       adjusted; both the official VI firmware and the blank project use a USB
       bootloader compatible layout by default.</p>
 

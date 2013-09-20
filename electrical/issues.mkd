@@ -4,7 +4,7 @@ title: Known Issues
 ---
 
 For greater detail, see the [changelog in the source
-files](/electrical/sources/index.html).
+files (.xls)](/electrical/CHANGELOG.xls).
 
 #### v0.3:
 

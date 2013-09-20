@@ -5,43 +5,43 @@ title: CAN Interface
 
 The CAN interface is acheived using an [NXP
 TJA1048](http://www.nxp.com/documents/data_sheet/TJA1048.pdf), a dual-channel
-CAN transceiver.  This is a part recommended by Ford engineers for it's
-reliablity and robustness.  The only hard requirement of this transceiver is
+CAN transceiver. This is a part recommended by Ford engineers for it's
+reliablity and robustness. The only hard requirement of this transceiver is
 that it have a Standby mode, and some way to wake up the microcontroller when
-the CAN bus comes out of standby.  Aside from the CAN signals, the TJA1048 also
+the CAN bus comes out of standby. Aside from the CAN signals, the TJA1048 also
 has one standby input per channel - pulling each line low will put it's
-respective CAN channel into standby mode.  These are routed to P0.19 for CAN
+respective CAN channel into standby mode. These are routed to P0.19 for CAN
 Channel 1, and P0.6 for CAN Channel 2.
 
-On the automotive side of the CAN transceivers, some support electronics are
-required.  D4 and D5 provide additional ESD protection against voltage spikes on
-the CAN line - each
+Some support electronics are required on the vehicle side of the CAN
+transceiver. D4 and D5 provide additional ESD protection against voltage spikes
+on the CAN line - each
 [PESD1CAN](http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf) can provide up
-to 200W of peak dissipation and ESD protection up to 23kV.  R1 and R2 provide
-termination resistance for the CAN Bus.  If the VI is acting as a
-CAN Slave, and is reading CAN signals from a vehicle, these resistors need to be
-connected across the HI and LO wires of each CAN bus.  SJ1 and SJ2 are closed by
-default, enabling this termination.  If this termination is not needed, the
-solder jumpers can be cut.  Finally, each CAN signal as a 100pF bypass capacitor
-very close to the OBD connector, to shunt high frequency noise to ground.
+to 200W of peak dissipation and ESD protection up to 23kV. R1 and R2 provide
+termination resistance for the CAN Bus. If the VI is acting as a termiantion
+point for a bench testing CAN rig, these resistors may need to be connected
+across the HI and LO wires of each CAN bus. SJ1 and SJ2 are closed by default,
+enabling this termination. If this termination is not needed, the solder jumpers
+can be cut (see [this issue](https://github.com/openxc/reference-vi/issues/9)).
+Finally, each CAN signal as a 100pF bypass capacitor very close to the OBD
+connector, to shunt high frequency noise to ground.
 
 The CAN bus doesn't particularly require a high speed PCB design, since the rate
-is only 1Mbps at most.  However an attempt was made to maintain the
-characteristic 120 ohm differential impedance on the CAN lines.  An attempt was
-also made to maintain a 45 mil guard band around each CAN bus, to keep high
-frequency switching transients from coupling onto the CAN bus.  The guard band
-was also applied to the LPC1769 side of the CAN transciever, to keep the same
-transients out of the converted CAN signals.  Since the layout is only 2 layers
-and very crowded, this wasn't implemented perfectly, but seems to be within 85%
-coverage.  The combination of these considerations means that the CAN interface
-should be highly resilient to noise and should limit signal distortion due to
-reflections and other transmission line phenomenon.
+is only 1Mbps at most and 500Kbps in practice. However, an attempt was made to
+maintain the characteristic 120 ohm differential impedance on the CAN lines. An
+attempt was also made to maintain a 45 mil guard band around each CAN bus, to
+keep high frequency switching transients from coupling onto the CAN bus. The
+guard band was also applied to the LPC1769 side of the CAN transciever, to keep
+the same transients out of the converted CAN signals. Since the layout is only 2
+layers and very crowded, this wasn't implemented perfectly, but seems to be
+within 85% coverage. The combination of these considerations means that the CAN
+interface should be highly resilient to noise and should limit signal distortion
+due to reflections and other transmission line phenomenon.
 
-CAN transceivers:
+All CAN transceiver options we considered:
 
 * NXP TJA1040 (or other NXP model, but this is supposedly best for being able to
   suspend) (Ford approved)
 * MCP2551 - Single CAN transceiver (not Ford approved, need 2)
 * NXP TJA1048T - Dual-CAN transceiver (Ford approved)
   * about 10 cents more expensive than 2 single CAN transceivers
-

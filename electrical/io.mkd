@@ -5,10 +5,11 @@ title: Pins, Ports, Inputs and Outputs
 
 Several headers and jumpers have been exposed for development purposes.  A
 header has been provided to access UART0 on the LPC1769 - this can be used for
-serial debug as well as ISP programming.  The standard JTAG interface has also
-been exposed through a 10-pin ARM JTAG Mini connector.  Two buttons have also
-been added to the board - one resets the LPC1769, and the other allows the
-LPC1769 to enter a USB bootloader if available.
+serial debug as well as [ISP programming](/firmware/programming/isp.html).  The
+standard [JTAG interface](/firmware/programming/jtag.html) has also been exposed
+through a 10-pin ARM JTAG Mini connector.  Two buttons have also been added to
+the board - one resets the LPC1769, and the other allows the LPC1769 to enter a
+[USB bootloader](/firmware/programming/usb.html) if available.
 
 ### Parts Layout
 

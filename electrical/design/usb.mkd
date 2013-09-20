@@ -4,37 +4,37 @@ title: USB Interface
 ---
 
 USB is provided directly by the LPC1769 - no external transceiver or controller
-is necessary.  A few external components are required to correctly enable the
+is necessary. A few external components are required to correctly enable the
 LPC1769 as a USB Device and can be found on [Page 276 of the LPC1769
 manual](http://www.rovingnetworks.com/resources/download/47/Advanced_User_Manual).
 The USB_CONNECT line and associated circuitry was mirrored from the LPC1768-H
 Blueboard design so that USB bootloader firmware would be interoperable, and a
 few modifications were made for additional resilience and device compatibility:
 
-Diodes D2, D6 and D7 were added to ESD protect the USB lines.  D2 is an [NXP
+Diodes D2, D6 and D7 were added to ESD protect the USB lines. D2 is an [NXP
 PESD12VS1ULD](http://www.nxp.com/documents/data_sheet/PESD12VS1ULD.pdf)
-unidirectional ESD protection diode.  D6 and D7 are [NXP
+unidirectional ESD protection diode. D6 and D7 are [NXP
 PESD5V0X1BL](http://www.nxp.com/documents/data_sheet/PESD5V0X1BL.pdf)
-bidirectional ESD diodes.  All protection diodes are specifically designed for
+bidirectional ESD diodes. All protection diodes are specifically designed for
 the USB bus and have very low capacitance to avoid disrupting USB signals.
 
 Resistor R25 attempts to indicate to an attached USB OTG device that the CAN
-Translator can provide charging current.  A specification exists on [Page 48 of
+Translator can provide charging current. A specification exists on [Page 48 of
 the USB Battery Charging Specification
 R1.2](http://kinetis.pl/sites/default/files/BC1.2_FINAL.pdf) describing an
-Accessory Charger Adapter.  This specification defines special resistance values
+Accessory Charger Adapter. This specification defines special resistance values
 on pin 4 of a USB OTG connector that should flag that the connected device is a
-charging device.  However in practice very few devices actually honor this
-specification.  It's totally up to the implementation of the portable tablet or
+charging device. However in practice very few devices actually honor this
+specification. It's totally up to the implementation of the portable tablet or
 smartphone whether or not they support charging while using the USB port as a
 USB Host.
 
 If a Male-Male USB Micro cable is used with the VI, this
-identification resistor will be readable by a connected USB OTG device.  If the
-device is USB ACA compliant, it will successfully charge.  If a Male-Male cable
+identification resistor will be readable by a connected USB OTG device. If the
+device is USB ACA compliant, it will successfully charge. If a Male-Male cable
 is unavailable, or if the device doesn't honor the USB ACA specification, a
 normal USB A to USB Micro cable can be used with a commonly-available USB OTG
-Host mode adapter.  For example:
+Host mode adapter. For example:
 
 * A Samsung Galaxy Note II with stock android firmware will honor the USB ACA
   profile [(from this forum post)](http://www.head-fi.org/t/595071/android-phones-and-usb-dacs/405#post_8748466)
@@ -44,11 +44,11 @@ Host mode adapter.  For example:
   is enabled without a custom firmware (tested)
 
 USB signals require high speed PCB routing to avoid signal integrity issues,
-since the bitrates are high (11Mbps - 480Mbps).  Unfortunately with a 2 layer
+since the bitrates are high (11Mbps - 480Mbps). Unfortunately with a 2 layer
 PCB, the trace widths required to obtain the ideal 90 ohm differential impedance
-for a USB line would be unfeasibly wide.  To compensate for this fact, the USB
-connector was located extremely close (~300 mils) to the LPC1769 USB pins.  A
+for a USB line would be unfeasibly wide. To compensate for this fact, the USB
+connector was located extremely close (~300 mils) to the LPC1769 USB pins. A
 guard band was used around the USB lines and tightly coupled to the ground
-plane.  The ground plane underneath the USB signals was kept clear so the ground
+plane. The ground plane underneath the USB signals was kept clear so the ground
 loop would be kept small and transient ground currents would avoid coupling into
 the USB signal.
