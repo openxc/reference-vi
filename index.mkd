@@ -1,6 +1,7 @@
 ---
 layout: default
 title: OpenXC Vehicle Interface Reference Design
+section: overview
 ---
 
 <h2>What is OpenXC?</h2>
