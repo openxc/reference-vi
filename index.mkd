@@ -127,7 +127,7 @@ quantities is around $45.
   available behind a solder jumper
 * Can relay vehicle data at up to 250kbps over a Bluetooth connection
 * Can relay vehicle data at up to 11Mbps over a USB connection
-* Passes up to 6A of power from the vehicle to the Dock and Accessories
+* Passes up to 6A of power from the vehicle to accessories
 
 ![VI Ports](/static/images/vi-ports.jpg)
 
