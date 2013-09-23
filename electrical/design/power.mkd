@@ -8,8 +8,8 @@ convert the unpredictable +12V automotive power source to the +5V and +3.3V
 rails needed by the MCU and related ICs.  Incoming power is protected from
 overvoltage by D3, a [SMBJ16CA](http://www.fairchildsemi.com/ds/SM/SMBJ16CA.pdf)
 Transient Voltage Suppressor (TVS) diode.  D3 will protect the interface from
-any voltage over 19.7V (Vbr).  The power regulators can handle up to 40V, but
-the Dock power switch (IC7) can only tolerate up to 20V.  Reverse voltage is
+any voltage over 19.7V (Vbr).  The power regulators can handle up to
+40V.  Reverse voltage is
 protected by D1.  Both regulators do not require any additional current or
 temperature protection - they can safely drive into a short circuit at
 temperatures up to 150 degrees C, and will limit current if they become too hot.
@@ -39,23 +39,25 @@ charging at 1A.
 The VI has the following power connections:
 
 * OBD-II Automotive Power: Input @ 12V
-* Dock Power Connector: Output @ 12V up to 6A
+* External Accessory Power Connector: Output @ 12V up to 6A
 * USB Micro Connector: Input OR Output @ 5V up to 1A
 
-The Dock power connector is controlled by a [TPS2421-2 power switch with
+The external accessory power connector is controlled by a [TPS2421-2
+power switch with
 internal MOSFET](http://www.ti.com/lit/ds/symlink/tps2421-2.pdf).  This allows
-the Dock power to be disabled when the vehicle is turned off, as well as
+the external accessory power to be disabled when the vehicle is turned
+off, as well as
 providing current protection.  The power switch has an active 6A limit, and will
 actively attempt to re-engage power when the limit is tripped ("retry on
 fault").
 
-The USB Micro Connector is directly connected to the +5V bus through a Fuse.
+The USB micro connector is directly connected to the +5V bus through a fuse.
 The lack of a diode means that the connected USB device can either consume or
-supply current.  If a PC is connected to the USB Micro connector, it will power
-the 3.3V regulator and the +5V regulator will be bypassed.  If an android tablet
-is connected that supports USB OTG Charging, it will be allowed to consume +5V
+supply current.  If a PC is connected to the USB micro connector, it will power
+the 3.3V regulator and the +5V regulator will be bypassed.  If an Android tablet
+is connected that supports USB OTG charging, it will be allowed to consume +5V
 power.  A resettable fuse (F1) has been added to protect the VI
-from a bad USB cable or USB Host.  The fuse is a [Bourns
+from a bad USB cable or USB host.  The fuse is a [Bourns
 MF-MSMF110/16-2](http://www.bourns.com/pdfs/mfmsmf.pdf).  The fuse will
 automatically reset when power is removed and the fuse is allowed to cool off.
 This has an added downside of temperature dependence - the fuse can only pass
