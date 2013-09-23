@@ -18,7 +18,7 @@ shipped on all of the prototype VI units by default.
 ![Enabling Bootloader](/firmware/img/programming-entering-bootloader.jpg)
 
 On Windows, OS X and Linux, the VI will appear as a typical USB drive named
-`LPC1759` - open it.
+`LPC1769` - open it.
 
 ![USB drive](/firmware/img/usb-drive-appears.png)
 
