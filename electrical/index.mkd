@@ -7,9 +7,8 @@ At the beginning of the project, defined the requirements of the vehicle
 interface:
 
 * Microcontroller with enough horsepower to process and send all CAN messages
-  and 2 CAN controllers
 * USB 2.0 port (controller included in microcontroller)
-* 2x CAN transceivers
+* 2x CAN transceivers, 2x CAN controllers
 * UART with optional Bluetooth module
 * Be programmable over USB with no extra hardware
 * JTAG header for programming and debugging
@@ -23,14 +22,14 @@ We ended up with:
 * Microcontroller: NXP LPC1769
   * Includes a [USB controller](/electrical/design/usb.html), 2 CAN controllers
     and enough UARTs for debugging and Bluetooth output
-* [CAN Transceiver](/electrical/design/can.html): NXP TJA1048
+* [Dual-Channel CAN Transceiver](/electrical/design/can.html): NXP TJA1048
 * Reads from 2 different CAN buses simultaneously at up to 1Mbps per bus - by
   default CAN1 and CAN2-1 (according to the [OpenXC naming
   scheme](http://openxcplatform.com/vehicle-interface/index.html)), with CAN2-2
   available behind a solder jumper
-* [Bluetooth](/electrical/design/bluetooth.html): Roving Networks RN-42, with
+* [Bluetooth](/electrical/design/bluetooth.html): Roving Networks RN-41, with
   hardware flow control enabled
-* [USB Programming](http://localhost:4000/firmware/programming/usb.html): we
+* [USB Programming](/firmware/programming/usb.html): we
   made the [OpenLPC USB
   Bootloader](https://github.com/openxc/openlpc-USB_Bootloader) compatible with
   this board and made it more reliable across all major operating systems.
