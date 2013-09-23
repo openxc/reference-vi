@@ -106,7 +106,7 @@ interface](http://chipkit-vi.openxcplatform.com) with the goal to:
   hardware modules
 
 This streamlined vehicle interface uses a ARM Cortex-M3 microcontroller (NXP's
-LPC1769), a CAN transceiver from NXP, the RN-41 Bluetooth module from Roving
+LPC1769), two CAN transceivers from NXP, the RN-41 Bluetooth module from Roving
 Networks and includes a micro-USB port. The design also includes a 12v port
 (with a Molex connector) to power an external device from the car, and this port
 can be shut off with the car to avoid battery drain.
@@ -115,7 +115,8 @@ We also designed and prototyped a plastic housing for the board that allows it
 to be easily gripped and attached/detached from the OBD-II port underneath the
 steering wheel.
 
-The current BOM total cost in 1,000 unit quantities is around $45.
+The current BOM total cost for the electrical components in 1,000 unit
+quantities is around $45.
 
 ### Features
 
@@ -131,8 +132,9 @@ The current BOM total cost in 1,000 unit quantities is around $45.
 
 ## Contributors
 
-This reference design was created by Bug Labs, contracted by Ford and in
-collaboration with Ford Research & Advanced Development engineers in both [Palo
+The electrical reference design was created by Bug Labs, contracted by
+Ford and in
+collaboration with Ford Research and Innovation engineers in both [Palo
 Alto, CA](http://fordsvl.com) and Dearborn, MI. For a full list of the
 contributors to this project, see the
 [AUTHORS](https://github.com/openxc/reference-vi/blob/gh-pages/AUTHORS) file.
