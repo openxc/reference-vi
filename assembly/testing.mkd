@@ -23,8 +23,7 @@ Beagleboard or pcDuino.
 1. Boot into ISP bootloader (Pull ISP_EN low, Toggle RESET, Release ISP_EN) and
  retrieve LPC1769 serial number
 1. (ensure that test firmware configures the baud rate of the RN-41 device, see
- the [RN-41 Configuration in the hardware
- README](./README.html#rn-41-configuration))
+ [RN-41 configuration](/firmware/rn41.html))
 1. Execute short bluetooth bandwidth test (data-test.py --bandwidth --size 5000
  --plot).  Capture results.  Take snapshot of BT_RTS, BT_CTS, BT_RESET,
  BT_CONN lines upon error
