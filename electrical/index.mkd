@@ -3,10 +3,9 @@ layout: electrical-design
 title: Electrical Design Considerations
 ---
 
-At the beginning of the project, defined the requirements of the vehicle
-interface:
+At the outset, we required the vehicle interface to have:
 
-* Microcontroller with enough horsepower to process and send all CAN messages
+* A microcontroller with enough horsepower to process and send all CAN messages
 * USB 2.0 port (controller included in microcontroller)
 * 2x CAN transceivers, 2x CAN controllers
 * UART with optional Bluetooth module
@@ -17,7 +16,8 @@ interface:
 * Allow USB to be attached while being vehicle powered
 * Pass 12v power from the car to external peripherals
 
-We ended up with:
+The result, documented on this site, meets all of the requirements with these
+parts:
 
 * Microcontroller: NXP LPC1769
   * Includes a [USB controller](/electrical/design/usb.html), 2 CAN controllers
@@ -33,7 +33,8 @@ We ended up with:
   made the [OpenLPC USB
   Bootloader](https://github.com/openxc/openlpc-USB_Bootloader) compatible with
   this board and made it more reliable across all major operating systems.
-* [Power](/electrical/design/power.html): up to 6A of 12v power can be passed through from the car.
+* [Power](/electrical/design/power.html): up to 6A of 12v power can be passed
+  through from the car, and USB can still be used when being powered by the car.
 
 
 ![Interface Block Diagram](/electrical/img/InterfaceBlockDiagram.svg "Interface Block Diagram")
