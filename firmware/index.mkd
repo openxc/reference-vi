@@ -3,18 +3,25 @@ layout: firmware
 title: Firmware Options
 ---
 
-Besides using [binary firmware for app
-developers](http://openxcplatform.com/vehicle-interface/firmware.html) you can
-build your own code to run on the VI. You can use the
-[official OpenXC VI firmware](http://vi-firmware.openxcplatform.com)
-(the source for most binary firmware, e.g. those from Ford) or start from
-scratch with a [blank project](https://github.com/openxc/lpc17xx-starter).
+You have a few different options for running code on the VI:
+
+* Use [binary firmware from an
+  automaker](http://openxcplatform.com/vehicle-interface/firmware.html) - these
+  are usually intended for application developers that are only interested in
+  the translated data.
+* Build your own code to run on the VI. We have a [blank starter project](https://github.com/openxc/lpc17xx-starter) with the
+  core perphieral libraries available.
+* Use the [official OpenXC VI firmware](http://vi-firmware.openxcplatform.com)
+   (the source for most binary firmware, e.g. those from Ford)
 
 If you're programming your custom firmware with the [USB
-bootloader](/firmware/usb.html), the memory layout must be adjusted; both the
+bootloader](/firmware/programming/usb.html), the memory layout must be adjusted; both the
 official VI firmware and the blank project use a USB bootloader compatible
 layout by default.
 
-Alternatively, you can use one of a few lower level programming options
-(some even allow in-circuit debugging). More details are available in the
-[firmware page](/firmware/index.html).
+For programming, you have a few options:
+
+* There is a compatible [USB bootloader](/firmware/programming/usb.html).
+* The VI has the pins for a [mini-JTAG connector](/firmware/programming/jtag.html).
+* The VI also has an [ISP header](/firmware/programming/isp.html), and you can
+  use the microcontroller's built-in ISP bootloader.

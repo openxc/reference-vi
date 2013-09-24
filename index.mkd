@@ -65,11 +65,6 @@ this particular implementation has USB and Bluetooth.
       or start from scratch with a <a
       href="https://github.com/openxc/lpc17xx-starter">blank project</a>.</p>
 
-      <p>If you're programming your custom firmware with the <a
-      href="/firmware/programming/usb.html">USB bootloader</a>, the memory layout must be
-      adjusted; both the official VI firmware and the blank project use a USB
-      bootloader compatible layout by default.</p>
-
       <p>Alternatively, you can use one of a few lower level programming options
       (some even allow in-circuit debugging). More details are available in the
       <a href="/firmware/index.html">firmware page</a>.
