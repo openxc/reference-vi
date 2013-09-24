@@ -8,37 +8,169 @@ onto the vehicle interface - the OpenXC fork of the [OpenLPC USB
 Bootloader](https://github.com/openxc/openlpc-USB_Bootloader) is compatible and
 shipped on all of the prototype VI units by default.
 
-![Programming Button](/firmware/img/vi-programming-button.jpg)
+<p>
+<img src="/firmware/img/vi-programming-button.jpg" title="Programming Button"/>
+</p>
 
-* Use a paper clip or pencil to hold down the programming button on the VI.
-* While holding down the programming button, connect a micro-USB cable to the
-   VI and to the computer you will use to do the programming - an LED on the VI
-   will flash green, and then you can let go of the button.
+<div class="panel-group" id="accordian">
 
-![Enabling Bootloader](/firmware/img/programming-entering-bootloader.jpg)
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a class="accordian-toggle" data-toggle="collapse"
+                  data-parent="#accordian" href="#collapseMac">
+               Mac OS X
+            </a>
+         </h4>
+      </div>
+      <div id="collapseMac" class="panel-collapse collapse">
+         <div class="panel-body">
+            <p>
+            The bootloader version on the prototype VI units is not the newest version, and
+            unfortunately there is bug that forces Linux and Mac OS X users to copy the new
+            firmware from the command line.
+            </p>
 
-On Windows, OS X and Linux, the VI will appear as a typical USB drive named
-`LPC1759` - open it.
+            <p>Use a paper clip or pencil to hold down the programming button on the VI. While
+            holding down the programming button, connect a micro-USB cable to the VI and to
+            the computer you will use to do the programming - an LED on the VI will flash
+            green, and then you can let go of the button.
+            </p>
 
-![USB drive](/firmware/img/usb-drive-appears.png)
+            <p>
+            <img src="/firmware/img/programming-entering-bootloader.jpg" title="Entering the Bootloader"/>
+            </p>
 
-The drive will have a `firmware.bin` file - delete it.
+            <p>Copy your new firmware.bin over the top of the existing firmware.bin from the
+            command line:
 
-![Existing firmware](/firmware/img/usb-existing-firmware.png)
+              <pre><code>$ cp newfirmware.bin /Volumes/LPC1759/firmware.bin</code></pre>
+            </p>
 
-Drag and drop the new firmware `.bin` file onto the drive.
+            <p>Eject and reset the microcontroller.</p>
+         </div>
+      </div>
+   </div>
 
-![New firmware](/firmware/img/usb-new-firmware.png)
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a class="accordian-toggle" data-toggle="collapse"
+                  data-parent="#accordian" href="#collapseLinux">
+               Linux
+            </a>
+         </h4>
+      </div>
+      <div id="collapseLinux" class="panel-collapse collapse">
+         <div class="panel-body">
 
-Eject or unmount the drive. When the drive is safe to remove, unplug the USB
-cable.
+            <p>
+            The bootloader version on the prototype VI units is not the newest version, and
+            unfortunately there is bug that forces Linux and Mac OS X users to copy the new
+            firmware from the command line.
+            </p>
 
-![Safe to remove](/firmware/img/usb-eject.png)
+            <p>Mounting the USB and copying over the firmware [does not
+            work](http://dangerousprototypes.com/docs/LPC_ARM_quick_start#Bootloaders) from
+            Linux. You need to use <code>mdel</code> and <code>mcopy</code> from the <code>mtools</code> package.</p>
 
-The next time you power up the VI (without pressing the programming button) it
-will be running the new firmware.
+            <p>Use a paper clip or pencil to hold down the programming button on the VI. While
+            holding down the programming button, connect a micro-USB cable to the VI and to
+            the computer you will use to do the programming - an LED on the VI will flash
+            green, and then you can let go of the button.
+            </p>
 
-To verify the VI was flashed correctly, we recommend this [testing
-procedure](http://openxcplatform.com/vehicle-interface/testing.html) - be aware
-that in order to use the VI in Windows, you need to install a driver (what else
-is new?).
+            <p>
+            <img src="/firmware/img/programming-entering-bootloader.jpg" title="Entering the Bootloader"/>
+            </p>
+
+            <p>Then, copy the new firmware:
+
+            <pre>$ sudo mdel -i /dev/sdc ::/firmware.bin
+$ sudo mcopy -i /dev/sdc firmware.bin ::/firmware.bin</pre>
+
+            where <code>/dev/sdc</code> is the device name of the LPC17xx. No need to unmount or
+            anything after that, just reset the board.
+            </p>
+
+            <p>There's a utility script at <code>script/flash.sh</code> to automate these two steps,
+            since sometimes it can take a few seconds before the LPC17xx filesystem can be
+            written, and you have to keep retrying the mdel command. Run it like so:
+
+                <pre>$ ../script/flash.sh /dev/sdc blink.bin</pre>
+            </p>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a class="accordian-toggle" data-toggle="collapse"
+                  data-parent="#accordian" href="#collapseWindows">
+               Windows
+            </a>
+         </h4>
+      </div>
+      <div id="collapseWindows" class="panel-collapse collapse">
+         <div class="panel-body">
+
+            <p>Use a paper clip or pencil to hold down the programming button on the VI. While
+            holding down the programming button, connect a micro-USB cable to the VI and to
+            the computer you will use to do the programming - an LED on the VI will flash
+            green, and then you can let go of the button.
+            </p>
+
+            <p>
+            <img src="/firmware/img/programming-entering-bootloader.jpg" title="Entering the Bootloader"/>
+            </p>
+
+            <p>On Windows, OS X and Linux, the VI will appear as a typical USB drive named
+            <code>LPC1759</code> - open it.</p>
+
+            <p>
+            <img src="/firmware/img/usb-drive-appears.png" title="USB drive"/>
+            </p>
+
+            <p>
+            The drive will have a <code>firmware.bin</code> file - delete it.
+            </p>
+
+            <p>
+            <img title="Existing firmware" src="/firmware/img/usb-existing-firmware.png"/>
+            </p>
+
+            <p>
+            Drag and drop the new firmware <code>.bin</code> file onto the drive.
+            </p>
+
+            <p>
+            <img src="/firmware/img/usb-new-firmware.png" title="New firmware"/>
+            </p>
+
+            <p>
+            Eject or unmount the drive. When the drive is safe to remove, unplug the USB
+            cable.
+            </p>
+
+            <p>
+            <img src="/firmware/img/usb-eject.png" title="Safe to remove"/>
+            </p>
+
+            <p>
+            The next time you power up the VI (without pressing the programming button) it
+            will be running the new firmware.
+            </p>
+
+            <p>
+            To verify the VI was flashed correctly, we recommend this <a
+            href="http://openxcplatform.com/vehicle-interface/testing.html">testing
+            procedure</a> - be aware that in order to use the VI in Windows, you need to
+            install a driver (what else is new?).
+            </p>
+         </div>
+      </div>
+   </div>
+
+</div>

@@ -68,3 +68,11 @@ h2:before, h3:before {
 .subnav {
     margin-bottom: 15px;
 }
+
+.programming-platform {
+    display: none;
+}
+
+#usb-programming-windows {
+    display: visible;
+}
