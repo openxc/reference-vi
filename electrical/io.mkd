@@ -45,7 +45,11 @@ the board - one resets the LPC1769, and the other allows the LPC1769 to enter a
 * SJ1, SJ2 - These are used to engage the 120 ohm termination resistor for CAN
   interfaces A and B respectively. If being used in a test bench without a full
   CAN network, you probably want these enabled. It may be simpler and more
-  reversible to add the resistors to the OBD-II cable, instead.
+  reversible to add the resistors to the OBD-II cable, instead. Note: The
+  current version has an error in the design and this functionality is reversed - the
+  resistors are enabled by default, and are disabled with the solder jumper. The
+  termiation resistance should be left to the vehicle's bus in normal operation
+  - see [issue #21](https://github.com/openxc/reference-vi/issues/21))
 * SJ3, SJ4 - These switch the CAN B channel between the Diagnostic Medium Speed
   and Multimedia CAN buses exposed by the OBD-II connector on Ford vehicles.
   They are each shorted towards the PCB edge, enabling the Diagnostic interface
