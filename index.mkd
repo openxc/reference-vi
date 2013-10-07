@@ -111,6 +111,13 @@ We also designed and prototyped a plastic housing for the board that allows it
 to be easily gripped and attached/detached from the OBD-II port underneath the
 steering wheel.
 
+The device is not as compact as it could be, primarily because we design it to
+use only a 2-layer PCB (to make it more accessible for hobbyists). Depending on
+the placement and angle of the OBD-II port in your vehicle, the VI may protrude
+too much - we recommend one of the many available [OBD-II extension
+cables](http://www.obd2cables.com/products/obd-cables/obd-ii-cables/cable-j1962m-to-j1962f-obd-ii-extension-cable-5ft.html)
+if that's the case.
+
 The current BOM total cost for the electrical components in 1,000 unit
 quantities is around $45.
 
