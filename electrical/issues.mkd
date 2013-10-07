@@ -3,16 +3,19 @@ layout: electrical
 title: Known Issues
 ---
 
+The version of the reference VI currently being shipped by Ford (in limited
+quantity) has v0.3 of the PCB, and there are no known electrical issues.
+
 For greater detail, see the [changelog in the source
 files (.xls)](/electrical/CHANGELOG.xls).
 
-#### v0.3:
+#### v0.3
 
-* The very first run of prototypes are lacking epoxy on the USB Micro connector
-  and the connector may break under stress.  This will be fixed in subsequent
-  manufacturing runs.
+* No known electrical issues.
 
-#### v0.2:
+#### v0.2
+
+This was the first test run of the schematic.
 
 * Output Power Jack Polarity is incorrect - The output power jack should be
   configured such that Pin 1 (the keyed pin) is Ground, and Pin 2 is +12V. This
