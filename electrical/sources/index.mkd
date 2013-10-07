@@ -22,3 +22,6 @@ pull requests are welcome!
 * [Bill of Materials (BOM)](/electrical/sources/vehicle-interface.bom.xls)
 * [Changelog](/electrical/CHANGELOG.xls)
 
+
+![VI PCB Top](/static/images/vi-front-angled.jpg)
+![VI PCB Bottom](/static/images/vi-back-angled.jpg)

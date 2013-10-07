@@ -123,6 +123,9 @@ if that's the case.
 The current BOM total cost for the electrical components in 1,000 unit
 quantities is around $45.
 
+There is a complete gallery of photos of the VI and the packaging [available
+online](https://plus.google.com/photos/108408483770573977605/albums/5931012963815778913?authkey=CKHyq8X99-GLAw).
+
 ### Features
 
 * Reads from 2 different CAN buses simultaneously at up to 1Mbps per bus - by

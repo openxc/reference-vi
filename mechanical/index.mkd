@@ -3,7 +3,7 @@ layout: default
 title: Mechanical Design
 ---
 
-![Assembly opened](/static/images/vi-open-top.jpg)
+![Assembly opened](/static/images/vi-open-bottom.jpg)
 
 The VI housing design consists of an opaque top and bottom, with a translucent
 diffuser piece at the end opposite the OBD-II connector, between two halves of
@@ -17,8 +17,7 @@ materials used were:
 * VI Top and Bottom: Bayblend T85 XF-901510
 * VI Difffuser: Lexan 3412R-131 (Natural 20% Glass Fiber PC)
 
-![Housing Top](/static/images/vi-housing-top.jpg)
-![Housing Bottom with Diffuser](/static/images/vi-housing-bottom.jpg)
+![Assembly opened and separated](/static/images/vi-open-top.jpg)
 
 ## Sources
 

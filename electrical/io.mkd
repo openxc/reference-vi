@@ -24,7 +24,7 @@ the board - one resets the LPC1769, and the other allows the LPC1769 to enter a
 * S2 (PROG) - This button engages a USB Bootloader. Hold down S2 while pressing
   S1 to enter the bootloader.
 
-![Interface Headers Top](/electrical/img/headers_top.png "Interface board - headers on top side")
+![Interface Headers Top](/electrical/img/headers_top.jpg "Interface board - headers on top side")
 
 #### Headers and jumpers
 
@@ -38,7 +38,7 @@ the board - one resets the LPC1769, and the other allows the LPC1769 to enter a
 * J5 (JTAG) - This is a 50 mil pitch 10-pin ARM Mini JTAG interface. An adapter
   can be used to connect the standard 100 mil 20-pin JTAG connector.
 
-![Interface Headers Bottom](/electrical/img/headers_bottom.png "Interface board - headers on bottom side")
+![Interface Headers Bottom](/electrical/img/headers_bottom.jpg "Interface board - headers on bottom side")
 
 #### Solder Jumpers
 
