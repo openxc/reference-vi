@@ -26,6 +26,8 @@ proprietary CAN messages to the standard [OpenXC message format][output-format]
 and sends the output over a common interface like USB to a [host device][] -
 this particular implementation has USB and Bluetooth.
 
+![Vehicle Interface Installed in Vehicle](/static/images/vi-installed-in-vehicle.jpg)
+
 <h2>Quick Start</h2>
 
 <div class="tabbable">
