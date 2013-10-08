@@ -26,6 +26,12 @@ proprietary CAN messages to the standard [OpenXC message format][output-format]
 and sends the output over a common interface like USB to a [host device][] -
 this particular implementation has USB and Bluetooth.
 
+Ford created this design and manufactured a small quantity to seed the developer
+community. If you have an idea for an OpenXC application and this hardware would
+help, [submit a
+request](https://docs.google.com/forms/d/1-l7_i7b6xsITh9q3Pr1NCjAU6Yw_cTPEgrPCNCggQec/viewform)
+to receive one of these prototypes.
+
 ![Vehicle Interface Installed in Vehicle](/static/images/vi-installed-in-vehicle.jpg)
 
 <h2>Quick Start</h2>
