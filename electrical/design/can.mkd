@@ -30,8 +30,7 @@ The CAN bus doesn't particularly require a high speed PCB design, since the rate
 is only 1Mbps at most and 500Kbps in practice. However, an attempt was made to
 maintain the characteristic 120 ohm differential impedance on the CAN lines
 (Note: this is a mistake in the design, as the termiation resistance should be
-left to the vehicle's bus in normal operation - see [issue
-#21](https://github.com/openxc/reference-vi/issues/21)). An
+left to the vehicle's bus in normal operation - see [issue #21](https://github.com/openxc/reference-vi/issues/21)). An
 attempt was also made to maintain a 45 mil guard band around each CAN bus, to
 keep high frequency switching transients from coupling onto the CAN bus. The
 guard band was also applied to the LPC1769 side of the CAN transciever, to keep
