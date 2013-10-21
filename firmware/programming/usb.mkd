@@ -164,10 +164,11 @@ $ sudo mcopy -i /dev/sdc firmware.bin ::/firmware.bin</pre>
             </p>
 
             <p>
-            To verify the VI was flashed correctly, we recommend this <a
-            href="http://openxcplatform.com/vehicle-interface/testing.html">testing
-            procedure</a> - be aware that in order to use the VI in Windows, you need to
-            install a driver (what else is new?).
+            To verify the VI was flashed correctly, we recommend trying the
+            <a href="http://openxcplatform.com/android/getting-started.html">Android "smoke test"</a> to make sure everything's working.
+            You can also <a
+            href="http://openxcplatform.com/python/getting-started.html">test from a regular computer with Python</a>, but it's a
+            bit more involved if you're not already familiar with the tools.
             </p>
          </div>
       </div>
