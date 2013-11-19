@@ -30,7 +30,10 @@ Ford created this design and manufactured a small quantity to seed the developer
 community. If you have an idea for an OpenXC application and this hardware would
 help, [submit a
 request](https://docs.google.com/forms/d/1-l7_i7b6xsITh9q3Pr1NCjAU6Yw_cTPEgrPCNCggQec/viewform)
-to receive one of these prototypes.
+to receive one of these prototypes. Make sure there aren't [any known issues
+with
+fit](https://github.com/openxc/openxcplatform.com/wiki/Vehicle-interface-physical-fit-compatibility)
+for the reference VI in your car.
 
 ![Vehicle Interface Installed in Vehicle](/static/images/vi-installed-in-vehicle.jpg)
 
