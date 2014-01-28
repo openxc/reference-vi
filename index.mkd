@@ -161,8 +161,8 @@ contributors to this project, see the
 Copyright (c) 2013 Ford Motor Company
 
 This vehicle interface is open source hardware. The electrical and mechanical
-designs in this repository are available under the [Creative Commons Atribution
-3.0 Unported](http://creativecommons.org/licenses/by/3.0/deed.en_US) license.
+designs in this repository are available under the [Creative Commons Attribution
+4.0 International](http://creativecommons.org/licenses/by/4.0/deed.en_US) license.
 
 [output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
 [host device]: http://openxcplatform.com/android/index.html
