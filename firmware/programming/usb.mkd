@@ -89,7 +89,7 @@ can re-flash the device using USB, with no extra hardware required.
 
             <pre>$ git clone https://github.com/openxc/vi-firmware
 $ cd vi-firmware
-vi-firmware/ $ script/bootloader-flash.sh /dev/sdc/ new-vi-firmware.bin</pre>
+vi-firmware/ $ script/bootloader-flash.sh /dev/sdc new-vi-firmware.bin</pre>
 
             where <code>/dev/sdc</code> is the device name of the LPC17xx (run
             <code>dmesg</code> to see what device it appears as when you plug it
