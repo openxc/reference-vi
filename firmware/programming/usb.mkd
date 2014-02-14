@@ -3,10 +3,10 @@ layout: programming
 title: USB Programming
 ---
 
-In order to program over USB, a USB bootloader must already have been programmed
-onto the vehicle interface - the OpenXC fork of the [OpenLPC USB
-Bootloader](https://github.com/openxc/openlpc-USB_Bootloader) is compatible and
-shipped on all of the prototype VI units by default.
+All of the reference VI units manufactured so far are pre-programmed with a USB
+bootloader (the OpenXC fork of the [OpenLPC USB
+Bootloader](https://github.com/openxc/openlpc-USB_Bootloader)). This means you
+can re-flash the device using USB, with no extra hardware required.
 
 <p>
 <img src="/firmware/img/vi-programming-button.jpg" title="Programming Button"/>
