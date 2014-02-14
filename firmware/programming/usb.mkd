@@ -85,20 +85,18 @@ shipped on all of the prototype VI units by default.
             <img src="/firmware/img/programming-entering-bootloader.jpg" title="Entering the Bootloader"/>
             </p>
 
-            <p>Then, copy the new firmware:
+            <p>Then, clone the vi-firmware repository and run the bootloader-flash.sh script to program the VI:
 
-            <pre>$ sudo mdel -i /dev/sdc ::/firmware.bin
-$ sudo mcopy -i /dev/sdc firmware.bin ::/firmware.bin</pre>
+            <pre>$ git clone https://github.com/openxc/vi-firmware
+$ cd vi-firmware
+vi-firmware/ $ script/bootloader-flash.sh /dev/sdc/ new-vi-firmware.bin</pre>
 
-            where <code>/dev/sdc</code> is the device name of the LPC17xx. No need to unmount or
-            anything after that, just reset the board.
-            </p>
-
-            <p>There's a utility script at <code>script/flash.sh</code> to automate these two steps,
-            since sometimes it can take a few seconds before the LPC17xx filesystem can be
-            written, and you have to keep retrying the mdel command. Run it like so:
-
-                <pre>$ ../script/flash.sh /dev/sdc blink.bin</pre>
+            where <code>/dev/sdc</code> is the device name of the LPC17xx (run
+            <code>dmesg</code> to see what device it appears as when you plug it
+            in with the bootloader button pressed down) and
+            <code>new-vi-firmware.bin</code> is the binary firmware you want to
+            flash, and it's located in the current directory. No need to unmount
+            or anything after that, just reset the board.
             </p>
 
          </div>
