@@ -70,9 +70,10 @@ shipped on all of the prototype VI units by default.
             firmware from the command line.
             </p>
 
-            <p>Mounting the USB and copying over the firmware [does not
-            work](http://dangerousprototypes.com/docs/LPC_ARM_quick_start#Bootloaders) from
-            Linux. You need to use <code>mdel</code> and <code>mcopy</code> from the <code>mtools</code> package.</p>
+            <p>Mounting the USB and copying over the firmware <a
+            href="http://dangerousprototypes.com/docs/LPC_ARM_quick_start#Bootloaders">does
+            not work</a> from Linux. You need to use <code>mdel</code> and
+            <code>mcopy</code> from the <code>mtools</code> package.</p>
 
             <p>Use a paper clip or pencil to hold down the programming button on the VI. While
             holding down the programming button, connect a micro-USB cable to the VI and to
