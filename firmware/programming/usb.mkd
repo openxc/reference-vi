@@ -8,6 +8,20 @@ bootloader (the OpenXC fork of the [OpenLPC USB
 Bootloader](https://github.com/openxc/openlpc-USB_Bootloader)). This means you
 can re-flash the device using USB, with no extra hardware required.
 
+There are two versions of the bootloader in the prototype units:
+
+   * If your prototype reference VI has an OpenXC sticker covering the housing,
+     your unit has the v1.1 bootloader.
+   * Otherwise, your VI does not have a sticker on it and you  have the v1.0
+     bootloader.
+
+<p>
+To verify the VI was flashed correctly, we recommend trying the
+<a href="http://openxcplatform.com/android/getting-started.html">Android "smoke test"</a> to make sure everything's working.
+You can also <a href="http://openxcplatform.com/python/getting-started.html">test from a regular computer with Python</a>, but it's a
+bit more involved if you're not already familiar with the tools.
+</p>
+
 <p>
 <img src="/firmware/img/vi-programming-button.jpg" title="Programming Button"/>
 </p>
@@ -25,29 +39,41 @@ can re-flash the device using USB, with no extra hardware required.
       </div>
       <div id="collapseMac" class="panel-collapse collapse">
          <div class="panel-body">
-            <p>
-            The bootloader version on the prototype VI units is not the newest version, and
-            unfortunately there is bug that forces Linux and Mac OS X users to copy the new
-            firmware from the command line.
-            </p>
-
-            <p>Use a paper clip or pencil to hold down the programming button on the VI. While
-            holding down the programming button, connect a micro-USB cable to the VI and to
-            the computer you will use to do the programming - an LED on the VI will flash
-            green, and then you can let go of the button.
+            <p>Use a paper clip or pencil to hold down the programming button on
+            the VI. While holding down the programming button, connect a
+            micro-USB cable to the VI and to the computer you will use to do the
+            programming - an LED on the VI will flash green, and then you can
+            let go of the button.
             </p>
 
             <p>
             <img src="/firmware/img/programming-entering-bootloader.jpg" title="Entering the Bootloader"/>
             </p>
 
-            <p>Copy your new firmware.bin over the top of the existing firmware.bin from the
-            command line:
+            <p>
+            If your VI has the v1.1 bootloader, i.e. it <strong>does</strong>
+            have an OpenXC sticker on the housing, you can copy the new
+            firmware over in Finder. Browse to the LPC1759 drive that appears
+            when you run it in bootloader mode, delete the firmware.bin file and
+            copy your new firmware file .bin over (the new filename doesn't
+            matter).
+            </p>
+
+            <p>Eject the LPC1759 drive and unlug the VI. It's flashed!</p>
+
+            <hr/>
+
+            <p>
+            If your VI has the v1.0 bootloader, i.e. it <strong>does not</strong> have OpenXC sticker, you must flash new firmware from
+            the command line. Open the Terminal app and run this to update the
+            firmware, assuming the file "newfirmware.bin" is in the current
+            directory and is the new version of the firmware you want to flash:
 
               <pre><code>$ cp newfirmware.bin /Volumes/LPC1759/firmware.bin</code></pre>
             </p>
 
-            <p>Eject and reset the microcontroller.</p>
+            <p>Eject the LPC1759 drive and unlug the VI. It's flashed!</p>
+
          </div>
       </div>
    </div>
@@ -64,17 +90,6 @@ can re-flash the device using USB, with no extra hardware required.
       <div id="collapseLinux" class="panel-collapse collapse">
          <div class="panel-body">
 
-            <p>
-            The bootloader version on the prototype VI units is not the newest version, and
-            unfortunately there is bug that forces Linux and Mac OS X users to copy the new
-            firmware from the command line.
-            </p>
-
-            <p>Mounting the USB and copying over the firmware <a
-            href="http://dangerousprototypes.com/docs/LPC_ARM_quick_start#Bootloaders">does
-            not work</a> from Linux. You need to use <code>mdel</code> and
-            <code>mcopy</code> from the <code>mtools</code> package.</p>
-
             <p>Use a paper clip or pencil to hold down the programming button on the VI. While
             holding down the programming button, connect a micro-USB cable to the VI and to
             the computer you will use to do the programming - an LED on the VI will flash
@@ -85,7 +100,25 @@ can re-flash the device using USB, with no extra hardware required.
             <img src="/firmware/img/programming-entering-bootloader.jpg" title="Entering the Bootloader"/>
             </p>
 
-            <p>Then, clone the vi-firmware repository and run the bootloader-flash.sh script to program the VI:
+            <p>
+            If your VI has the v1.1 bootloader, i.e. it <strong>does</strong>
+            have an OpenXC sticker on the housing, you can copy the new
+            firmware over in any file manager. Browse to the LPC1759 drive that
+            appears when you run it in bootloader mode, delete the firmware.bin
+            file and copy your new firmware file .bin over (the new filename
+            doesn't matter). Eject the LPC1759 drive and unlug the VI. It's
+            flashed!
+            </p>
+
+            <hr/>
+
+            <p>
+            If your VI has the v1.0 bootloader, i.e. it <strong>does
+            not</strong> have OpenXC sticker, you must flash new firmware from
+            the command line with <code>mdel</code> and <code>mcopy</code>
+            from the <code>mtools</code> package. Once you have
+            <code>mtools</code>, clone the vi-firmware repository and run the
+            bootloader-flash.sh script to program the VI:
 
             <pre>$ git clone https://github.com/openxc/vi-firmware
 $ cd vi-firmware
@@ -95,8 +128,8 @@ vi-firmware/ $ script/bootloader-flash.sh /dev/sdc new-vi-firmware.bin</pre>
             <code>dmesg</code> to see what device it appears as when you plug it
             in with the bootloader button pressed down) and
             <code>new-vi-firmware.bin</code> is the binary firmware you want to
-            flash, and it's located in the current directory. No need to unmount
-            or anything after that, just reset the board.
+            flash, and it's located in the current directory. When the script
+            exists, the VI is flashed - just unplug it.
             </p>
 
          </div>
@@ -125,7 +158,7 @@ vi-firmware/ $ script/bootloader-flash.sh /dev/sdc new-vi-firmware.bin</pre>
             <img src="/firmware/img/programming-entering-bootloader.jpg" title="Entering the Bootloader"/>
             </p>
 
-            <p>On Windows, OS X and Linux, the VI will appear as a typical USB drive named
+            <p>The VI will appear as a typical USB drive named
             <code>LPC1759</code> - open it.</p>
 
             <p>
@@ -160,14 +193,6 @@ vi-firmware/ $ script/bootloader-flash.sh /dev/sdc new-vi-firmware.bin</pre>
             <p>
             The next time you power up the VI (without pressing the programming button) it
             will be running the new firmware.
-            </p>
-
-            <p>
-            To verify the VI was flashed correctly, we recommend trying the
-            <a href="http://openxcplatform.com/android/getting-started.html">Android "smoke test"</a> to make sure everything's working.
-            You can also <a
-            href="http://openxcplatform.com/python/getting-started.html">test from a regular computer with Python</a>, but it's a
-            bit more involved if you're not already familiar with the tools.
             </p>
          </div>
       </div>
