@@ -3,16 +3,18 @@ layout: firmware
 title: Firmware Options
 ---
 
-You have a few different options for running code on the VI:
+You have a few different choices for code to run on the reference VI:
 
 * Use [binary firmware from an
   automaker](http://openxcplatform.com/vehicle-interface/firmware.html) - these
   are usually intended for application developers that are only interested in
-  the translated data.
-* Build your own code to run on the VI. We have a [blank starter project](https://github.com/openxc/lpc17xx-starter) with the
-  core perphieral libraries available.
-* Use the [official OpenXC VI firmware](http://vi-firmware.openxcplatform.com)
-   (the source for most binary firmware, e.g. those from Ford)
+  the translated data. You probably want this option!
+* Advanced: Compile the [official OpenXC VI firmware](http://vi-firmware.openxcplatform.com)
+   (the source for most binary firmware, e.g. those from Ford). This is the
+   best option if you have your own CAN messages you want to support.
+* Expert: Build your own code to run on the VI. We have a [blank starter
+  project](https://github.com/openxc/lpc17xx-starter) with the core perphieral
+  libraries available.
 
 If you're programming your custom firmware with the [USB
 bootloader](/firmware/programming/usb.html), the memory layout must be adjusted; both the
