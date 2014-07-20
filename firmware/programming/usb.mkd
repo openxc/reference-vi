@@ -59,7 +59,7 @@ bit more involved if you're not already familiar with the tools.
             matter).
             </p>
 
-            <p>Eject the LPC1759 drive and unlug the VI. It's flashed!</p>
+            <p>Eject the LPC1759 drive and unplug the VI. It's flashed!</p>
 
             <hr/>
 
@@ -72,7 +72,7 @@ bit more involved if you're not already familiar with the tools.
               <pre><code>$ cp newfirmware.bin /Volumes/LPC1759/firmware.bin</code></pre>
             </p>
 
-            <p>Eject the LPC1759 drive and unlug the VI. It's flashed!</p>
+            <p>Eject the LPC1759 drive and unplug the VI. It's flashed!</p>
 
          </div>
       </div>
@@ -106,7 +106,7 @@ bit more involved if you're not already familiar with the tools.
             firmware over in any file manager. Browse to the LPC1759 drive that
             appears when you run it in bootloader mode, delete the firmware.bin
             file and copy your new firmware file .bin over (the new filename
-            doesn't matter). Eject the LPC1759 drive and unlug the VI. It's
+            doesn't matter). Eject the LPC1759 drive and unplug the VI. It's
             flashed!
             </p>
 
