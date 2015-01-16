@@ -73,6 +73,15 @@ bit more involved if you're not already familiar with the tools.
             </p>
 
             <p>Eject the LPC1759 drive and unplug the VI. It's flashed!</p>
+            
+            <p>
+            Note: The <code>LPC1759/firmware.bin</code> file you see in Finder is
+            <a href="https://github.com/openxc/openlpc-USB_Bootloader#flashing-user-code">just a placeholder</a>. 
+            To check if your firmware is properly flashed, plug in the VI via 
+            USB and try running <code>openxc-control version</code>
+            <a href="http://openxcplatform.com/python/getting-started.html">from the Terminal</a>
+            to get the firmware version.
+            </p>
 
          </div>
       </div>
@@ -193,6 +202,14 @@ vi-firmware/ $ script/bootloader-flash.sh /dev/sdc new-vi-firmware.bin</pre>
             <p>
             The next time you power up the VI (without pressing the programming button) it
             will be running the new firmware.
+            </p>
+            <p>
+            Note: The <code>LPC1759/firmware.bin</code> file you see in Windows
+            Explorer is <a href="https://github.com/openxc/openlpc-USB_Bootloader#flashing-user-code">just a placeholder</a>. 
+            To check if your firmware is properly flashed, plug in the VI via 
+            USB and try running <code>openxc-control version</code>
+            <a href="http://openxcplatform.com/python/getting-started.html">from the command line</a>
+            to get the firmware version.
             </p>
          </div>
       </div>
