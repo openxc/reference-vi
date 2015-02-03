@@ -19,7 +19,7 @@ pull requests are welcome!
 * Board Layout
   * [EAGLE source](/electrical/sources/vehicle-interface.brd)
   * [PNG image](/electrical/sources/vehicle-interface.brd.png)
-* [Bill of Materials (BOM)](/electrical/sources/vehicle-interface.bom.xlsx)
+* [Bill of Materials (BOM)](/electrical/sources/vehicle-interface.bom-3.xls)
 * [Changelog](/electrical/CHANGELOG.xls)
 
 
