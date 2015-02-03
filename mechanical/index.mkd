@@ -11,7 +11,7 @@ the housing. The diffuser does a decent job of spreading the light from the 2
 RGB LEDs, although a light pipe may provide more consistent saturation.
 
 We've manufacturing this design succesfully with a MakerBot Replicator 2,
-SLA, and most recently, injection molded by Protomold. At Protomold, the
+SLA, and most recently, injection molded by contract manufacturers from Silicon Valley, the
 materials used were:
 
 * VI Top and Bottom: Bayblend T85 XF-901510
@@ -21,7 +21,7 @@ materials used were:
 
 ## Sources
 
-The master source files for the 3D design were created in CATIA, which
+The original master source files for the 3D design were created in CATIA, which
 unfortunately is neither open source nor affordable. We've output the design for
 the top of the enclosure, the bottom and the diffuser as STL (triangle) and STP
 (solid) files.
@@ -30,18 +30,19 @@ The files are all [stored in a Git repository at
 GitHub](https://github.com/openxc/reference-vi/tree/gh-pages/mechanical) -
 pull requests are welcome!
 
+[![Top](/mechanical/img/OpenXC_VI_Top.png =250x)](/mechanical/img/OpenXC_VI_Top.png)
+[![Bottom](/mechanical/img/OpenXC_VI_Bottom.png =250x)](/mechanical/img/OpenXC_VI_Bottom.png)
+[![Diffuser](/mechanical/img/OpenXC_Diffuser.png =250x)](/mechanical/img/OpenXC_Diffuser.png)
+
 * VI Enclosure Bottom
-  * [CATIA](/mechanical/vi-bottom.CATPart)
-  * [STL](/mechanical/vi-bottom.stl)
-  * [STP](/mechanical/vi-bottom.stp)
+  * [2D Drawing(PDF)](/mechanical/OpenXC_VI_Bottom.PDF)
+  * [STEP](/mechanical/VI_bottom.step)
 * VI Enclosure Top
-  * [CATIA](/mechanical/vi-top.CATPart)
-  * [STL](/mechanical/vi-top.stl)
-  * [STP](/mechanical/vi-top.stp)
+  * [2D Drawing(PDF)](/mechanical/OpenXC_VI_Top.PDF)
+  * [STEP](/mechanical/VI_top.step)
 * Diffuser
-  * [CATIA](/mechanical/vi-diffuser.CATPart)
-  * [STL](/mechanical/vi-diffuser.stl)
-  * [STP](/mechanical/vi-diffuser.stp)
+  * [2D Drawing(PDF)](/mechanical/OpenXC_Diffuser.PDF)
+  * [STEP](/mechanical/VI_diffuser.step)
 
 ## Improving Design for Manufacturing
 
