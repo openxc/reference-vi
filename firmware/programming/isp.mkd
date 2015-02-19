@@ -9,7 +9,26 @@ using the ISP header, J3.  To use ISP simply short JP2 and reset the LPC1769.
 If the ISP_EN pin is grounded when the LPC1769 boots, it will enter the built-in
 ISP bootloader instead of running the OpenXC firmware.  UART0 will then be used
 for programming under an application like [Flash
-Magic](http://www.flashmagictool.com/).  Page 616 of the LPC17XX user manual
-outlines how to use ISP mode.
+Magic](http://www.flashmagictool.com/).  
 
-![ISP Header](/firmware/img/isp-header.jpg)
+![ISP Header](/firmware/img/isp-header.jpg =360x)
+
+The setup using Flash Magic are as follow:
+
+1. Connect to the OpenXC VI board using 3.3V USB-Serial converter, with exactly each pins on USB-Serial converter connect to the OpenXC VI board as shown on the above
+2. Short JP2 with a proper connector or jumper cable 
+3. Use Flash Magic and set the following programming paratmeters:
+
+	- Select LPC1769 device from dropdown list
+	- Select the correct COM port
+	- Set Baud rate to 38400
+	- Set Oscillator frequency to 12000000
+	- Check "Erase all Flash+Code Rd Prot" box
+	- Check "Verify after programming" box
+	- Select the downloaded [bootloader hex file](/firmware/programming/Bootloader.hex)
+
+![flash magic](/firmware/img/flashmagic.png =360x)
+
+Step 4: 
+	Click Start in Flash Magic!
+  
