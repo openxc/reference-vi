@@ -44,13 +44,7 @@ pull requests are welcome!
   * [2D Drawing(PDF)](/mechanical/OpenXC_Diffuser.PDF)
   * [STEP](/mechanical/VI_diffuser.step)
 
-## Improving Design for Manufacturing
+## Design for Manufacturing
 
-* Decrease mold costs by designing mirror image parts - i.e. the top and bottom
-  of the VI shold be identical. As of right now, this is not possible with the
-  side ports for USB and 12V power.
-* Make the part, and therefore the mold, more modular by creating an
-  interchangeable plate on the side of the VI. This plate could
-  be changed and swapped for different input/output configurations. For
-  example: If down the line we decide to remove the 12V connection to reduce
-  costs, we could just create a new plate instead of an entire new VI mold.
+* Added 1.5 degree draft angles for top and bottom enclosures. 1.5 degree was chosen based on the selected surface texturing MT-11020. The only exception is the vertical wall where the OBD-II connector sits, which only has 0.5 degree of draft and does not have texturing.
+* 

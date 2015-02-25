@@ -17,8 +17,8 @@ This website is the documentation for a reference design of an OpenXC-compatible
 for more information on the platform in general, visit
 [openxcplatform.com][openxc].
 
-![Vehicle Interface](/static/images/vi-assembled.jpg)
-![Vehicle Interface Opened Up](/static/images/vi-open-top-right.jpg)
+![Vehicle Interface](/static/images/vi-surface.png =400x)
+![Vehicle Interface Opened Up](/static/images/vi-packaging.png =410x)
 
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
 (VI) is piece of hardware that connects to the car's CAN bus, translates
@@ -35,6 +35,7 @@ with
 fit](https://github.com/openxc/openxcplatform.com/wiki/Vehicle-interface-physical-fit-compatibility)
 for the reference VI in your car.
 
+![Vehicle Interface Open](/static/images/vi-open.jpg =550x)
 ![Vehicle Interface Installed in Vehicle](/static/images/vi-installed-in-vehicle.jpg)
 
 <h2>Quick Start</h2>

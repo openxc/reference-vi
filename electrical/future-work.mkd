@@ -3,7 +3,13 @@ layout: electrical
 title: Future Work and Cost Optimization
 ---
 
-These are some thoughts on how to minimize the cost of the VI.
+These are some thoughts on how to minimize the cost of 
+the VI.
+
+**PCB Design DFM**
+
+Increase spacing between pin-through-holes(PIH) and surface-mount components(SMT) to allow wave soldering. For next iteration, potentially separate the two as much as possible.  
+Negatives: none
 
 **Remove Bluetooth**
 
