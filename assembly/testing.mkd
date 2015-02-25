@@ -35,6 +35,8 @@ Beagleboard or pcDuino.
  within 0.5V of target.
 1. De-assert Dock power output, re-measure, verify connector output is 1V or
  below.
+1. Deploy [Emulator Firmware](https://github.com/openxc/vi-firmware/releases) from the openxc-vi-firmware package and connect to the OpenXC VI with an test Android device. 
+2. Use the OpenXC Enabler App on the Android device to verify emulated data is being streamed to Android from the OpenXC VI.
 1. Deploy production firmware to board
 1. Connect to USB, verify production firmware is successfully running
 
