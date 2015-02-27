@@ -35,7 +35,7 @@ with
 fit](https://github.com/openxc/openxcplatform.com/wiki/Vehicle-interface-physical-fit-compatibility)
 for the reference VI in your car.
 
-![Vehicle Interface Open](/static/images/vi-open.jpg =550x)
+![Vehicle Interface Open](/static/images/vi-opening.jpg =550x)
 ![Vehicle Interface Installed in Vehicle](/static/images/vi-installed-in-vehicle.jpg)
 
 <h2>Quick Start</h2>
