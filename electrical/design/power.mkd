@@ -39,7 +39,7 @@ charging at 1A.
 The VI has the following power connections:
 
 * OBD-II Automotive Power: Input @ 12V
-* External Accessory Power Connector: Output @ 12V up to 6A
+* External Accessory Power Connector: Output @ 12V up to 5A
 * USB Micro Connector: Input OR Output @ 5V up to 1A
 
 The external accessory power connector is controlled by a [TPS2421-2
@@ -47,7 +47,7 @@ power switch with
 internal MOSFET](http://www.ti.com/lit/ds/symlink/tps2421-2.pdf).  This allows
 the external accessory power to be disabled when the vehicle is turned
 off, as well as
-providing current protection.  The power switch has an active 6A limit, and will
+providing current protection.  The power switch has an active 5A limit, and will
 actively attempt to re-engage power when the limit is tripped ("retry on
 fault").
 
@@ -64,20 +64,3 @@ This has an added downside of temperature dependence - the fuse can only pass
 the full 1A of current up to 40 degrees C.  Above that temperature the limit
 slowly decreases - see the datasheet for a thermal derating chart.
 
-## Original Schematic
-
-This power supply is based on a design by Kevin Hille and Karl Wojcik at Ford.
-The following are the original schematic (which also includes the CAN and CPU
-supervisor sections) and some notes.
-
-* One of the 330 caps at the top, going into the 5v regulator, is missing the
-  polarity sign - the top line should have the +.
-* C5 protects from low voltage dropout
-* Diodes make sure reversing 12v and ground doesn't blow anything up
-* c3/c4 are high frequency filters to protect from a voltage dropout
-* 47uF - keeps 3v3 regulator stable and protects from dropouts
-* Could take the 3.3v regulator off of the 5v to minimize the heat that has to
-  be dissapated - going from 5 -> 3.3 instead of 12 -> 3.3v.
-  * Fill in the copper around the regulator as a heatsink
-
-![Power Supply Schematic](/electrical/img/powersupply_v1.0.jpg)
