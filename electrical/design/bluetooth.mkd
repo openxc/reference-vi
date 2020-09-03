@@ -14,7 +14,7 @@ chosen to implement the Bluetooth interface for the VI because:
 The only major design impact of the RN-41 is that it requires a large "keepout"
 area near the antenna of the module. In this area, there should be a minimal
 amount of traces or copper blocking the radio signal. The [RN-41
-Datasheet](http://www.rovingnetworks.com/resources/download/18/RN_41)
+Datasheet](https://cdn.sparkfun.com/datasheets/Wireless/Bluetooth/Bluetooth-RN-41-DS.pdf)
 illustrates the suggested keepout zone on page 9. Otherwise, the RN-41 is
 controlled with a serial UART bus with similar bitrates to the CAN data (230kbps
 - 1Mbps).

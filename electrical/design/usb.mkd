@@ -5,23 +5,23 @@ title: USB Interface
 
 USB is provided directly by the LPC1769 - no external transceiver or controller
 is necessary. A few external components are required to correctly enable the
-LPC1769 as a USB Device and can be found on [Page 276 of the LPC1769
-manual](http://www.rovingnetworks.com/resources/download/47/Advanced_User_Manual).
+LPC1769 as a USB Device and can be found on [the LPC1769
+manual](https://www.nxp.com/docs/en/user-guide/UM10360.pdf).
 The USB_CONNECT line and associated circuitry was mirrored from the LPC1768-H
 Blueboard design so that USB bootloader firmware would be interoperable, and a
 few modifications were made for additional resilience and device compatibility:
 
 Diodes D2, D6 and D7 were added to ESD protect the USB lines. D2 is an [NXP
-PESD12VS1ULD](http://www.nxp.com/documents/data_sheet/PESD12VS1ULD.pdf)
+PESD12VS1ULD](https://assets.nexperia.com/documents/data-sheet/PESD12VS1ULD.pdf)
 unidirectional ESD protection diode. D6 and D7 are [NXP
-PESD5V0X1BL](http://www.nxp.com/documents/data_sheet/PESD5V0X1BL.pdf)
+PESD5V0X1BL](https://assets.nexperia.com/documents/data-sheet/PESD5V0X1BL.pdf)
 bidirectional ESD diodes. All protection diodes are specifically designed for
 the USB bus and have very low capacitance to avoid disrupting USB signals.
 
 Resistor R25 attempts to indicate to an attached USB OTG device that the CAN
-Translator can provide charging current. A specification exists on [Page 48 of
+Translator can provide charging current. A specification exists on [
 the USB Battery Charging Specification
-R1.2](http://kinetis.pl/sites/default/files/BC1.2_FINAL.pdf) describing an
+R1.2](https://www.usb.org/sites/default/files/USB_Battery_Charging_1.2.pdf) describing an
 Accessory Charger Adapter. This specification defines special resistance values
 on pin 4 of a USB OTG connector that should flag that the connected device is a
 charging device. However in practice very few devices actually honor this

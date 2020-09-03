@@ -17,8 +17,8 @@ This website is the documentation for a reference design of an OpenXC-compatible
 for more information on the platform in general, visit
 [openxcplatform.com][openxc].
 
-![Vehicle Interface](/static/images/vi-surface.png =400x)
-![Vehicle Interface Opened Up](/static/images/vi-packaging.png =410x)
+![Vehicle Interface](/static/images/vi-surface.png)
+![Vehicle Interface Opened Up](/static/images/vi-packaging.png)
 
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
 (VI) is piece of hardware that connects to the car's CAN bus, translates
@@ -51,7 +51,7 @@ for the reference VI in your car.
 
       <p>The VI needs to be programmed with firmware before you can get data
       from a car. You can use the <a
-      href="http://openxcplatform.com.s3.amazonaws.com/openxc-canemulator-firmware.zip">emulator
+      href="https://github.com/openxc/vi-firmware/releases">emulator
       firmware (zip file)</a> to test the data connection to a <a
       href="http://openxcplatform.com/host-devices/index.html">host device</a>
       (a computer, smartphone or tablet). To get data from a real car, grab one
@@ -133,8 +133,6 @@ if that's the case.
 The current BOM total cost for the electrical components in 1,000 unit
 quantities is around $45.
 
-There is a complete gallery of photos of the VI and the packaging [available
-online](https://plus.google.com/photos/108408483770573977605/albums/5931012963815778913?authkey=CKHyq8X99-GLAw).
 
 ### Features
 
@@ -153,7 +151,7 @@ online](https://plus.google.com/photos/108408483770573977605/albums/593101296381
 The electrical reference design was created by Bug Labs, contracted by
 Ford and in
 collaboration with Ford Research and Innovation engineers in both [Palo
-Alto, CA](http://fordsvl.com) and Dearborn, MI. For a full list of the
+Alto, CA](https://corporate.ford.com/operations/locations/silicon-valley.html) and Dearborn, MI. For a full list of the
 contributors to this project, see the
 [AUTHORS](https://github.com/openxc/reference-vi/blob/gh-pages/AUTHORS) file.
 
