@@ -15,7 +15,7 @@ connected services, and can offer you more insight into your car's operation.
 This website is the documentation for a reference design of an OpenXC-compatible
 [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)  -
 for more information on the platform in general, visit
-[openxcplatform.com][openxc].
+[openxcplatform.com](http://openxcplatform.com).
 
 ![Vehicle Interface](/static/images/vi-surface.png)
 ![Vehicle Interface Opened Up](/static/images/vi-packaging.png)
