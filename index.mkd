@@ -22,8 +22,8 @@ for more information on the platform in general, visit
 
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
 (VI) is piece of hardware that connects to the car's CAN bus, translates
-proprietary CAN messages to the standard [OpenXC message format][output-format]
-and sends the output over a common interface like USB to a [host device][] -
+proprietary CAN messages to the standard [OpenXC message format](http://openxcplatform.com/vehicle-interface/output-format.html)
+and sends the output over a common interface like USB to a [host device](http://openxcplatform.com/android/index.html) -
 this particular implementation has USB and Bluetooth.
 
 Ford created this design and manufactured a small quantity to seed the developer
