@@ -6,7 +6,7 @@ section: overview
 
 <h2>What is OpenXC?</h2>
 
-[OpenXC][openxc] is an API to your car - by installing a small hardware module
+[OpenXC](http://openxcplatform.com) is an API to your car - by installing a small hardware module
 to read and translate metrics from a car's internal network, the data becomes
 accessible from most Android applications using the OpenXC library. You can
 start making vehicle-aware applications that have better interfaces based on
