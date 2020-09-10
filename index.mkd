@@ -6,7 +6,7 @@ section: overview
 
 <h2>What is OpenXC?</h2>
 
-[OpenXC][openxc] is an API to your car - by installing a small hardware module
+[OpenXC](http://openxcplatform.com) is an API to your car - by installing a small hardware module
 to read and translate metrics from a car's internal network, the data becomes
 accessible from most Android applications using the OpenXC library. You can
 start making vehicle-aware applications that have better interfaces based on
@@ -15,27 +15,25 @@ connected services, and can offer you more insight into your car's operation.
 This website is the documentation for a reference design of an OpenXC-compatible
 [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)  -
 for more information on the platform in general, visit
-[openxcplatform.com][openxc].
+[openxcplatform.com](http://openxcplatform.com).
 
-![Vehicle Interface](/static/images/vi-surface.png =400x)
-![Vehicle Interface Opened Up](/static/images/vi-packaging.png =410x)
+![Vehicle Interface](/static/images/vi-surface.png)
+![Vehicle Interface Opened Up](/static/images/vi-packaging.png)
 
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
 (VI) is piece of hardware that connects to the car's CAN bus, translates
-proprietary CAN messages to the standard [OpenXC message format][output-format]
-and sends the output over a common interface like USB to a [host device][] -
+proprietary CAN messages to the standard [OpenXC message format](http://openxcplatform.com/vehicle-interface/output-format.html)
+and sends the output over a common interface like USB to a [host device](http://openxcplatform.com/host-devices/hardware.html) -
 this particular implementation has USB and Bluetooth.
 
 Ford created this design and manufactured a small quantity to seed the developer
 community. If you have an idea for an OpenXC application and this hardware would
-help, [submit a
-request](https://docs.google.com/forms/d/1-l7_i7b6xsITh9q3Pr1NCjAU6Yw_cTPEgrPCNCggQec/viewform)
-to receive one of these prototypes. Make sure there aren't [any known issues
+help, make sure there aren't [any known issues
 with
-fit](https://github.com/openxc/openxcplatform.com/wiki/Vehicle-interface-physical-fit-compatibility)
+the fit](https://github.com/openxc/openxcplatform.com/wiki/Vehicle-interface-physical-fit-compatibility)
 for the reference VI in your car.
 
-![Vehicle Interface Open](/static/images/vi-opening.jpg =550x)
+![Vehicle Interface Open](/static/images/vi-opening.jpg)
 ![Vehicle Interface Installed in Vehicle](/static/images/vi-installed-in-vehicle.jpg)
 
 <h2>Quick Start</h2>
