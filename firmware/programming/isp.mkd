@@ -11,7 +11,7 @@ ISP bootloader instead of running the OpenXC firmware.  UART0 will then be used
 for programming under an application like [Flash
 Magic](http://www.flashmagictool.com/).  
 
-![ISP Header](/firmware/img/isp-header.jpg =360x)
+![ISP Header](/firmware/img/isp-header.jpg)
 
 The setup using Flash Magic are as follow:
 
@@ -27,7 +27,7 @@ The setup using Flash Magic are as follow:
 	- Check "Verify after programming" box
 	- Select the downloaded [bootloader hex file](/firmware/programming/Bootloader.hex)
 
-![flash magic](/firmware/img/flashmagic.png =360x)
+![flash magic](/firmware/img/flashmagic.png)
 
 Step 4: 
 	Click Start in Flash Magic!
