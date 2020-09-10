@@ -30,9 +30,9 @@ The files are all [stored in a Git repository at
 GitHub](https://github.com/openxc/reference-vi/tree/gh-pages/mechanical) -
 pull requests are welcome!
 
-[![Top](/mechanical/img/OpenXC_VI_Top.png =250x)](/mechanical/img/OpenXC_VI_Top.png)
-[![Bottom](/mechanical/img/OpenXC_VI_Bottom.png =250x)](/mechanical/img/OpenXC_VI_Bottom.png)
-[![Diffuser](/mechanical/img/OpenXC_Diffuser.png =250x)](/mechanical/img/OpenXC_Diffuser.png)
+[![Top](/mechanical/img/OpenXC_VI_Top.png)](/mechanical/img/OpenXC_VI_Top.png)
+[![Bottom](/mechanical/img/OpenXC_VI_Bottom.png)](/mechanical/img/OpenXC_VI_Bottom.png)
+[![Diffuser](/mechanical/img/OpenXC_Diffuser.png)](/mechanical/img/OpenXC_Diffuser.png)
 
 * VI Enclosure Bottom
   * [2D Drawing(PDF)](/mechanical/OpenXC_VI_Bottom.PDF)
