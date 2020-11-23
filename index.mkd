@@ -78,6 +78,7 @@ for the reference VI in your car.
       <p>Alternatively, you can use one of a few lower level programming options
       (some even allow in-circuit debugging). More details are available in the
       <a href="/firmware/index.html">firmware page</a>.
+      </p>
 
   </div>
 
@@ -89,7 +90,7 @@ for the reference VI in your car.
       <a href="https://github.com/openxc/reference-vi">openxc/reference-vi</a>
       GitHub repository (along with the contents of this website).
 
-  </div>
+    
   </div>
 </div>
 
@@ -109,7 +110,7 @@ interface </a> with the goal to:
   <li>Be compact enough to sit directly on the OBD-II port and not hit the driver's
   knees</li>
   <li>Include Bluetooth by default</li>
-  <li>Be powered from the vehicle and not drain the battery when left attached
+  <li>Be powered from the vehicle and not drain the battery when left attached</li>
   <li>Provide 12v power from the vehicle to an external USB hub for other OpenXC
   hardware modules</li>
 </ul>
