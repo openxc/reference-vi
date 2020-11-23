@@ -3,7 +3,9 @@ layout: default
 title: OpenXC Vehicle Interface Reference Design
 section: overview
 ---
+
 <h2>What is OpenXC?</h2>
+
 [OpenXC](http://openxcplatform.com) is an API to your car - by installing a small hardware module
 to read and translate metrics from a car's internal network, the data becomes
 accessible from most Android applications using the OpenXC library. You can
@@ -14,30 +16,40 @@ This website is the documentation for a reference design of an OpenXC-compatible
 [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)  -
 for more information on the platform in general, visit
 [openxcplatform.com](http://openxcplatform.com).
+
 ![Vehicle Interface](/static/images/vi-surface.png)
 ![Vehicle Interface Opened Up](/static/images/vi-packaging.png)
+
 The [Vehicle Interface](http://openxcplatform.com/vehicle-interface/index.html)
 (VI) is piece of hardware that connects to the car's CAN bus, translates
 proprietary CAN messages to the standard [OpenXC message format](http://openxcplatform.com/vehicle-interface/output-format.html)
 and sends the output over a common interface like USB to a [host device](http://openxcplatform.com/host-devices/hardware.html) -
 this particular implementation has USB and Bluetooth.
+
 Ford created this design and manufactured a small quantity to seed the developer
 community. If you have an idea for an OpenXC application and this hardware would
 help, make sure there aren't [any known issues
 with
 the fit](https://github.com/openxc/openxcplatform.com/wiki/Vehicle-interface-physical-fit-compatibility)
 for the reference VI in your car.
+
 ![Vehicle Interface Open](/static/images/vi-opening.jpg)
 ![Vehicle Interface Installed in Vehicle](/static/images/vi-installed-in-vehicle.jpg)
+
 <h2>Quick Start</h2>
+
 <div class="tabbable">
+
     <ul class="nav nav-tabs">
         <li class="active"><a href="#app-devs" data-toggle="tab">For App Developers</a></li>
         <li><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
         <li><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
     </ul>
+
     <div class="tab-content">
+
         <div class="active tab-pane" id="app-devs">
+
             <p>The VI needs to be programmed with firmware before you can get data
                 from a car. You can use the <a href="https://github.com/openxc/vi-firmware/releases">emulator
                     firmware (zip file)</a> to test the data connection to a <a
@@ -46,41 +58,56 @@ for the reference VI in your car.
                 of the <a href="http://openxcplatform.com/vehicle-interface/firmware.html">other
                     available firmwares</a>.
             </p>
+
             <p>Once you've downloaded a firmware file (it should be a version for the
                 "FORDBOARD" and have the ".bin" extension) programming the VI is simple -
                 follow the <a href="/firmware/programming/usb.html">USB programming
                     instructions</a>.
             </p>
+
         </div>
+
         <div class="active tab-pane" id="firmware-devs">
+
             <p>Besides using <a href="http://openxcplatform.com/vehicle-interface/firmware.html">binary
                     firmware for app developers</a>, you can build your own code to run on the
                 VI. You can use the <a href="http://vi-firmware.openxcplatform.com">official OpenXC VI
                     firmware</a> (the source for most binary firmware, e.g. those from Ford)
                 or start from scratch with a <a href="https://github.com/openxc/lpc17xx-starter">blank project</a>.</p>
+
             <p>Alternatively, you can use one of a few lower level programming options
                 (some even allow in-circuit debugging). More details are available in the
                 <a href="/firmware/index.html">firmware page</a>.
             </p>
+
         </div>
+
         <div class="active tab-pane" id="hardware-devs">
+
             <p>This site contains complete documentation of the hardware,
                 design motivations, fabrication and testing plans. Every component is
                 released as open source hardware and the source files are available in the
                 <a href="https://github.com/openxc/reference-vi">openxc/reference-vi</a>
                 GitHub repository (along with the contents of this website).
             </p>
+
         </div>
+
     </div>
+
 </div>
+
 <hr />
+
 <h2>What is this vehicle interface?</h2>
+
 <p>
     The particular unit is a reference design for a "dongle" style vehicle interface
     that connects directly to the diagnostic port with no cable. Ford created this
     design as an iteration from the original, <a href="https://chipkit-vi.openxcplatform.com"> chipKIT-based vehicle
         interface </a> with the goal to:
 </p>
+
 <ul>
     <li>Require no OBD-II cable to connect to the vehicle</li>
     <li>Be compact enough to sit directly on the OBD-II port and not hit the driver's
@@ -90,6 +117,7 @@ for the reference VI in your car.
     <li>Provide 12v power from the vehicle to an external USB hub for other OpenXC
         hardware modules</li>
 </ul>
+
 <p>
     This streamlined vehicle interface uses a ARM Cortex-M3 microcontroller (NXP's
     LPC1769), a dual-channel CAN transceiver from NXP, the RN-41 Bluetooth
@@ -98,11 +126,13 @@ for the reference VI in your car.
     (with a Molex connector) to power an external device from the car, and this port
     can be shut off with the car to avoid battery drain.
 </p>
+
 <p>
     We also designed and prototyped a plastic housing for the board that allows it
     to be easily gripped and attached/detached from the OBD-II port underneath the
     steering wheel.
 </p>
+
 <p>
     The device is not as compact as it could be, primarily because we design it to
     use only a 2-layer PCB (to make it more accessible for hobbyists). Depending on
@@ -112,11 +142,15 @@ for the reference VI in your car.
         extension
         cables</a> if that's the case.
 </p>
+
 <p>
     The current BOM total cost for the electrical components in 1,000 unit
     quantities is around $45.
 </p>
+
+
 <h2>Features</h2>
+
 <ul>
     <li>Reads from 2 different CAN buses simultaneously at up to 1Mbps per bus - by
         default CAN1 and CAN2-1 (according to the <a
@@ -128,8 +162,12 @@ for the reference VI in your car.
     <li>Can relay vehicle data at up to 11Mbps over a USB connection</li>
     <li>Passes up to 6A of power from the vehicle to accessories</li>
 </ul>
+
 <img src="static/images/vi-ports.jpg" alt="VI Ports">
+
+
 <h2>Contributors</h2>
+
 <p>
     The electrical reference design was created by Bug Labs, contracted by
     Ford and in
@@ -139,10 +177,14 @@ for the reference VI in your car.
     contributors to this project, see the <a
         href="https://github.com/openxc/reference-vi/blob/gh-pages/AUTHORS">AUTHORS</a> file.
 </p>
+
+
 <h2>License</h2>
+
 <p>
     Copyright (c) 2013 Ford Motor Company
 </p>
+
 <p>
     This vehicle interface is open source hardware. The electrical and mechanical
     designs in this repository are available under the <a
