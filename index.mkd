@@ -180,7 +180,3 @@ This vehicle interface is open source hardware. The electrical and mechanical
 designs in this repository are available under the <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution
 4.0 International</a> license.
 </p>
-
-[output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
-[host device]: http://openxcplatform.com/android/index.html
-[openxc]: http://openxcplatform.com
