@@ -40,9 +40,9 @@ for the reference VI in your car.
 
 <div class="tabbable">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#app-devs" data-toggle="tab">For App Developers</a></li>
-    <li class="active"><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
-    <li class="active"><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
+    <li><a href="#app-devs" data-toggle="tab">For App Developers</a></li>
+    <li><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
+    <li><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
   </ul>
   <div class="tab-content">
     <div class="active tab-pane" id="app-devs">
@@ -97,7 +97,6 @@ for the reference VI in your car.
 
 <h2>What is this vehicle interface?</h2>
 
-<div>
 The particular unit is a reference design for a "dongle" style vehicle interface
 that connects directly to the diagnostic port with no cable. Ford created this
 design as an iteration from the original, [chipKIT-based vehicle
@@ -131,7 +130,6 @@ if that's the case.
 
 The current BOM total cost for the electrical components in 1,000 unit
 quantities is around $45.
-</div>
 
 
 ### Features
