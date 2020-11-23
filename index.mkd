@@ -41,8 +41,8 @@ for the reference VI in your car.
 <div class="tabbable">
   <ul class="nav nav-tabs">
     <li class="active"><a href="#app-devs" data-toggle="tab">For App Developers</a></li>
-    <li><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
-    <li><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
+    <li class="active"><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
+    <li class="active"><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
   </ul>
   <div class="tab-content">
     <div class="active tab-pane" id="app-devs">
@@ -62,9 +62,9 @@ for the reference VI in your car.
       follow the <a href="/firmware/programming/usb.html">USB programming
       instructions</a>.</p>
 
-    </div>
+  </div>
 
-    <div class="tab-pane" id="firmware-devs">
+  <div class="active tab-pane" id="firmware-devs">
 
       <p>Besides using <a
       href="http://openxcplatform.com/vehicle-interface/firmware.html">binary
@@ -79,9 +79,9 @@ for the reference VI in your car.
       (some even allow in-circuit debugging). More details are available in the
       <a href="/firmware/index.html">firmware page</a>.
 
-    </div>
+  </div>
 
-    <div class="tab-pane" id="hardware-devs">
+  <div class="active tab-pane" id="hardware-devs">
 
       <p>This site contains complete documentation of the hardware,
       design motivations, fabrication and testing plans. Every component is
@@ -89,7 +89,7 @@ for the reference VI in your car.
       <a href="https://github.com/openxc/reference-vi">openxc/reference-vi</a>
       GitHub repository (along with the contents of this website).
 
-    </div>
+  </div>
   </div>
 </div>
 
