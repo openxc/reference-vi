@@ -41,8 +41,8 @@ for the reference VI in your car.
 <div class="tabbable">
   <ul class="nav nav-tabs">
     <li class="active"><a href="#app-devs" data-toggle="tab">For App Developers</a></li>
-    <li><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
-    <li><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
+    <li class="active"><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
+    <li class="active"><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
   </ul>
   <div class="tab-content">
     <div class="active tab-pane" id="app-devs">
@@ -97,12 +97,13 @@ for the reference VI in your car.
 
 <h2>What is this vehicle interface?</h2>
 
+<div>
 The particular unit is a reference design for a "dongle" style vehicle interface
 that connects directly to the diagnostic port with no cable. Ford created this
 design as an iteration from the original, [chipKIT-based vehicle
 interface](https://chipkit-vi.openxcplatform.com) with the goal to:
 
-<!-- * Require no OBD-II cable to connect to the vehicle
+* Require no OBD-II cable to connect to the vehicle
 * Be compact enough to sit directly on the OBD-II port and not hit the driver's
   knees.
 * Include Bluetooth by default
@@ -129,7 +130,8 @@ cables](http://www.obd2cables.com/products/obd-cables/obd-ii-cables/cable-j1962m
 if that's the case.
 
 The current BOM total cost for the electrical components in 1,000 unit
-quantities is around $45. -->
+quantities is around $45.
+</div>
 
 
 ### Features
