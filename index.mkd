@@ -41,8 +41,8 @@ for the reference VI in your car.
 <div class="tabbable">
   <ul class="nav nav-tabs">
     <li class="active"><a href="#app-devs" data-toggle="tab">For App Developers</a></li>
-    <li class="active"><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
-    <li class="active"><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
+    <li><a href="#firmware-devs" data-toggle="tab">For Firmware Developers</a></li>
+    <li><a href="#hardware-devs" data-toggle="tab">For Hardware Developers</a></li>
   </ul>
   <div class="tab-content">
     <div class="active tab-pane" id="app-devs">
