@@ -104,64 +104,82 @@ design as an iteration from the original, <a href="https://chipkit-vi.openxcplat
 interface </a> with the goal to:
 </p>
 
-* Require no OBD-II cable to connect to the vehicle
-* Be compact enough to sit directly on the OBD-II port and not hit the driver's
-  knees.
-* Include Bluetooth by default
-* Be powered from the vehicle and not drain the battery when left attached
-* Provide 12v power from the vehicle to an external USB hub for other OpenXC
-  hardware modules
+<ul>
+  <li>Require no OBD-II cable to connect to the vehicle</li>
+  <li>Be compact enough to sit directly on the OBD-II port and not hit the driver's
+  knees</li>
+  <li>Include Bluetooth by default</li>
+  <li>Be powered from the vehicle and not drain the battery when left attached
+  <li>Provide 12v power from the vehicle to an external USB hub for other OpenXC
+  hardware modules</li>
+</ul>
 
+<p>
 This streamlined vehicle interface uses a ARM Cortex-M3 microcontroller (NXP's
 LPC1769), a dual-channel CAN transceiver from NXP, the RN-41 Bluetooth
 module from Roving
 Networks and includes a micro-USB port. The design also includes a 12v port
 (with a Molex connector) to power an external device from the car, and this port
 can be shut off with the car to avoid battery drain.
+</p>
 
+<p>
 We also designed and prototyped a plastic housing for the board that allows it
 to be easily gripped and attached/detached from the OBD-II port underneath the
 steering wheel.
+</p>
 
+<p>
 The device is not as compact as it could be, primarily because we design it to
 use only a 2-layer PCB (to make it more accessible for hobbyists). Depending on
 the placement and angle of the OBD-II port in your vehicle, the VI may protrude
-too much - we recommend one of the many available [OBD-II extension
-cables](http://www.obd2cables.com/products/obd-cables/obd-ii-cables/cable-j1962m-to-j1962f-obd-ii-extension-cable-5ft.html)
-if that's the case.
+too much - we recommend one of the many available <a href="http://www.obd2cables.com/products/obd-cables/obd-ii-cables/cable-j1962m-to-j1962f-obd-ii-extension-cable-5ft.html">OBD-II extension
+cables</a> if that's the case.
+</p>
 
+<p>
 The current BOM total cost for the electrical components in 1,000 unit
 quantities is around $45.
+</p>
 
 
-### Features
+<h2>Features</h2>
 
-* Reads from 2 different CAN buses simultaneously at up to 1Mbps per bus - by
-  default CAN1 and CAN2-1 (according to the [OpenXC naming
-  scheme](http://openxcplatform.com/vehicle-interface/index.html)), with CAN2-2
+<ul>
+  <li>Reads from 2 different CAN buses simultaneously at up to 1Mbps per bus - by
+  default CAN1 and CAN2-1 (according to the <a href="http://openxcplatform.com/vehicle-interface/index.html">OpenXC naming
+  scheme</a>), with CAN2-2
   available behind a solder jumper
-* Can relay vehicle data at up to 250kbps over a Bluetooth connection
-* Can relay vehicle data at up to 11Mbps over a USB connection
-* Passes up to 6A of power from the vehicle to accessories
+  </li>
+  <li>Can relay vehicle data at up to 250kbps over a Bluetooth connection</li>
+  <li>Can relay vehicle data at up to 11Mbps over a USB connection</li>
+  <li>Passes up to 6A of power from the vehicle to accessories</li>
+</ul>
 
-![VI Ports](/static/images/vi-ports.jpg)
+<img src="static/images/vi-ports.jpg" alt="VI Ports">
 
-## Contributors
 
+<h2>Contributors</h2>
+
+<p>
 The electrical reference design was created by Bug Labs, contracted by
 Ford and in
-collaboration with Ford Research and Innovation engineers in both [Palo
-Alto, CA](https://corporate.ford.com/operations/locations/silicon-valley.html) and Dearborn, MI. For a full list of the
-contributors to this project, see the
-[AUTHORS](https://github.com/openxc/reference-vi/blob/gh-pages/AUTHORS) file.
+collaboration with Ford Research and Innovation engineers in both <a href="https://corporate.ford.com/operations/locations/silicon-valley.html">Palo
+Alto, CA</a> and Dearborn, MI. For a full list of the
+contributors to this project, see the <a href="https://github.com/openxc/reference-vi/blob/gh-pages/AUTHORS">AUTHORS</a> file.
+</p>
 
-## License
+<h2>License</h2>
 
+<p>
 Copyright (c) 2013 Ford Motor Company
+</p>
 
+<p>
 This vehicle interface is open source hardware. The electrical and mechanical
-designs in this repository are available under the [Creative Commons Attribution
-4.0 International](http://creativecommons.org/licenses/by/4.0/deed.en_US) license.
+designs in this repository are available under the <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution
+4.0 International</a> license.
+</p>
 
 [output-format]: http://openxcplatform.com/vehicle-interface/output-format.html
 [host device]: http://openxcplatform.com/android/index.html
