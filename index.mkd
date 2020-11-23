@@ -100,7 +100,7 @@ for the reference VI in your car.
 The particular unit is a reference design for a "dongle" style vehicle interface
 that connects directly to the diagnostic port with no cable. Ford created this
 design as an iteration from the original, [chipKIT-based vehicle
-interface](http://chipkit-vi.openxcplatform.com) with the goal to:
+interface](https://chipkit-vi.openxcplatform.com) with the goal to:
 
 * Require no OBD-II cable to connect to the vehicle
 * Be compact enough to sit directly on the OBD-II port and not hit the driver's
