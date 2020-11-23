@@ -62,6 +62,8 @@ for the reference VI in your car.
       follow the <a href="/firmware/programming/usb.html">USB programming
       instructions</a>.</p>
 
+    </div>
+
     <div class="tab-pane" id="firmware-devs">
 
       <p>Besides using <a
@@ -76,6 +78,7 @@ for the reference VI in your car.
       <p>Alternatively, you can use one of a few lower level programming options
       (some even allow in-circuit debugging). More details are available in the
       <a href="/firmware/index.html">firmware page</a>.
+
     </div>
 
     <div class="tab-pane" id="hardware-devs">
@@ -86,6 +89,9 @@ for the reference VI in your car.
       <a href="https://github.com/openxc/reference-vi">openxc/reference-vi</a>
       GitHub repository (along with the contents of this website).
 
+    </div>
+  </div>
+</div>
 
 <hr/>
 
