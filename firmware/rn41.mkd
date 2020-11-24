@@ -26,6 +26,6 @@ manually, follow these instructions.
 
 The commands can also be sent via `UART0` on the LPC1769 to avoid the
 configuration timer.  See [the RN-41 advanced user
-manual](http://www.rovingnetworks.com/resources/download/47/Advanced_User_Manual)
+manual](https://www.sparkfun.com/datasheets/Wireless/Bluetooth/rn-bluetooth-um.pdf)
 for additional documentation on parameters that can be changed (Page 30 for a
 quick reference)

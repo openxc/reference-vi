@@ -76,3 +76,20 @@ h2:before, h3:before {
 #usb-programming-windows {
     display: visible;
 }
+
+
+img[alt="Vehicle Interface"] { width: 400px; }
+
+img[alt="Vehicle Interface Opened Up"] { width: 410px; }
+
+img[alt="Vehicle Interface Open"] { width: 550px; }
+
+img[alt="Top"] { width: 250px; }
+
+img[alt="Bottom"] { width: 250px; }
+
+img[alt="Diffuser"] { width: 250px; }
+
+img[alt="ISP Header"] { width: 360px; }
+
+img[alt="flash magic"] { width: 360px; }
